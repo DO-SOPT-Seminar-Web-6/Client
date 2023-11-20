@@ -1,6 +1,15 @@
-import React from "react";
-import styled from "styled-components";
+import { ThemeProvider } from 'styled-components';
+import Dummy from '@components/Dummy';
+import GlobalStyle from '@styles/globalStyle';
+import theme from '@styles/theme';
 
-export default function App() {
-  return <div>App</div>;
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Dummy />
+    </ThemeProvider>
+  );
 }
+
+export default App;

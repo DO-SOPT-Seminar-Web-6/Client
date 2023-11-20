@@ -1,8 +1,10 @@
 {
-  "name": "watchpedia_client",
+  "name": "watch_pedia_client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "DO_SOPT_WEB_6조",
+  "description": "Watcha Pedia를 개선 및 보완한 사이트",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,6 +13,7 @@
     "stylelint": "stylelint './src/**/*.{ts,tsx}' --fix"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.30",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "postcss": "^8.4.31",
     "postcss-styled-syntax": "^0.5.0",
@@ -18,6 +21,7 @@
     "prettier": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.19.0",
     "styled-components": "^6.1.1",
     "stylelint-config-concentric-order": "^5.2.0",
     "stylelint-config-prettier": "^9.0.5",
@@ -25,6 +29,7 @@
     "stylelint-config-styled-components": "^0.1.1"
   },
   "devDependencies": {
+    "@types/node": "^20.9.2",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
