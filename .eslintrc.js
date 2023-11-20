@@ -1,7 +1,11 @@
 module.exports = {
+  root: true, 
+  env: { browser: true, es2020: true },
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "prettier"],
   extends: [
+    'eslint:recommended',
+    "eslint-config-prettier",
     "airbnb",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -9,6 +13,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
   ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
   rules: {
     "linebreak-style": 0,
     "import/prefer-default-export": 0,
