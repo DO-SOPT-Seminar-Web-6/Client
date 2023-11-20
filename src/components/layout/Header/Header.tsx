@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import HeaderLeft from './HeaderLeft';
-import HeaderRight from './HeaderRight';
+import HeaderLeft from './HeaderLeft/HeaderLeft';
+import HeaderRight from './HeaderRight/HeaderRight';
 
 /** header */
 export default function Header() {
