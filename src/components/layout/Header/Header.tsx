@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import BannerProfileIc from '@assets/icon/banner/bannerProfileIc.svg';
 import bannerSearchIc from '@assets/icon/banner/bannerSearchIc.svg';
 import watchaLogoIc from '@assets/icon/banner/watchaLogoIc.svg';
+import { flexCenter } from '@styles/globalStyle';
 
 /** header */
 export default function Header() {
@@ -45,21 +46,20 @@ const HeaderContainer = styled.header`
 `;
 
 const HeaderContainerLeft = styled.div`
-  display: flex;
+  ${flexCenter}
+
   gap: 3rem;
-  align-items: center;
-  justify-content: center;
 `;
 
 const HeaderNav = styled.nav`
+  ${({ theme }) => theme.fonts.body1};
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 17.5rem;
   height: 3.3rem;
   color: ${({ theme }) => theme.colors.grey700};
-
-  ${({ theme }) => theme.fonts.body1};
 `;
 
 const HeaderText = styled.span`
@@ -67,20 +67,17 @@ const HeaderText = styled.span`
 `;
 
 const HeaderContainerRight = styled.div`
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.colors.grey700};
-
+  ${flexCenter}
   ${({ theme }) => theme.fonts.body3};
+
+  gap: 2rem;
+  color: ${({ theme }) => theme.colors.grey700};
 `;
 
 const HeaderSearchForm = styled.form`
-  display: flex;
+  ${flexCenter}
+
   gap: 0.7rem;
-  align-items: center;
-  justify-content: center;
   width: 29.8rem;
   height: 3.7rem;
   background-color: ${({ theme }) => theme.colors.grey200};
