@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-<!-- title: "[ 페이지명 ] - 기능명(feat, fix, etc)" -->
-
 ## 목적
 
 설명
