@@ -25,26 +25,35 @@ export default function MovieInfo({
   imgHeight = 35.2,
 }: InMovieInfoProps) {
   return (
-    <article>
+    <ArticleContainer>
       <ArticleImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
       <ArticleInfoBox>
         <ArticleTitle>{title}</ArticleTitle>
-        <ArticleRate>
+        <ArticleRateText>
           <span>평균</span>
           <img src={castDetailLikeIc} />
           <span>{rate}</span>
-        </ArticleRate>
+        </ArticleRateText>
         {subInfo && <p>{subInfo}</p>}
       </ArticleInfoBox>
-      <ul>{/* {tag && tag.map((item, index) => <li key={`${item} - ${index}`}>{item}</li>)} */}</ul>
-    </article>
+      <ArticleTagList>
+        {tag && tag.map((item, index) => <ArticleTagListItem key={`${item} - ${index}`}>{item}</ArticleTagListItem>)}
+      </ArticleTagList>
+    </ArticleContainer>
   );
 }
+
+const ArticleContainer = styled.article`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+`;
 
 const ArticleImage = styled.img<InImageTypes>`
   width: ${({ imgWidth }) => `${imgWidth}rem`};
   height: ${({ imgHeight }) => `${imgHeight}rem`};
-  margin-bottom: 0.7rem;
 `;
 
 const ArticleInfoBox = styled.div`
@@ -61,8 +70,25 @@ const ArticleTitle = styled.h3`
   line-height: 2.3rem;
 `;
 
-const ArticleRate = styled.p`
+const ArticleRateText = styled.p`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+`;
+
+const ArticleTagList = styled.ul`
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+const ArticleTagListItem = styled.li`
+  ${({ theme }) => theme.fonts.body5};
+
+  height: 2.5rem;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid ${({ theme }) => theme.colors.grey600};
+  border-radius: 22px;
+  color: ${({ theme }) => theme.colors.grey600};
 `;
