@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import FooterBottomFirstRow from './FooterBottomFirstRow';
 import FooterBottomSecondRow from './FooterBottomSecondRow';
 import FooterBottomThirdRow from './FooterBottomThirdRow';
+import { SectionContainer } from '@styles/globalStyle';
 
 /** footer bottom section */
 export default function FooterBottom() {
@@ -14,7 +15,7 @@ export default function FooterBottom() {
   );
 }
 
-const FooterBottomBox = styled.div`
+const FooterBottomBox = styled(SectionContainer)`
   ${({ theme }) => theme.fonts.body6};
 
   display: flex;
@@ -22,7 +23,7 @@ const FooterBottomBox = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
-  padding: 2.2rem 5.8rem 3.5rem;
+  padding-top: 2.2rem;
+  padding-bottom: 3.5rem;
   color: ${({ theme }) => theme.colors.grey500};
 `;

@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 import HeaderLeft from './HeaderLeft/HeaderLeft';
 import HeaderRight from './HeaderRight/HeaderRight';
+import { SectionContainer } from '@styles/globalStyle';
 
 /** header */
 export default function Header() {
   return (
-    <HeaderContainer>
+    <HeaderContainer as="header">
       <HeaderLeft />
       <HeaderRight />
     </HeaderContainer>
   );
 }
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled(SectionContainer)`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 6.3rem;
-  padding: 0 6rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey300};
 `;
