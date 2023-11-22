@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BannerProfileIc from '@assets/icon/banner/bannerProfileIc.svg';
+import BannerProfileIc from '@assets/icon/banner/bannerProfileIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
 import HeaderInput from './HeaderInput';
 
