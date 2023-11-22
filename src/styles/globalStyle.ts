@@ -1,10 +1,15 @@
-import { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import resetStyle from './resetStyle';
 
 export const flexCenter = css`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const SectionContainer = styled.section`
+  padding: 0 6rem;
+  width: 100%;
 `;
 
 export const GlobalStyle = createGlobalStyle`
