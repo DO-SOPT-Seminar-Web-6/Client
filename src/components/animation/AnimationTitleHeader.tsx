@@ -12,6 +12,7 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  margin-bottom: 3rem;
 `;
 
 const AnimationTitle = styled.h1`
