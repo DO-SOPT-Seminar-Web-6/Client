@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import WatchaOpenIc from '@assets/icon/watcha/watchaOpenIc.svg';
-import WatchaCloseIc from '@assets/icon/watcha/watchaCloseIc.svg';
+import WatchaOpenIc from '@assets/icon/watcha/watchaOpenIc.svg?react';
+import WatchaCloseIc from '@assets/icon/watcha/watchaCloseIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
 import { useState } from 'react';
 

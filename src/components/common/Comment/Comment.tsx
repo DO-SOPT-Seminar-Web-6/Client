@@ -1,6 +1,6 @@
-import ReviewStarFullIc from '@assets/icon/review/reviewStarFullIc.svg';
-import ReviewLikeCommentIc from '@assets/icon/review/reviewLikeCommentIc.svg';
-import ReviewLikeUnActiveIc from '@assets/icon/review/reviewLikeUnActiveIc.svg';
+import ReviewStarFullIc from '@assets/icon/review/reviewStarFullIc.svg?react';
+import ReviewLikeCommentIc from '@assets/icon/review/reviewLikeCommentIc.svg?react';
+import ReviewLikeUnActiveIc from '@assets/icon/review/reviewLikeUnActiveIc.svg?react';
 
 interface InCommentTypeProps {
   userName: string;

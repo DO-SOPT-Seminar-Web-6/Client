@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import castDetailLikeIc from '@assets/icon/watcha/watchaListStarIc.svg';
+import castDetailLikeIc from '@assets/icon/watcha/watchaListStarIc.svg?react';
 
 interface InMovieArticleProps {
   title: string;

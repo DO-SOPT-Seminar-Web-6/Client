@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import watchaLogoIc from '@assets/icon/banner/watchaLogoIc.svg';
+import watchaLogoIc from '@assets/icon/banner/watchaLogoIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
 import HeaderNav from './HeaderNav';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bannerSearchIc from '@assets/icon/banner/bannerSearchIc.svg';
+import bannerSearchIc from '@assets/icon/banner/bannerSearchIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
 
 /** header right section input */
