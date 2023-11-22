@@ -1,4 +1,6 @@
-export { ReactComponent as BannerProfileIc } from './icon/banner/bannerProfileIc.svg';
+import BannerProfileIc from './icon/banner/bannerProfileIc.svg?react';
+
+export { BannerProfileIc };
 // export { ReactComponent as BannerSearchIc } from './icon/banner/bannerSearchIc.svg';
 // export { ReactComponent as WatchaLogoIc } from './icon/banner/watchaLogoIc.svg';
 
