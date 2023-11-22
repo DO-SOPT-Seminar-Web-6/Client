@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { CollectDetailLikeTopIc, CollectDetailChatTopIc, CollectDetailShareTopIc } from '@assets/index';
+
 export default function AnimationTitleButtons() {
   return (
     <ButtonBox>
