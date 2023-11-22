@@ -17,6 +17,7 @@ export default function AnimationTitleDetail() {
 const Wrapper = styled.article`
   display: flex;
   gap: 1.4rem;
+  margin-bottom: 2rem;
   ${({ theme }) => theme.fonts.body2};
 `;
 
