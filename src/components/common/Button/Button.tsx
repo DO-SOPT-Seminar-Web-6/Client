@@ -36,9 +36,9 @@ const ButtonContainer = styled.button`
   ${flexCenter}
   ${({ theme }) => theme.fonts.body3};
 
-  width: 16.6rem;
-  height: 3.4rem;
   border: 1px solid ${({ theme }) => theme.colors.grey300};
   border-radius: 6px;
+  width: 16.6rem;
+  height: 3.4rem;
   color: ${({ theme }) => theme.colors.mainPink};
 `;

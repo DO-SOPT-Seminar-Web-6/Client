@@ -25,15 +25,15 @@ export default function MovieInfo({ title, rate, subInfo }: InMovieArticleProps)
 const ArticleInfoBox = styled.div`
   ${({ theme }) => theme.fonts.body3};
 
-  color: ${({ theme }) => theme.colors.grey600};
   line-height: 2rem;
+  color: ${({ theme }) => theme.colors.grey600};
 `;
 
 const ArticleTitle = styled.h3`
   ${({ theme }) => theme.fonts.subTitle5};
 
-  color: ${({ theme }) => theme.colors.black};
   line-height: 2.3rem;
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 const ArticleRateText = styled.p`

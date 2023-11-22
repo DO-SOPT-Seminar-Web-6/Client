@@ -18,9 +18,9 @@ const HeaderSearchForm = styled.form`
   ${flexCenter}
 
   gap: 0.7rem;
+  background-color: ${({ theme }) => theme.colors.grey200};
   width: 29.8rem;
   height: 3.7rem;
-  background-color: ${({ theme }) => theme.colors.grey200};
 `;
 
 const HeaderSearchLabel = styled.label`

@@ -23,9 +23,9 @@ const ArticleTagList = styled.ul`
 const ArticleTagListItem = styled.li`
   ${({ theme }) => theme.fonts.body5};
 
-  height: 2.5rem;
-  padding: 0.4rem 1.2rem;
   border: 1px solid ${({ theme }) => theme.colors.grey600};
   border-radius: 22px;
+  padding: 0.4rem 1.2rem;
+  height: 2.5rem;
   color: ${({ theme }) => theme.colors.grey600};
 `;

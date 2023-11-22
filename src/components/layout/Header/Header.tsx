@@ -17,6 +17,6 @@ const HeaderContainer = styled(SectionContainer)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6.3rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey300};
+  height: 6.3rem;
 `;

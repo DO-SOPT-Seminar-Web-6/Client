@@ -8,8 +8,8 @@ export const flexCenter = css`
 `;
 
 export const SectionContainer = styled.section`
-  width: 100%;
   padding: 0 6rem;
+  width: 100%;
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -21,10 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    width: 136.6rem;
     margin: 0 auto;
-    font-family: 'Noto Sans KR', sans-serif;
+    width: 136.6rem;
     letter-spacing: normal;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 `;
 

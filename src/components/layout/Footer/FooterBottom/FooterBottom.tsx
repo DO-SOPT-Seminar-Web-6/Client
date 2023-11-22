@@ -19,8 +19,8 @@ const FooterBottomBox = styled(SectionContainer)`
   ${({ theme }) => theme.fonts.body6};
 
   display: flex;
-  gap: 1.6rem;
   flex-direction: column;
+  gap: 1.6rem;
   align-items: flex-start;
   justify-content: center;
   padding-top: 2.2rem;
