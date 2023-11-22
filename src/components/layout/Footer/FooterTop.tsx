@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import footerStarIc from '@assets/icon/footer/footerStarIc.svg';
+import footerStarIc from '@assets/icon/footer/footerStarIc.svg?react';
 
 /** footer top section */
 export default function FooterTop() {

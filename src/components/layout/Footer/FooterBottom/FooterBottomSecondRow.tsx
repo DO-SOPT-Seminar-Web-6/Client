@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import footerPushDownIc from '@assets/icon/footer/footerPushDownIc.svg';
+import footerPushDownIc from '@assets/icon/footer/footerPushDownIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
 
 /** footer bottom section second row */
