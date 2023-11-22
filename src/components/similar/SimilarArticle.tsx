@@ -19,31 +19,31 @@ export default function SimilarArticle() {
       <MovieArticle
         imgSrc={SimilarNum2Img}
         title="하울의 움직이는 성"
-        rate={3.8}
-        tag={['가족', '애니메이션']}
+        rate={4.2}
+        tag={['애니메이션', '모험']}
       />
       <MovieArticle
         imgSrc={SimilarNum3Img}
-        title="마녀 배달부 키키"
-        rate={3.8}
-        tag={['가족', '애니메이션']}
+        title="센과 치히로의 행방불명"
+        rate={4.3}
+        tag={['애니메이션', '판타지']}
       />
       <MovieArticle
         imgSrc={SimilarNum4Img}
-        title="마녀 배달부 키키"
-        rate={3.8}
-        tag={['가족', '애니메이션']}
+        title="모노노케 히메"
+        rate={4.0}
+        tag={['스튜디오 지브리', '가족']}
       />
       <MovieArticle
         imgSrc={SimilarNum5Img}
-        title="마녀 배달부 키키"
-        rate={3.8}
-        tag={['가족', '애니메이션']}
+        title="붉은 거북"
+        rate={3.5}
+        tag={['애니메이션', '판타지']}
       />
       <MovieArticle
         imgSrc={SimilarNum6Img}
-        title="마녀 배달부 키키"
-        rate={3.8}
+        title="반딧불이의 묘"
+        rate={3.4}
         tag={['가족', '애니메이션']}
       />
     </Article>
