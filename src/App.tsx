@@ -1,12 +1,12 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import MainLayout from '@components/layout/MainLayout';
+import Comments from '@pages/Comments/Comments';
+import Director from '@pages/Director/Director';
+import Error from '@pages/Error/Error';
+import Main from '@pages/Main/Main';
 import GlobalStyle from '@styles/globalStyle';
 import theme from '@styles/theme';
-import Main from '@pages/Main/Animation';
-import Comments from '@pages/Comments/Animation';
-import Director from '@pages/Director/Animation';
-import Error from '@pages/Error/Error';
 
 const router = createBrowserRouter([
   {
