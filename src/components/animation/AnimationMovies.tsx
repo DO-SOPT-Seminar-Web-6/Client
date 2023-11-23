@@ -4,7 +4,7 @@ import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import { animationMovies } from '@core/animationMovies';
 
 export default function AnimationMovies() {
-  const imgSize = [16.4, 23.8];
+  const imgSize: number[] = [16.4, 23.8];
   return (
     <MoviesArr>
       {animationMovies &&
@@ -12,6 +12,7 @@ export default function AnimationMovies() {
           const { img, title, rate, subInfo } = movie;
           return (
             <MovieArticle
+              key={title}
               imgHeight={imgSize[1]}
               imgWidth={imgSize[0]}
               imgSrc={img}
