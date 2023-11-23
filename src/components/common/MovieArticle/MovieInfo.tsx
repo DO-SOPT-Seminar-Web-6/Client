@@ -1,20 +1,21 @@
 import styled from 'styled-components';
-import castDetailLikeIc from '@assets/icon/watcha/watchaListStarIc.svg?react';
 
 interface InMovieArticleProps {
   title: string;
   rate: number;
+  keyword: string;
+  icon? : string;
   subInfo?: string;
 }
 
 /** each movie info  */
-export default function MovieInfo({ title, rate, subInfo }: InMovieArticleProps) {
+export default function MovieInfo({ keyword, icon, title, rate, subInfo }: InMovieArticleProps) {
   return (
     <ArticleInfoBox>
       <ArticleTitle>{title}</ArticleTitle>
       <ArticleRateText>
-        <span>평균</span>
-        <img src={castDetailLikeIc} />
+        <span>{keyword}</span>
+        {icon && <img src={icon}/>} 
         <span>{rate}</span>
       </ArticleRateText>
       {subInfo && <p>{subInfo}</p>}
