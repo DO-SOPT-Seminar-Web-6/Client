@@ -46,3 +46,15 @@ const CommentMiddleText = styled.p<InContainerTypes>`
   text-overflow: ellipsis;
   line-height: 2.3rem;
 `;
+
+{
+  /** 이런 식으로 사용하면 됩니다 */
+}
+{
+  /** <Comment
+   *    userName="너"
+   *    content="설명"
+   *    isThumbnail={true} // isThumbnail은 comment view 말고 thumbnail view에서 사용할 때만 true로 속성 넣어주시면 되고, comment view에서 사용할 경우, 속성 추가 안하셔도 됩니다
+   *  />
+   */
+}
