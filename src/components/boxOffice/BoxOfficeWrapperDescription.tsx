@@ -9,8 +9,8 @@ interface InBoxOfficePropsTypes {
   imgHeight:number;
 }
 
-export default function BoxOfficeWrapperDescriptions({title, rate,imgSrc, imgWidth, imgHeight}:InBoxOfficePropsTypes){
-  
+export default function BoxOfficeWrapperDescriptions(InBoxOfficePropsTypes){
+  const {title, rate,imgSrc, imgWidth, imgHeight} = InBoxOfficePropsTypes;
   return (
     <DescriptionBox>
       <DescriptionImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />

@@ -1,8 +1,8 @@
+import React from "react";
 import styled from 'styled-components';
 import BoxOfficeWrapperDescription from './BoxOfficeWrapperDescription';
-
-interface InBoxOfficePropsTypes {
-  WrapperNumber : string;
+interface InBoxOfficeMoviesProps {
+  wrapperNumber : string;
   imgSrc: string;
   title: string;
   rate: number;
@@ -12,17 +12,17 @@ interface InBoxOfficePropsTypes {
 
 /** each BoxOffice info  */
 export default function BoxOfficeWrapper({
-  WrapperNumber,
+  wrapperNumber,
   imgSrc,
   title,
   rate,
   imgWidth = 15,
   imgHeight = 21.6,
-}: InBoxOfficePropsTypes) {
+}: InBoxOfficeMoviesProps): JSX.Element{
 
-  return (
+  return ( 
     <WrapperContents>
-      <Grade>{WrapperNumber}</Grade>
+      <Grade>{wrapperNumber}</Grade>
       <BoxOfficeWrapperDescription imgSrc={imgSrc} title={title} rate={rate} imgWidth={imgWidth} imgHeight={imgHeight}/>
     </WrapperContents>
   );
