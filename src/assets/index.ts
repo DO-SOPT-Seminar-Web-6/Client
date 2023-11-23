@@ -1,67 +1,128 @@
-export { ReactComponent as BannerProfileIc } from './icon/banner/bannerProfileIc.svg';
-export { ReactComponent as BannerSearchIc } from './icon/banner/bannerSearchIc.svg';
-export { ReactComponent as WatchaLogoIc } from './icon/banner/watchaLogoIc.svg';
+import BannerProfileIc from './icon/banner/bannerProfileIc.svg?react';
+import BannerSearchIc from './icon/banner/bannerSearchIc.svg?react';
+import WatchaLogoIc from './icon/banner/watchaLogoIc.svg?react';
 
-export { ReactComponent as BodyCommentChatIc } from './icon/body/bodyCommentChatIc.svg';
-export { ReactComponent as BodyCommentLikeIc } from './icon/body/bodyCommentLikeIc.svg';
-export { ReactComponent as BodyCommentStars1Ic } from './icon/body/bodyCommentStars1Ic.svg';
-export { ReactComponent as BodyCommentStars2Ic } from './icon/body/bodyCommentStars2Ic.svg';
-export { ReactComponent as BodyGradeIc } from './icon/body/bodyGradeIc.svg';
-export { ReactComponent as BodyMenuHoverIc } from './icon/body/bodyMenuHoverIc.svg';
-export { ReactComponent as BodyMenuNormalIc } from './icon/body/bodyMenuNormalIc.svg';
-export { ReactComponent as BodyPencilHoverIc } from './icon/body/bodyPencilHoverIc.svg';
-export { ReactComponent as BodyPencilNormalIc } from './icon/body/bodyPencilNormalIc.svg';
-export { ReactComponent as BodyPlusHoverIc } from './icon/body/bodyPlusHoverIc.svg';
-export { ReactComponent as BodyPlusNormalIc } from './icon/body/bodyPlusNormalIc.svg';
-export { ReactComponent as BodyPlusSelectIc } from './icon/body/bodyPlusSelectIc.svg';
-export { ReactComponent as BodyPopupArchiveActiveIc } from './icon/body/bodyPopupArchiveActiveIc.svg';
-export { ReactComponent as BodyPopupArchiveHoverIc } from './icon/body/bodyPopupArchiveHoverIc.svg';
-export { ReactComponent as BodyPopupArchiveUnActiveIc } from './icon/body/bodyPopupArchiveUnActiveIc.svg';
-export { ReactComponent as BodyPopupDoNotActiveIc } from './icon/body/bodyPopupDoNotActiveIc.svg';
-export { ReactComponent as BodyPopupDoNotHoverIc } from './icon/body/bodyPopupDoNotHoverIc.svg';
-export { ReactComponent as BodyPopupDoNotUnActiveIc } from './icon/body/bodyPopupDoNotUnActiveIc.svg';
-export { ReactComponent as BodyPopupEventActiveIc } from './icon/body/bodyPopupEventActiveIc.svg';
-export { ReactComponent as BodyPopupEventHoverIc } from './icon/body/bodyPopupEventHoverIc.svg';
-export { ReactComponent as BodyPopupEventUnActiveIc } from './icon/body/bodyPopupEventUnActiveIc.svg';
-export { ReactComponent as BodyPopupPencilActiveIc } from './icon/body/bodyPopupPencilActiveIc.svg';
-export { ReactComponent as BodyPopupPencilHoverIc } from './icon/body/bodyPopupPencilHoverIc.svg';
-export { ReactComponent as BodyPopupPencilUnActiveIc } from './icon/body/bodyPopupPencilUnActiveIc.svg';
-export { ReactComponent as BodyPopupTrashActiveIc } from './icon/body/bodyPopupTrashActiveIc.svg';
-export { ReactComponent as BodyPopupTrashHoverIc } from './icon/body/bodyPopupTrashHoverIc.svg';
-export { ReactComponent as BodyPopupTrashUnActiveIc } from './icon/body/bodyPopupTrashUnActiveIc.svg';
-export { ReactComponent as BodyProfileIc } from './icon/body/bodyProfileIc.svg';
-export { ReactComponent as BodyStarEmptyIc } from './icon/body/bodyStarEmptyIc.svg';
-export { ReactComponent as BodyStarFillIc } from './icon/body/bodyStarFillIc.svg';
-export { ReactComponent as BodyStarHalfIc } from './icon/body/bodyStarHalfIc.svg';
+import BodyCommentChatIc from './icon/body/bodyCommentChatIc.svg?react';
+import BodyCommentLikeIc from './icon/body/bodyCommentLikeIc.svg?react';
+import BodyCommentStars1Ic from './icon/body/bodyCommentStars1Ic.svg?react';
+import BodyCommentStars2Ic from './icon/body/bodyCommentStars2Ic.svg?react';
+import BodyGradeIc from './icon/body/bodyGradeIc.svg?react';
+import BodyMenuHoverIc from './icon/body/bodyMenuHoverIc.svg?react';
+import BodyMenuNormalIc from './icon/body/bodyMenuNormalIc.svg?react';
+import BodyPencilHoverIc from './icon/body/bodyPencilHoverIc.svg?react';
+import BodyPencilNormalIc from './icon/body/bodyPencilNormalIc.svg?react';
+import BodyPlusHoverIc from './icon/body/bodyPlusHoverIc.svg?react';
+import BodyPlusNormalIc from './icon/body/bodyPlusNormalIc.svg?react';
+import BodyPlusSelectIc from './icon/body/bodyPlusSelectIc.svg?react';
+import BodyPopupArchiveActiveIc from './icon/body/bodyPopupArchiveActiveIc.svg?react';
+import BodyPopupArchiveHoverIc from './icon/body/bodyPopupArchiveHoverIc.svg?react';
+import BodyPopupArchiveUnActiveIc from './icon/body/bodyPopupArchiveUnActiveIc.svg?react';
+import BodyPopupDoNotActiveIc from './icon/body/bodyPopupDoNotActiveIc.svg?react';
+import BodyPopupDoNotHoverIc from './icon/body/bodyPopupDoNotHoverIc.svg?react';
+import BodyPopupDoNotUnActiveIc from './icon/body/bodyPopupDoNotUnActiveIc.svg?react';
+import BodyPopupEventActiveIc from './icon/body/bodyPopupEventActiveIc.svg?react';
+import BodyPopupEventHoverIc from './icon/body/bodyPopupEventHoverIc.svg?react';
+import BodyPopupEventUnActiveIc from './icon/body/bodyPopupEventUnActiveIc.svg?react';
+import BodyPopupPencilActiveIc from './icon/body/bodyPopupPencilActiveIc.svg?react';
+import BodyPopupPencilHoverIc from './icon/body/bodyPopupPencilHoverIc.svg?react';
+import BodyPopupPencilUnActiveIc from './icon/body/bodyPopupPencilUnActiveIc.svg?react';
+import BodyPopupTrashActiveIc from './icon/body/bodyPopupTrashActiveIc.svg?react';
+import BodyPopupTrashHoverIc from './icon/body/bodyPopupTrashHoverIc.svg?react';
+import BodyPopupTrashUnActiveIc from './icon/body/bodyPopupTrashUnActiveIc.svg?react';
+import BodyProfileIc from './icon/body/bodyProfileIc.svg?react';
+import BodyStarEmptyIc from './icon/body/bodyStarEmptyIc.svg?react';
+import BodyStarFillIc from './icon/body/bodyStarFillIc.svg?react';
+import BodyStarHalfIc from './icon/body/bodyStarHalfIc.svg?react';
 
-export { ReactComponent as BoxOfficeStarIc } from './icon/boxOffice/boxOfficeStarIc.svg';
+import BoxOfficeStarIc from './icon/boxOffice/boxOfficeStarIc.svg?react';
 
-export { ReactComponent as CastDetailLikeIc } from './icon/cast/castDetail/castDetailLikeIc.svg';
+import CastDetailLikeIc from './icon/cast/castDetail/castDetailLikeIc.svg?react';
 
-export { ReactComponent as CollectDetailChatBottomIc } from './icon/collection/collectDetail/collectDetailChatBottomIc.svg';
-export { ReactComponent as CollectDetailChatTopIc } from './icon/collection/collectDetail/collectDetailChatTopIc.svg';
-export { ReactComponent as CollectDetailLikeBottomIc } from './icon/collection/collectDetail/collectDetailLikeBottomIc.svg';
-export { ReactComponent as CollectDetailLikeTopIc } from './icon/collection/collectDetail/collectDetailLikeTopIc.svg';
-export { ReactComponent as CollectDetailMenuBottomIc } from './icon/collection/collectDetail/collectDetailMenuBottomIc.svg';
-export { ReactComponent as CollectDetailShareTopIc } from './icon/collection/collectDetail/collectDetailShareTopIc.svg';
-export { ReactComponent as CollectDetailStarIc } from './icon/collection/collectDetail/collectDetailStarIc.svg';
+import CollectDetailChatBottomIc from './icon/collection/collectDetail/collectDetailChatBottomIc.svg?react';
+import CollectDetailChatTopIc from './icon/collection/collectDetail/collectDetailChatTopIc.svg?react';
+import CollectDetailLikeBottomIc from './icon/collection/collectDetail/collectDetailLikeBottomIc.svg?react';
+import CollectDetailLikeTopIc from './icon/collection/collectDetail/collectDetailLikeTopIc.svg?react';
+import CollectDetailMenuBottomIc from './icon/collection/collectDetail/collectDetailMenuBottomIc.svg?react';
+import CollectDetailShareTopIc from './icon/collection/collectDetail/collectDetailShareTopIc.svg?react';
+import CollectDetailStarIc from './icon/collection/collectDetail/collectDetailStarIc.svg?react';
 
-export { ReactComponent as FooterPushDownIc } from './icon/footer/footerPushDownIc.svg';
-export { ReactComponent as FooterStarIc } from './icon/footer/footerStarIc.svg';
+import FooterPushDownIc from './icon/footer/footerPushDownIc.svg?react';
+import FooterStarIc from './icon/footer/footerStarIc.svg?react';
 
-export { ReactComponent as PopupExitIc } from './icon/popup/popupExitIc.svg';
+import PopupExitIc from './icon/popup/popupExitIc.svg?react';
 
-export { ReactComponent as ReviewFilterIc } from './icon/review/reviewFilterIc.svg';
-export { ReactComponent as ReviewLikeActiveIc } from './icon/review/reviewLikeActiveIc.svg';
-export { ReactComponent as ReviewLikeCommentIc } from './icon/review/reviewLikeCommentIc.svg';
-export { ReactComponent as ReviewLikeUnActiveIc } from './icon/review/reviewLikeUnActiveIc.svg';
-export { ReactComponent as ReviewStarEmptyIc } from './icon/review/reviewStarEmptyIc.svg';
-export { ReactComponent as ReviewStarFullIc } from './icon/review/reviewStarFullIc.svg';
-export { ReactComponent as ReviewStarHalfIc } from './icon/review/reviewStarHalfIc.svg';
+import ReviewFilterIc from './icon/review/reviewFilterIc.svg?react';
+import ReviewLikeActiveIc from './icon/review/reviewLikeActiveIc.svg?react';
+import ReviewLikeCommentIc from './icon/review/reviewLikeCommentIc.svg?react';
+import ReviewLikeUnActiveIc from './icon/review/reviewLikeUnActiveIc.svg?react';
+import ReviewStarEmptyIc from './icon/review/reviewStarEmptyIc.svg?react';
+import ReviewStarFullIc from './icon/review/reviewStarFullIc.svg?react';
+import ReviewStarHalfIc from './icon/review/reviewStarHalfIc.svg?react';
 
-export { ReactComponent as SimilarPlusActive } from './icon/similar/similarPlusActive.svg';
-export { ReactComponent as SimilarPlusUnActive } from './icon/similar/similarPlusUnActive.svg';
+import SimilarPlusActive from './icon/similar/similarPlusActive.svg?react';
+import SimilarPlusUnActive from './icon/similar/similarPlusUnActive.svg?react';
 
-export { ReactComponent as WatchaCloseIc } from './icon/watcha/watchaCloseIc.svg';
-export { ReactComponent as WatchaListStarIc } from './icon/watcha/watchaListStarIc.svg';
-export { ReactComponent as WatchaOpenIc } from './icon/watcha/watchaOpenIc.svg';
+import WatchaCloseIc from './icon/watcha/watchaCloseIc.svg?react';
+import WatchaListStarIc from './icon/watcha/watchaListStarIc.svg?react';
+import WatchaOpenIc from './icon/watcha/watchaOpenIc.svg?react';
+
+export {
+  BannerProfileIc,
+  BannerSearchIc,
+  WatchaLogoIc,
+  BodyCommentChatIc,
+  BodyCommentLikeIc,
+  BodyCommentStars1Ic,
+  BodyCommentStars2Ic,
+  BodyGradeIc,
+  BodyMenuHoverIc,
+  BodyMenuNormalIc,
+  BodyPencilHoverIc,
+  BodyPencilNormalIc,
+  BodyPlusHoverIc,
+  BodyPlusNormalIc,
+  BodyPlusSelectIc,
+  BodyPopupArchiveActiveIc,
+  BodyPopupArchiveHoverIc,
+  BodyPopupArchiveUnActiveIc,
+  BodyPopupDoNotActiveIc,
+  BodyPopupDoNotHoverIc,
+  BodyPopupDoNotUnActiveIc,
+  BodyPopupEventActiveIc,
+  BodyPopupEventHoverIc,
+  BodyPopupEventUnActiveIc,
+  BodyPopupPencilActiveIc,
+  BodyPopupPencilHoverIc,
+  BodyPopupPencilUnActiveIc,
+  BodyPopupTrashActiveIc,
+  BodyPopupTrashHoverIc,
+  BodyPopupTrashUnActiveIc,
+  BodyProfileIc,
+  BodyStarEmptyIc,
+  BodyStarFillIc,
+  BodyStarHalfIc,
+  BoxOfficeStarIc,
+  CastDetailLikeIc,
+  CollectDetailChatBottomIc,
+  CollectDetailChatTopIc,
+  CollectDetailLikeBottomIc,
+  CollectDetailLikeTopIc,
+  CollectDetailMenuBottomIc,
+  CollectDetailShareTopIc,
+  CollectDetailStarIc,
+  FooterPushDownIc,
+  FooterStarIc,
+  PopupExitIc,
+  ReviewFilterIc,
+  ReviewLikeActiveIc,
+  ReviewLikeCommentIc,
+  ReviewLikeUnActiveIc,
+  ReviewStarEmptyIc,
+  ReviewStarFullIc,
+  ReviewStarHalfIc,
+  SimilarPlusActive,
+  SimilarPlusUnActive,
+  WatchaCloseIc,
+  WatchaListStarIc,
+  WatchaOpenIc,
+};
