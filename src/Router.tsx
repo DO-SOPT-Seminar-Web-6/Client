@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Main /> },
+      { index: true, element: <Main /> },
       { path: '/animation', element: <Animation /> },
       { path: '/main', element: <Main /> },
       { path: '/comments', element: <Comments /> },
