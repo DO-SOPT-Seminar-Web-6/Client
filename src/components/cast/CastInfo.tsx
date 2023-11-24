@@ -22,9 +22,9 @@ const CastInfoBox = styled.section`
   flex-direction: column;
   gap:0.5rem;
   padding:0.2rem 0;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
   width: 22.9rem;
   height: 6.3rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
 `
 
 const CastName = styled.p`
