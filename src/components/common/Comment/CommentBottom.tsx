@@ -20,12 +20,12 @@ export default function CommentBottom() {
 }
 
 const CommentBottomBox = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.colors.grey300};
-  width: 100%;
-  height: 3.4rem;
   display: flex;
   gap: 1.2rem;
   align-items: flex-end;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey300};
+  width: 100%;
+  height: 3.4rem;
 `;
 
 const CommentBottomButton = styled.button`
