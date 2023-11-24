@@ -43,6 +43,7 @@ const fonts = {
   subTitle5: FONT({ weight: 500, size: 1.6 }),
   subTitle160: FONT({ weight: 500, size: 1.6, lineHeight: 1.6 }),
   subTitle6: FONT({ weight: 400, size: 1.6 }),
+  subTitle7: FONT({ weight: 500, size: 3.5 }),
   body1: FONT({ weight: 700, size: 1.4 }),
   body2: FONT({ weight: 500, size: 1.4 }),
   body2160: FONT({ weight: 500, size: 1.4, lineHeight: 1.6 }),
