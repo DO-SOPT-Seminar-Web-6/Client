@@ -19,5 +19,5 @@ const Description = styled.p`
   ${({ theme }) => theme.fonts.body2160};
   border-top: 1px solid ${({ theme }) => theme.colors.grey400};
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
-  color: ${({ theme }) => theme.colors.
+  color: ${({ theme }) => theme.colors.grey600};
 `;
