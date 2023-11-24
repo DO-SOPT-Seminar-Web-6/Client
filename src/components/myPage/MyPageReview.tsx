@@ -30,8 +30,8 @@ const TagBox = styled.article`
   padding: 4rem 0;
   &>h2{
     ${({ theme }) => theme.fonts.body5};
-    line-height: 1.8rem;
     margin-bottom:1.2rem;
+    line-height: 1.8rem;
     color: ${({ theme }) => theme.colors.grey600};
   }
 `
@@ -40,8 +40,8 @@ const MyCommentBox = styled.section`
   padding: 4rem 0 0;
   &>h2{
     ${({ theme }) => theme.fonts.body5};
-    line-height: 1.8rem;
     margin-bottom:1.2rem;
+    line-height: 1.8rem;
     color: ${({ theme }) => theme.colors.grey600};
   }
 `
@@ -57,7 +57,7 @@ const MyComment = styled.article`
 `
 const Text = styled.p`
   ${({ theme }) => theme.fonts.body2};
-  line-height: 2rem;
   width: 9.3rem;
+  line-height: 2rem;
   height: 4rem;
 `

@@ -1,33 +1,35 @@
 import React from 'react'
-import Comment from '@components/common/Comment/Comment'
 import styled from 'styled-components'
+import PopularCommentDetails from './PopularCommentDetails'
+import { popularComments } from '@core/popularComments'
 
 export default function MyPagePopularComment() {
 
   return (
-    <PopularCommentBox>
+    <PopularCommentSection>
       <h2>인기 코멘트</h2>
-      <PopularCommentDetails>
-        <Comment
-          userName="신상훈남" 
-          content="설명" 
-          isThumbnail={true}
-        />
-        <Comment
-          userName="신상훈남" 
-          content="설명" 
-          isThumbnail={true}
-        />
-      </PopularCommentDetails> 
-    </PopularCommentBox>
+      <PopularCommentBox>
+        {popularComments && popularComments.map((data)=> {
+          const {imgSrc, name, comments,likes, numComments} =data;
+          return(
+            <PopularCommentDetails 
+            imgSrc={imgSrc}
+            name={name}
+            comments={comments}
+            likes={likes}
+            numComments={numComments}/>
+          )
+        })}
+      </PopularCommentBox> 
+    </PopularCommentSection>
   )
 }
 
-const PopularCommentBox = styled.section`
+const PopularCommentSection = styled.section`
   display:flex;
   flex-direction:column;
   gap: 1.2rem;
-  padding: 3rem 0 0;
+  padding: 3rem 0;
   height: 28.1rem;
   &>h2{
     ${({ theme }) => theme.fonts.body5};
@@ -36,7 +38,7 @@ const PopularCommentBox = styled.section`
     color: ${({ theme }) => theme.colors.grey600};
   }
 `
-const PopularCommentDetails= styled.section`
+const PopularCommentBox= styled.section`
   display:flex;
-  flex-direction:row;
+  gap: 2rem; 
 `
