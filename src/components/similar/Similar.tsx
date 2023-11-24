@@ -1,5 +1,5 @@
 import SimilarHeader from "./SimilarHeader";
-import { SectionContainer , flexCenter} from "@styles/globalStyle";
+import {SectionContainer} from "@styles/globalStyle";
 import SimilarArticle from "./SimilarArticle";
 import styled from "styled-components";
 import Button from "@components/common/Button/Button";
