@@ -21,8 +21,8 @@ const CastInfoBox = styled.section`
   display: flex;
   flex-direction: column;
   gap:0.5rem;
-  padding:0.2rem 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
+  padding:0.2rem 0;
   width: 22.9rem;
   height: 6.3rem;
 `
@@ -33,7 +33,7 @@ const CastName = styled.p`
 `
 
 const CastRole = styled.p`
-  ${({ theme }) => theme.fonts.body5}; 
+  ${({ theme }) => theme.fonts.body5};
   color: ${({ theme }) => theme.colors.grey600};
-  line-height:2.1rem;
-`
+  line-height: 2.1rem;
+`;
