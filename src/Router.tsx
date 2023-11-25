@@ -4,7 +4,7 @@ import Animation from '@pages/Animation';
 import Comments from '@pages/Comments/Comments';
 import Director from '@pages/Director/Director';
 import Error from '@pages/Error/Error';
-import Main from '@pages/Main/Main';
+import Main from '@pages/Main';
 
 export const router = createBrowserRouter([
   {
