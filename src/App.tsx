@@ -6,7 +6,6 @@ import Main from '@pages/Main';
 import { router } from 'Router';
 
 
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
