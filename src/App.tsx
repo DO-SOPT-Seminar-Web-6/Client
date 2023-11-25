@@ -2,6 +2,8 @@ import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '@styles/globalStyle';
 import theme from '@styles/theme';
+
+import Main from '@pages/Main';
 import { router } from 'Router';
 
 
@@ -10,7 +12,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <RouterProvider router={router} />
       <GlobalStyle />
-
     </ThemeProvider>
   );
 }
