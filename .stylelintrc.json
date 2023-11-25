@@ -17,14 +17,6 @@
     }
   ],
   "rules": {
-    "color-named": "never",
-    "value-no-vendor-prefix": [
-      true,
-      {
-        "ignore": [
-          "display"
-        ]
-      }
-    ]
+    "color-named": "never"
   }
 }
