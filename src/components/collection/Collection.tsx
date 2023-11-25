@@ -2,7 +2,6 @@ import { SectionContainer } from "@styles/globalStyle";
 import CollectionHeader from "./CollectionHeader";
 import CollectionArticle from "./CollectionArticle";
 import styled from "styled-components";
-import React from 'react';
 
 export default function Collection() {
 
