@@ -1,50 +1,60 @@
-import ReviewStarFullIc from '@assets/icon/review/reviewStarFullIc.svg?react';
-import ReviewLikeCommentIc from '@assets/icon/review/reviewLikeCommentIc.svg?react';
-import ReviewLikeUnActiveIc from '@assets/icon/review/reviewLikeUnActiveIc.svg?react';
+import styled from 'styled-components';
+import CommentTop from './CommentTop';
+import CommentBottom from './CommentBottom';
 
-interface InCommentTypeProps {
+interface InContainerTypes {
+  isThumbnail?: boolean;
+}
+
+interface InCommentPropsTypes extends InContainerTypes {
   userName: string;
+  content: string;
 }
 
 /** Comment */
-export default function Comment(props: InCommentTypeProps) {
-  const { userName } = props;
+export default function Comment(props: InCommentPropsTypes) {
+  const { userName, content, isThumbnail = false } = props;
 
   return (
-    <article>
-      <div>
-        <img src="" alt="user-profile" />
-        <span>{userName}</span>
-        <div>
-          <img src={ReviewStarFullIc} />
-          <img src={ReviewStarFullIc} />
-          <img src={ReviewStarFullIc} />
-          <img src={ReviewStarFullIc} />
-          <img src={ReviewStarFullIc} />
-        </div>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora reprehenderit aperiam ut nesciunt
-          perspiciatis, tenetur tempore unde ducimus dolore, cupiditate sapiente possimus libero placeat quibusdam saepe
-          officiis iste ab perferendis. Fuga voluptatem aliquid nesciunt commodi accusamus numquam deserunt totam
-          quaerat placeat qui, esse ullam quisquam eligendi molestias delectus perspiciatis eum veritatis dolorem
-          perferendis culpa voluptatum? Ipsam alias aliquid cum eaque. Aliquid molestias praesentium consequuntur eaque
-          pariatur exercitationem sequi numquam dicta ab, iure inventore quisquam, architecto, perferendis placeat quasi
-          fugit corporis cupiditate ut? Rerum laborum aut dolorem iste tempore ad iusto corrupti? Veniam voluptatum
-          accusantium, suscipit aut eligendi maiores reprehenderit?
-        </p>
-      </div>
-      <div>
-        <button>
-          <img src={ReviewLikeUnActiveIc} />
-          <span>755</span>
-        </button>
-        <button>
-          <img src={ReviewLikeCommentIc} />
-          <span>14</span>
-        </button>
-      </div>
-    </article>
+    <CommentContainer isThumbnail={isThumbnail}>
+      <CommentTop userName={userName} isThumbnail={isThumbnail} />
+      <CommentMiddleText>{content}</CommentMiddleText>
+      <CommentBottom />
+    </CommentContainer>
   );
+}
+
+const CommentContainer = styled.article<InContainerTypes>`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ isThumbnail }) => (isThumbnail ? '1.2rem' : '1.4rem')};
+  border-radius: 6px;
+  background-color: ${({ theme }) => theme.colors.grey100};
+  padding: 1.2rem;
+  width: ${({ isThumbnail }) => (isThumbnail ? '30.4rem' : '48.9rem')};
+  height: ${({ isThumbnail }) => (isThumbnail ? '25rem' : '25.1rem')};
+`;
+
+const CommentMiddleText = styled.p<InContainerTypes>`
+  ${({ theme }) => theme.fonts.body2160};
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box; /* stylelint-disable-line value-no-vendor-prefix */
+  width: 100%;
+  height: ${({ isThumbnail }) => (isThumbnail ? '12.2rem' : '12.1rem')};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 2.3rem;
+`;
+
+{
+  /** 이런 식으로 사용하면 됩니다 */
+}
+{
+  /** <Comment
+   *    userName="너"
+   *    content="설명"
+   *    isThumbnail={true} // isThumbnail은 comment view 말고 thumbnail view에서 사용할 때만 true로 속성 넣어주시면 되고, comment view에서 사용할 경우, 속성 추가 안하셔도 됩니다
+   *  />
+   */
 }
