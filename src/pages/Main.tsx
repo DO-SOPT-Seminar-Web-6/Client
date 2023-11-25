@@ -1,3 +1,4 @@
+import MainComment from "@components/mainComment/MainComment"
 import Cast from "@components/cast/Cast"
 import Similar from "@components/similar/Similar"
 import Collection from "@components/collection/Collection"
@@ -10,10 +11,10 @@ export default function Main() {
 <> 
   <Thumbnail/>
   <Cast/>
+  <MainComment/>
   <BoxOffice/>
   <Collection/>
   <Similar/>
   </>
   )
 }
-
