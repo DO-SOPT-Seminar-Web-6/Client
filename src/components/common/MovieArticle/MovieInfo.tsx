@@ -15,7 +15,7 @@ export default function MovieInfo({ keyword, icon, title, rate, subInfo }: InMov
       <ArticleTitle>{title}</ArticleTitle>
       <ArticleRateText>
         <span>{keyword}</span>
-        {icon && <img src={icon}/>} 
+        {icon && <img src={icon} />}
         <span>{rate}</span>
       </ArticleRateText>
       {subInfo && <p>{subInfo}</p>}
