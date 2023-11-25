@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 interface InMovieArticleProps {
   title: string;
   rate: number;
