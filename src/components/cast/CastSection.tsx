@@ -5,21 +5,15 @@ interface InCastSectionPropsTypes{
   imgSrc: string;
   name: string;
   role: string;
-  imgHeight: number;
-  imgWidth: number;
 }
 
 /** each movie info  */
-export default function CastSection({
-  imgSrc,
-  name,
-  role,
-  imgWidth= 5.7,
-  imgHeight= 5.7,
-}: InCastSectionPropsTypes) {
+export default function CastSection(props: InCastSectionPropsTypes) {
+  const { imgSrc, name, role } = props;
+
   return (
     <CastContainer>
-      <CastImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
+      <CastImage src={imgSrc}/>
       <CastInfo name={name} role={role}/>
     </CastContainer>
   );
@@ -33,8 +27,8 @@ const CastContainer = styled.article`
   height: 6.6rem;
 `;
 
-const CastImage = styled.img<InCastSectionPropsTypes>`
-  width: ${({ imgWidth }) => `${imgWidth}rem`};
-  height: ${({ imgHeight }) => `${imgHeight}rem`};
+const CastImage = styled.img`
+  width: 5.7rem;
+  height: 5.7rem;
 `;
 
