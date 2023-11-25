@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { CollectDetailLikeTopIc, CollectDetailChatTopIc, CollectDetailShareTopIc } from '@assets/index';
+
 export default function AnimationTitleButtons() {
   return (
     <ButtonBox>
@@ -51,8 +52,8 @@ const ButtonBox = styled.div`
 
   gap: 8.4rem;
   align-items: center;
+  justify-content: center;
   border: 1px solid ${({ theme }) => theme.colors.grey300};
-  width: 69.2rem;
   height: 5.2rem;
 `;
 

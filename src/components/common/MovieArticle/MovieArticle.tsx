@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import MovieTag from './MovieTag';
 import MovieInfo from './MovieInfo';
-
 interface InImageTypes {
   imgWidth?: number;
   imgHeight?: number;
 }
-
 interface InMovieArticleProps extends InImageTypes {
   imgSrc: string;
   title: string;
   rate: number;
+  keyword: string;
+  icon?: string;
   subInfo?: string;
   tag?: string[];
 }
@@ -22,13 +22,15 @@ export default function MovieArticle({
   rate,
   subInfo,
   tag,
+  keyword,
+  icon,
   imgWidth = 23.6,
   imgHeight = 35.2,
 }: InMovieArticleProps) {
   return (
     <ArticleContainer>
       <ArticleImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
-      <MovieInfo title={title} rate={rate} subInfo={subInfo} />
+      <MovieInfo title={title} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon} />
       <MovieTag tag={tag} />
     </ArticleContainer>
   );
