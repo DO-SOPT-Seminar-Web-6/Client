@@ -10,6 +10,6 @@ export default function Thumbnail() {
     </Wrapper>
   );
 }
-const Wrapper=styled.section`
-  position:relative;
-`
+const Wrapper = styled.section`
+  position: relative;
+`;
