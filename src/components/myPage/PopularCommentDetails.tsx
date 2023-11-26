@@ -1,16 +1,15 @@
 import React from 'react'
-import { MainContainer } from '@styles/Layout/MainContainer'
+import { MainContainer } from '@styles/Layout/MainContainer' 
 import styled from 'styled-components'
 import PopularCommentHeader from './PopularCommentHeader'
 import PopularCommentBottom from './PopularCommentBottom'
-import { flexCenter } from '@styles/globalStyle'
 
 interface InPopularCommentPropsTypes {
-  imgSrc: string
-  name: string
-  comments: string
-  likes: string
-  numComments: number
+  imgSrc: string;
+  name: string;
+  comments: string;
+  likes: string;
+  numComments: number;
 }
 
 /** Comment */
