@@ -9,14 +9,14 @@ import MyPage from "./MyPage"
 export default function Main() {
   
   return (
-<> 
-  <Thumbnail/>
-  <MyPage/>
-  <Cast/>
-  <MainComment/>
-  <BoxOffice/>
-  <Collection/>
-  <Similar/>
-  </>
-  )
+    <>
+      <Thumbnail />
+      <MyPage />
+      <Cast />
+      <MainComment />
+      <BoxOffice />
+      <Collection />
+      <Similar />
+    </>
+  );
 }
