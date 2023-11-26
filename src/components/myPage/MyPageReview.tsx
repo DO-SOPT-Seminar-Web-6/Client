@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import MovieTag from '@components/common/MovieArticle/MovieTag'
-import { flexCenter } from '@styles/globalStyle'
 import {BannerProfileIc} from '@assets/index'
 import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader'
 
@@ -11,7 +10,7 @@ export default function MyPageReview() {
       <MyCommentBox>
         <BoxHeader>내가 쓴 코멘트</BoxHeader>
         <MyComment>
-          <BannerProfileIc width="5.8rem" height="5.8rem"/>
+          <BannerProfileIcon/>
           <Text>심오합니다 깊고 좋았어요...</Text>
         </MyComment>
       </MyCommentBox>
@@ -52,4 +51,8 @@ const Text = styled.p`
   width: 9.3rem;
   height: 4rem;
   line-height: 2rem;
+`
+const BannerProfileIcon = styled(BannerProfileIc)`
+width: 5.8rem;
+height: 5.8rem;
 `
