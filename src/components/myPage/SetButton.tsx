@@ -9,11 +9,11 @@ import MyPageModal from '@utils/Modal';
 interface InSetButtonPropsTypes{
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
-  isWriteComment: React.Dispatch<React.SetStateAction<boolean>>;
+  isExistComment: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function SetButton(props:InSetButtonPropsTypes) {
-  const {comment, setComment, isWriteComment} = props;
+  const {comment, setComment, isExistComment} = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSeeMore, setIsSeeMore] = useState(false);
 
@@ -22,7 +22,7 @@ export default function SetButton(props:InSetButtonPropsTypes) {
   }
   function handleCloseModal(){
     setIsModalOpen(false); 
-    isWriteComment(true);
+    isExistComment(true);
   }
   function handleSeeMore() {
     setIsSeeMore((see) => !see);

@@ -4,18 +4,18 @@ import MovieTag from '@components/common/MovieArticle/MovieTag'
 import MyCommentBox from './MyCommentBox'
 import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader'
 interface InMyPageReviewPropsTypes{
-  writeComment: boolean;
+  existComment: boolean;
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
-  isWriteComment: React.Dispatch<React.SetStateAction<boolean>>;
+  isExistComment: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function MyPageReview(props:InMyPageReviewPropsTypes) {
-  const {writeComment, comment} = props;
+  const {existComment, comment} = props;
 
   return (
     <MyPageReviewBox>
-      {writeComment&&<MyCommentBox comment={comment}/>}
+      {existComment&&<MyCommentBox comment={comment}/>}
       <TagBox>
         <BoxHeader>선호하는 태그</BoxHeader>
         <MovieTag tag={['스튜디오 지브리','소셜 원작']} />

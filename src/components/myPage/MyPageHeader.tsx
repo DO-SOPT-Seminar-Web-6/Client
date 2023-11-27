@@ -5,21 +5,21 @@ import SetButton from './SetButton'
 import { flexCenter } from '@styles/globalStyle'
 
 interface InHeaderPropsTypes{
-  writeComment: boolean;
+  existComment: boolean;
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
-  isWriteComment: React.Dispatch<React.SetStateAction<boolean>>;
+  isExistComment: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function MyPageHeader(props:InHeaderPropsTypes) {
 
-  const {writeComment, comment, setComment, isWriteComment} = props;
+  const {existComment, comment, setComment, isExistComment} = props;
   return (
     <HeaderBox>
       <Contents>
         <SetStars/>
         <SetRates/>
-        <SetButton writeComment={writeComment} comment={comment} setComment={setComment} isWriteComment={isWriteComment}/>
+        <SetButton existComment={existComment} comment={comment} setComment={setComment} isExistComment={isExistComment}/>
       </Contents>
     </HeaderBox>
   )

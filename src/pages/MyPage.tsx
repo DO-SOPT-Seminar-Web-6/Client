@@ -8,15 +8,15 @@ import MyPagePopularComment from '@components/myPage/MyPagePopularComment';
 import { useState } from 'react';
 
 export default function MyPage() {
-  const [writeComment, isWriteComment] = useState(false);
+  const [existComment, isExistComment] = useState(false);
   const [comment, setComment] = useState(null);
 
   return (
     <Section>
       <MyPageSide />
       <MyPageBox>
-        <MyPageHeader comment={comment} writeComment={writeComment} setComment={setComment} isWriteComment={isWriteComment}/>
-        <MyPageReview comment={comment} writeComment={writeComment} setComment={setComment} isWriteComment={isWriteComment}/>
+        <MyPageHeader comment={comment} existComment={existComment} setComment={setComment} isExistComment={isExistComment}/>
+        <MyPageReview comment={comment} existComment={existComment} setComment={setComment} isExistComment={isExistComment}/>
         <MyPageDescription />
         <MyPagePopularComment />
       </MyPageBox>
