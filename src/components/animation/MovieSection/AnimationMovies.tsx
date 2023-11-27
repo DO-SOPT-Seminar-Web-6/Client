@@ -13,6 +13,7 @@ export default function AnimationMovies() {
           return (
             <MovieArticle
               key={title}
+              keyword="평점"
               imgHeight={imgSize[1]}
               imgWidth={imgSize[0]}
               imgSrc={img}
