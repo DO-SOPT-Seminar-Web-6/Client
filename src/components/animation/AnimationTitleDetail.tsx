@@ -1,16 +1,17 @@
 import styled from 'styled-components';
+import { AnimationDetailText } from '@styles/common/commonText';
 
 export default function AnimationTitleDetail() {
   return (
     <Wrapper>
-      <Details>좋아요</Details>
+      <AnimationDetailText>좋아요</AnimationDetailText>
       <Number>1324</Number>
       <DivideLine />
-      <Details>댓글</Details>
+      <AnimationDetailText>댓글</AnimationDetailText>
       <Number>9</Number>
       <DivideLine />
 
-      <Details>12일 전 업데이트</Details>
+      <AnimationDetailText>12일 전 업데이트</AnimationDetailText>
     </Wrapper>
   );
 }
@@ -20,10 +21,6 @@ const Wrapper = styled.article`
   gap: 1.4rem;
   margin-bottom: 2rem;
   ${({ theme }) => theme.fonts.body2};
-`;
-
-const Details = styled.h2`
-  color: ${({ theme }) => theme.colors.grey600};
 `;
 
 const Number = styled.p`
