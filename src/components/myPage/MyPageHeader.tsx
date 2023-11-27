@@ -11,8 +11,8 @@ interface InHeaderPropsTypes{
 }
 
 export default function MyPageHeader(props:InHeaderPropsTypes) {
-
   const {comment, setComment, isExistComment} = props;
+  
   return (
     <HeaderBox>
       <Contents>

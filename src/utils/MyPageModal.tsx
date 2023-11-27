@@ -3,14 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { PopupExitIc } from '@assets/index';
 
-interface InModalProps {
+interface InModalPropsTypes {
   open: boolean;
   close:(v:boolean)=>void;
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function MyPageModal(props: InModalProps) {
+export default function MyPageModal(props: InModalPropsTypes) {
   const {open, close, comment, setComment} = props;
 
   function handleInputValue(event: React.ChangeEvent<HTMLInputElement>) {

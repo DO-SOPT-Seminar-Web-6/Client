@@ -3,10 +3,10 @@ import {BannerProfileIc} from '@assets/index'
 import styled from 'styled-components';
 import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader'
 
-interface InMyCommentBoxPropsTypes{
+interface InBoxPropsTypes{
   comment: string;
 }
-export default function MyCommentBox(props: InMyCommentBoxPropsTypes) {
+export default function MyCommentBox(props: InBoxPropsTypes) {
   const {comment}= props; 
 
   return (
@@ -40,7 +40,6 @@ const BannerProfileIcon = styled(BannerProfileIc)`
 width: 5.8rem;
 height: 5.8rem;
 `
-
 const Text = styled.p`
   ${({ theme }) => theme.fonts.body2};
   width: 9.3rem;

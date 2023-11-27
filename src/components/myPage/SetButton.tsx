@@ -4,7 +4,7 @@ import { flexCenter } from '@styles/globalStyle';
 import { useState } from 'react';
 import { SetTitle } from '@styles/common/myPage/SetTitle';
 import { ButtonBox } from '@styles/Layout/MyPage/SetButtonBox';
-import MyPageModal from '@utils/Modal';
+import MyPageModal from '@utils/MyPageModal';
 
 interface InSetButtonPropsTypes{
   comment: string;
