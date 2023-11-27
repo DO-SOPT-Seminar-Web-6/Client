@@ -15,8 +15,8 @@ export default function MyPage() {
     <Section>
       <MyPageSide />
       <MyPageBox>
-        <MyPageHeader comment={comment} existComment={existComment} setComment={setComment} isExistComment={isExistComment}/>
-        <MyPageReview comment={comment} existComment={existComment} setComment={setComment} isExistComment={isExistComment}/>
+        <MyPageHeader comment={comment} setComment={setComment} isExistComment={isExistComment}/>
+        <MyPageReview comment={comment} existComment={existComment}/>
         <MyPageDescription />
         <MyPagePopularComment />
       </MyPageBox>
