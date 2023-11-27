@@ -1,6 +1,7 @@
 import { flexCenter } from '@styles/globalStyle';
 import { ReviewFilterIc } from '@assets/index';
 import styled from 'styled-components';
+import CommentToggle from './CommentToggle';
 
 export default function CommentHeader() {
   return (
@@ -10,6 +11,7 @@ export default function CommentHeader() {
         <ReviewFilterIcon />
         좋아요순
       </OrderButton>
+      <CommentToggle />
     </Wrapper>
   );
 }
