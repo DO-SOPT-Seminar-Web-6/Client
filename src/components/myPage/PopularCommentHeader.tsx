@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import { MainContainer } from '@styles/Layout/MainContainer';
-
 interface InHeaderPropsTypes {
   name: string;
   imgSrc: string;
@@ -15,14 +13,13 @@ export default function PopularCommentHeader(props: InHeaderPropsTypes) {
     <Header>
       <Reviewer>
         <img src={imgSrc} alt="Reviewer 사진"/>
-        <h2>{name}</h2>
+        <Name>{name}</Name>
       </Reviewer>
-      <Stars/>
     </Header>
   )
 }
 
-const Header = styled.div`
+const Header = styled.section`
   display:flex;
   flex: row; 
   padding: 1.2rem 0; 
@@ -30,16 +27,12 @@ const Header = styled.div`
   height: 5.6rem;
 `
 
-const Reviewer = styled.div`
+const Reviewer = styled.article`
   display:flex;
   flex: row; 
   gap: 1.5rem;
-  &>h2{
-    padding: 0.5rem 0 0;
-    ${({ theme }) => theme.fonts.subTitle3};
-  }
 `
-
-const Stars = styled.img`
-  
-`
+const Name = styled.h2`
+  padding: 0.5rem 0 0;
+  ${({ theme }) => theme.fonts.subTitle3};
+`;

@@ -4,11 +4,11 @@ import styled from 'styled-components';
 export default function SetStars() {
   return (
     <StarBox>
-      <BodyStarFillIc width="4.5rem" height="4.5rem" />
-      <BodyStarFillIc width="4.5rem" height="4.5rem" />
-      <BodyStarFillIc width="4.5rem" height="4.5rem" />
-      <BodyStarFillIc width="4.5rem" height="4.5rem" />
-      <BodyStarFillIc width="4.5rem" height="4.5rem" />
+      <BodyStarFillIcon />
+      <BodyStarFillIcon />
+      <BodyStarFillIcon />
+      <BodyStarFillIcon />
+      <BodyStarFillIcon />
     </StarBox>
   );
 }
@@ -16,4 +16,9 @@ export default function SetStars() {
 const StarBox = styled.span`
   width: 27.5rem;
   height: 7rem;
+`;
+
+const BodyStarFillIcon = styled(BodyStarFillIc)`
+  width: 4.5rem;
+  height: 4.5rem;
 `;

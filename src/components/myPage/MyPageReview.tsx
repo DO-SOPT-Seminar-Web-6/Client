@@ -1,21 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import MovieTag from '@components/common/MovieArticle/MovieTag'
-import { flexCenter } from '@styles/globalStyle'
 import {BannerProfileIc} from '@assets/index'
+import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader'
 
 export default function MyPageReview() {
   return (
     <MyPageReviewBox>
       <MyCommentBox>
-        <h2>내가 쓴 코멘트</h2>
+        <BoxHeader>내가 쓴 코멘트</BoxHeader>
         <MyComment>
-          <BannerProfileIc width="5.8rem" height="5.8rem"/>
+          <BannerProfileIcon/>
           <Text>심오합니다 깊고 좋았어요...</Text>
         </MyComment>
       </MyCommentBox>
       <TagBox>
-        <h2>선호하는 태그</h2>
+        <BoxHeader>선호하는 태그</BoxHeader>
         <MovieTag tag={['스튜디오 지브리','소셜 원작']} />
       </TagBox>
     </MyPageReviewBox>
@@ -25,26 +25,17 @@ export default function MyPageReview() {
 const MyPageReviewBox = styled.div` 
   padding: 0 0;
 `
-const TagBox = styled.article`
-  gap:1.2rem;
-  padding: 4rem 0;
-  &>h2{
-    ${({ theme }) => theme.fonts.body5};
-    margin-bottom:1.2rem;
-    line-height: 1.8rem;
-    color: ${({ theme }) => theme.colors.grey600};
-  }
-`
+
 const MyCommentBox = styled.section`
   gap:1.2rem;
   padding: 4rem 0 0;
-  &>h2{
-    ${({ theme }) => theme.fonts.body5};
-    margin-bottom:1.2rem;
-    line-height: 1.8rem;
-    color: ${({ theme }) => theme.colors.grey600};
-  }
 `
+
+const TagBox = styled.article`
+  gap:1.2rem;
+  padding: 4rem 0;
+`
+
 const MyComment = styled.article`
   display:flex;
   flex-direction: row;
@@ -58,6 +49,10 @@ const MyComment = styled.article`
 const Text = styled.p`
   ${({ theme }) => theme.fonts.body2};
   width: 9.3rem;
-  line-height: 2rem;
   height: 4rem;
+  line-height: 2rem;
+`
+const BannerProfileIcon = styled(BannerProfileIc)`
+width: 5.8rem;
+height: 5.8rem;
 `

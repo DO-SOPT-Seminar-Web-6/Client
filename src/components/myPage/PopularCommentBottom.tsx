@@ -1,7 +1,5 @@
-import ReviewLikeCommentIc from '@assets/icon/review/reviewLikeCommentIc.svg';
-import ReviewLikeUnActiveIc from '@assets/icon/review/reviewLikeUnActiveIc.svg';
+import {ReviewLikeCommentIc,ReviewLikeUnActiveIc} from '@assets/index';
 import styled from 'styled-components';
-import { flexCenter } from '@styles/globalStyle';
 
 interface InBottomPropsTypes {
   likes: string;
@@ -11,21 +9,21 @@ interface InBottomPropsTypes {
 export default function PopularCommentBottom(props: InBottomPropsTypes) {
   const { likes, numComments } = props; 
 
-  return(
+  return (
     <BottomBox>
       <CommentBottomButton>
-        <img src={ReviewLikeUnActiveIc} />
-        <span>{likes}</span>
+        <ReviewLikeCommentIcon />
+        {likes}
       </CommentBottomButton>
       <CommentBottomButton>
-        <img src={ReviewLikeCommentIc} />
-        <span>{numComments}</span>
+        <ReviewLikeUnActiveIcon />
+        {numComments}
       </CommentBottomButton>
     </BottomBox>
-  )
+  );
 }
 
-const BottomBox = styled.div`
+const BottomBox = styled.section`
   display: flex;
   gap: 1.2rem;
   align-items: flex-end;
@@ -37,9 +35,15 @@ const BottomBox = styled.div`
 
 const CommentBottomButton = styled.button`
   display: flex;
-
   gap: 0.2rem;
-  &>span{
-    color: ${({ theme }) => theme.colors.grey600};
-  }
+  color: ${({ theme }) => theme.colors.grey600};
 `;
+
+const ReviewLikeCommentIcon = styled(ReviewLikeCommentIc)`
+  width: 2rem;
+  height: 2rem;
+`
+const ReviewLikeUnActiveIcon = styled(ReviewLikeUnActiveIc)`
+  width: 2rem;
+  height: 2rem;
+`
