@@ -1,7 +1,7 @@
 import CommentTitle from './Comment/CommentTitle';
 import CommentInput from './Comment/CommentInput';
-import CommentBox from './Comment/CommentBox';
 import { DivideLineButtom } from '@styles/common/divideLine';
+import CommentsContainer from './Comment/CommentsContainer';
 
 export default function CommentSection() {
   return (
@@ -9,7 +9,7 @@ export default function CommentSection() {
       <CommentTitle />
       <CommentInput />
       <DivideLineButtom />
-      <CommentBox />
+      <CommentsContainer />
     </>
   );
 }
