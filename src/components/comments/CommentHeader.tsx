@@ -2,16 +2,24 @@ import { flexCenter } from '@styles/globalStyle';
 import { ReviewFilterIc } from '@assets/index';
 import styled from 'styled-components';
 import CommentToggle from './CommentToggle';
+import { useState } from 'react';
 
 export default function CommentHeader() {
+  const [isReorder, setIsReorder] = useState(false);
+  const [isLiked, setIsLiked] = useState(true);
+
+  function handleClickOrder() {
+    setIsReorder((prev) => !prev);
+  }
+
   return (
     <Wrapper>
       <TitleText>코멘트</TitleText>
-      <OrderButton>
+      <OrderButton onClick={handleClickOrder}>
         <ReviewFilterIcon />
-        좋아요순
+        {isLiked ? '좋아요 순' : '댓글 수 순'}
       </OrderButton>
-      <CommentToggle />
+      {isReorder && <CommentToggle setIsReorder={setIsReorder} setIsLiked={setIsLiked} />}
     </Wrapper>
   );
 }
