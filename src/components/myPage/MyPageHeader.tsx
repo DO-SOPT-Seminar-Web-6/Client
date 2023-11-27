@@ -4,13 +4,22 @@ import SetRates from './SetRates'
 import SetButton from './SetButton'
 import { flexCenter } from '@styles/globalStyle'
 
-export default function MyPageHeader() {
+interface InHeaderPropsTypes{
+  writeComment: boolean;
+  comment: string;
+  setComment: React.Dispatch<React.SetStateAction<string>>;
+  isWriteComment: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function MyPageHeader(props:InHeaderPropsTypes) {
+
+  const {writeComment, comment, setComment, isWriteComment} = props;
   return (
     <HeaderBox>
       <Contents>
         <SetStars/>
         <SetRates/>
-        <SetButton/>
+        <SetButton writeComment={writeComment} comment={comment} setComment={setComment} isWriteComment={isWriteComment}/>
       </Contents>
     </HeaderBox>
   )
