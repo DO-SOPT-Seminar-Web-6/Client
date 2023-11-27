@@ -1,19 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import MovieTag from '@components/common/MovieArticle/MovieTag'
-import {BannerProfileIc} from '@assets/index'
+import MyCommentBox from './MyCommentBox'
 import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader'
+interface InMyPageReviewPropsTypes{
+  writeComment: boolean;
+  comment: string;
+  setComment: React.Dispatch<React.SetStateAction<string>>;
+  isWriteComment: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export default function MyPageReview() {
+export default function MyPageReview(props:InMyPageReviewPropsTypes) {
+  const {writeComment, comment} = props;
+
   return (
     <MyPageReviewBox>
-      <MyCommentBox>
-        <BoxHeader>내가 쓴 코멘트</BoxHeader>
-        <MyComment>
-          <BannerProfileIcon/>
-          <Text>심오합니다 깊고 좋았어요...</Text>
-        </MyComment>
-      </MyCommentBox>
+      {writeComment&&<MyCommentBox comment={comment}/>}
       <TagBox>
         <BoxHeader>선호하는 태그</BoxHeader>
         <MovieTag tag={['스튜디오 지브리','소셜 원작']} />
@@ -26,33 +28,7 @@ const MyPageReviewBox = styled.div`
   padding: 0 0;
 `
 
-const MyCommentBox = styled.section`
-  gap:1.2rem;
-  padding: 4rem 0 0;
-`
-
 const TagBox = styled.article`
   gap:1.2rem;
   padding: 4rem 0;
-`
-
-const MyComment = styled.article`
-  display:flex;
-  flex-direction: row;
-  gap: 1.7rem;
-  align-items:center;
-  background-color: ${({ theme }) => theme.colors.white};
-  padding: 2rem;
-  width: 100%;
-  height: 10rem;
-`
-const Text = styled.p`
-  ${({ theme }) => theme.fonts.body2};
-  width: 9.3rem;
-  height: 4rem;
-  line-height: 2rem;
-`
-const BannerProfileIcon = styled(BannerProfileIc)`
-width: 5.8rem;
-height: 5.8rem;
 `
