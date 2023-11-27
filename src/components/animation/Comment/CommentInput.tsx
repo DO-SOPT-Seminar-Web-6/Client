@@ -17,8 +17,9 @@ export default function CommentInput() {
 const Wrapper = styled.article`
   display: flex;
   gap: 2.4rem;
+  justify-content: space-between;
   margin: 2.7rem 0rem;
-  width: 100%;
+  width: 68rem;
 `;
 
 const CommentInputBox = styled.input`
