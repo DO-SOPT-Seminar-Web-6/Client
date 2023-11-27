@@ -20,7 +20,7 @@ interface InFONTProps {
   lineHeight?: number;
 }
 
-function FONT({ weight, size, lineHeight = 1 }: InFONTProps) {
+function FONT({ weight, size, lineHeight = 1.4 }: InFONTProps) {
   return `
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: ${weight};
@@ -32,7 +32,7 @@ function FONT({ weight, size, lineHeight = 1 }: InFONTProps) {
 
 const fonts = {
   largeTitle: FONT({ weight: 700, size: 3.6 }),
-  title1: FONT({ weight: 700, size: 2.4 }),
+  title1: FONT({ weight: 700, size: 3 }),
   title2: FONT({ weight: 700, size: 2.4 }),
   title3: FONT({ weight: 400, size: 2.4 }),
   title4: FONT({ weight: 350, size: 2.4 }),
