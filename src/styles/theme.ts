@@ -48,6 +48,7 @@ const fonts = {
   body2: FONT({ weight: 500, size: 1.4 }),
   body2160: FONT({ weight: 500, size: 1.4, lineHeight: 1.6 }),
   body3: FONT({ weight: 400, size: 1.4 }),
+  body4: FONT({ weight: 500, size: 1.2, lineHeight: 1.7 }),
   body5: FONT({ weight: 500, size: 1.2 }),
   body6: FONT({ weight: 400, size: 1.2 }),
 };
