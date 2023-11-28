@@ -14,6 +14,7 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  margin-top: 2rem;
   margin-bottom: 3rem;
 `;
 
