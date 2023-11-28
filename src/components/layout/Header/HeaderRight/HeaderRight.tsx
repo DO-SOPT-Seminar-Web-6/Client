@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BannerProfileIc from '@assets/icon/banner/bannerProfileIc.svg?react';
+import { BannerProfileIc } from '@assets/index';
 import { flexCenter } from '@styles/globalStyle';
 import HeaderInput from './HeaderInput';
 
@@ -11,7 +11,7 @@ export default function HeaderRight() {
       <HeaderText>평가하기</HeaderText>
       <HeaderText>소식</HeaderText>
       <button>
-        <img src={BannerProfileIc} />
+        <BannerProfileIcon />
       </button>
     </HeaderContainerRight>
   );
@@ -27,4 +27,9 @@ const HeaderContainerRight = styled.div`
 
   gap: 2rem;
   color: ${({ theme }) => theme.colors.grey700};
+`;
+
+const BannerProfileIcon = styled(BannerProfileIc)`
+  width: 2.6rem;
+  height: 2.7rem;
 `;
