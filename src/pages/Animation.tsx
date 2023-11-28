@@ -12,9 +12,11 @@ export default function Animation() {
       <SectionWrapper>
         <AnimationLayout>
           <AnimationHeader />
-          <AnimationTitle />
-          <MoviesSection />
-          <CommentSection />
+          <ContentLayout>
+            <AnimationTitle />
+            <MoviesSection />
+            <CommentSection />
+          </ContentLayout>
         </AnimationLayout>
       </SectionWrapper>
     </>
