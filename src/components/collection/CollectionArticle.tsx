@@ -6,6 +6,7 @@ import MovieArticle from "@components/common/MovieArticle/MovieArticle";
 export default function CollectionArticle() {
   const imgSize : number[] = [19.8, 29.6]
   const keyword : string = "좋아요"
+  const icon : boolean = false
   return (
     <Article>
       {collectionImages && collectionImages.map((image)=>{
@@ -18,6 +19,7 @@ export default function CollectionArticle() {
           title={title}
           rate={likes}
           keyword={keyword}
+          icon={icon}
           />
         );
       })}
