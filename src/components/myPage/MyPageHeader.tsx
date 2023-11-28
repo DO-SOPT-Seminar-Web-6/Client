@@ -4,13 +4,21 @@ import SetRates from './SetRates'
 import SetButton from './SetButton'
 import { flexCenter } from '@styles/globalStyle'
 
-export default function MyPageHeader() {
+interface InHeaderPropsTypes{
+  comment: string;
+  setComment: React.Dispatch<React.SetStateAction<string>>;
+  isExistComment: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function MyPageHeader(props:InHeaderPropsTypes) {
+  const {comment, setComment, isExistComment} = props;
+  
   return (
     <HeaderBox>
       <Contents>
         <SetStars/>
         <SetRates/>
-        <SetButton/>
+        <SetButton comment={comment} setComment={setComment} isExistComment={isExistComment}/>
       </Contents>
     </HeaderBox>
   )

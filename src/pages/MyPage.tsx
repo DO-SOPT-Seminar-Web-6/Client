@@ -5,14 +5,18 @@ import MyPageSide from '@components/myPage/MyPageSide';
 import MyPageHeader from '@components/myPage/MyPageHeader';
 import MyPageReview from '@components/myPage/MyPageReview';
 import MyPagePopularComment from '@components/myPage/MyPagePopularComment';
+import { useState } from 'react';
 
 export default function MyPage() {
+  const [existComment, isExistComment] = useState(false);
+  const [comment, setComment] = useState(null);
+
   return (
     <Section>
       <MyPageSide />
       <MyPageBox>
-        <MyPageHeader />
-        <MyPageReview />
+        <MyPageHeader comment={comment} setComment={setComment} isExistComment={isExistComment}/>
+        <MyPageReview comment={comment} existComment={existComment}/>
         <MyPageDescription />
         <MyPagePopularComment />
       </MyPageBox>
