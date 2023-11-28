@@ -9,11 +9,13 @@ interface CommentTogglePropsTypes {
 export default function CommentToggle(props: CommentTogglePropsTypes) {
   const { setIsReorder, setIsLiked } = props;
 
+  //좋아요 수 순
   function handleClickLikedOrder() {
     setIsReorder(false);
     setIsLiked(true);
   }
 
+  //댓글수순
   function handleClickCommentsNumOrder() {
     setIsReorder(false);
     setIsLiked(false);
