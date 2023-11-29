@@ -2,7 +2,7 @@ import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import styled from 'styled-components';
 import Button from '@components/common/Button/Button';
 import useShowMore from '@hooks/useShowMore';
-import { animationMovies } from '@core/animationMovies';
+import { castDetailMovies } from '@core/\bdirectorMovies';
 
 interface InFilmoContainerPropsTypes {
   title: string;
@@ -17,7 +17,7 @@ export default function FilmoContainer(props: InFilmoContainerPropsTypes) {
     <>
       <FilmoTitle>{title}</FilmoTitle>
       <FilmoList isOpen={isOpen}>
-        {animationMovies.map(({ img, title, rate, subInfo }) => (
+        {castDetailMovies.map(({ img, title, rate, subInfo }) => (
           <li key={`${title}-${rate}-${subInfo}`}>
             <MovieArticle imgSrc={img} title={title} rate={rate} subInfo={subInfo} />
           </li>
