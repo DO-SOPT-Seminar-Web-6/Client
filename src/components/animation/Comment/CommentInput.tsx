@@ -1,12 +1,43 @@
+import { useState } from 'react';
 import { flexCenter } from '@styles/globalStyle';
 import styled from 'styled-components';
 import { CollectDetailChatBottomIc } from '@assets/index';
+import { useMutation, useQueryClient } from 'react-query';
+import { postCollectionAnimation } from '@api/postCollectionAnimation';
 
 export default function CommentInput() {
+  const [inputValue, setInputValue] = useState('');
+  const queryClient = useQueryClient();
+
+  const { mutate: postComment } = useMutation(postCollectionAnimation, {
+    onSuccess: () => {
+      queryClient.invalidateQueries('getAnimationCollection');
+      setInputValue('');
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+  });
+
+  function handleClickPostButton() {
+    if (inputValue.trim() !== '') {
+      postComment({ userId: 1, content: inputValue });
+    }
+  }
+
+  function handleChangeComment(e: React.ChangeEvent<HTMLInputElement>) {
+    setInputValue(e.target.value);
+  }
+
   return (
     <Wrapper>
-      <CommentInputBox placeholder="컬렉션에 댓글을 남겨보세요." type="text" />
-      <InputSubmitButton>
+      <CommentInputBox
+        onChange={handleChangeComment}
+        value={inputValue}
+        placeholder="컬렉션에 댓글을 남겨보세요."
+        type="text"
+      />
+      <InputSubmitButton onClick={handleClickPostButton}>
         <CollectDetailChatBottomIcon />
         등록
       </InputSubmitButton>
