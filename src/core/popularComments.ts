@@ -1,5 +1,5 @@
-import ReviewProfile1Img from '@assets/image/review/ReviewProfile1Img.png';
-import ReviewProfile2Img from '@assets/image/review/ReviewProfile2Img.png';
+import ReviewProfile1Img from '@assets/image/review/reviewProfile1Img.png';
+import ReviewProfile2Img from '@assets/image/review/reviewProfile2Img.png';
 
 interface InPopularCommentTypes {
   imgSrc: string;
