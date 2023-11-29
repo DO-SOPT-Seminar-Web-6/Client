@@ -22,7 +22,7 @@
 
     /* Path and Alias */
     "baseUrl": "./src",
-    "types": ["node"],
+    "types": ["node", "vite-plugin-svgr/client"],
     "paths": {
       "@api/*": ["api/*"],
       "@atom/*": ["atom/*"],
@@ -36,6 +36,6 @@
       "@type/*": ["type/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "public/assets", "src/assets/assets.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

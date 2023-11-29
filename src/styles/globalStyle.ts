@@ -1,5 +1,16 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import resetStyle from './resetStyle';
+
+export const flexCenter = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const SectionContainer = styled.section`
+  padding: 0 6rem;
+  width: 100%;
+`;
 
 export const GlobalStyle = createGlobalStyle`
   ${resetStyle}
@@ -10,10 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    width: 136.6rem;
     margin: 0 auto;
-    font-family: 'Noto Sans KR', sans-serif;
+    width: 136.6rem;
     letter-spacing: normal;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 `;
 

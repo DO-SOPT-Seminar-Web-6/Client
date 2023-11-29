@@ -28,8 +28,8 @@ const ResetStyle = css`
 
   /* For images to not be able to exceed their container */
   img {
-    max-inline-size: 100%;
     max-block-size: 100%;
+    max-inline-size: 100%;
   }
 
   /* removes spacing between cells in tables */
@@ -40,7 +40,7 @@ const ResetStyle = css`
   /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
   input,
   textarea {
-    -webkit-user-select: auto;
+    user-select: auto;
   }
 
   /* revert the 'white-space' property for textarea elements on Safari */
@@ -50,7 +50,6 @@ const ResetStyle = css`
 
   /* minimum style to allow to style meter element */
   meter {
-    -webkit-appearance: revert;
     appearance: revert;
   }
 
@@ -83,7 +82,7 @@ const ResetStyle = css`
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
     -webkit-line-break: after-white-space;
-    -webkit-user-select: auto;
+    user-select: auto;
   }
 
   /* apply back the draggable feature - exist only in Chromium and Safari */
