@@ -14,7 +14,7 @@ export default function CommentTitle() {
   );
 }
 
-const Wrapper = styled.p`
+const Wrapper = styled.div`
   ${flexCenter};
   gap: 0.4rem;
   justify-content: flex-start;
