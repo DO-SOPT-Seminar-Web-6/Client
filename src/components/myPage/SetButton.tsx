@@ -24,7 +24,7 @@ export default function SetButton(props: InSetButtonPropsTypes) {
   const [isSeeMore, setIsSeeMore] = useState(false);
 
   function handleOpenModal() {
-    setIsModalOpen(true);
+    setIsModalOpen((open)=>!open);
   }
   function handleCloseModal() {
     setIsModalOpen(false);
@@ -33,18 +33,25 @@ export default function SetButton(props: InSetButtonPropsTypes) {
   function handleSeeMore() {
     setIsSeeMore((see) => !see);
   }
-
+  function handleComment(value: string) {
+    setComment(value);
+  } 
   return (
     <Container>
       <ButtonBox>
         <BodyPlusNormalIc />
         <SetTitle>보고싶어요</SetTitle>
       </ButtonBox>
+      <ModalBox>
       <ButtonBox onClick={handleOpenModal}>
         {isModalOpen && <BodyPencilHoverIc />}
         {!isModalOpen && <BodyPencilNormalIc />}
         <SetTitle>코멘트</SetTitle>
       </ButtonBox>
+      {isModalOpen && (
+        <MyPageModal open={isModalOpen} close={handleCloseModal} comment={comment} handleComment={handleComment} />
+      )}
+      </ModalBox>
       <ToggleBox>
         <ButtonBox onClick={handleSeeMore}>
           {isSeeMore && <BodyMenuHoverIc />}
@@ -53,9 +60,6 @@ export default function SetButton(props: InSetButtonPropsTypes) {
         </ButtonBox>
         {isSeeMore && <MyPageToggle />}
       </ToggleBox>
-      {isModalOpen && (
-        <MyPageModal open={isModalOpen} close={handleCloseModal} comment={comment} setComment={setComment} />
-      )}
     </Container>
   );
 }
@@ -69,3 +73,8 @@ const ToggleBox = styled.section`
   display: flex;
   flex-direction: column;
 `;
+
+const ModalBox = styled.section`
+  display: flex;
+  flex-direction: column;
+`
