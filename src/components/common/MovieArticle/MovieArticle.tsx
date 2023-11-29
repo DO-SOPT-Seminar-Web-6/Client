@@ -9,28 +9,31 @@ interface InMovieArticleProps extends InImageTypes {
   imgSrc: string;
   title: string;
   rate: number;
-  keyword: string;
+  keyword?: string;
   subInfo?: string;
+  titleLength?: number;
   tag?: string[];
-  icon: boolean;
+  icon?: boolean;
 }
 
 /** each movie info  */
-export default function MovieArticle({
-  imgSrc,
-  title,
-  rate,
-  subInfo,
-  tag,
-  keyword,
-  icon = true,
-  imgWidth = 23.6,
-  imgHeight = 35.2,
-}: InMovieArticleProps) {
+export default function MovieArticle(props: InMovieArticleProps) {
+  const {
+    imgSrc,
+    title,
+    titleLength,
+    rate,
+    subInfo,
+    tag,
+    keyword = '평균',
+    icon = true,
+    imgWidth = 23.6,
+    imgHeight = 35.2,
+  } = props;
   return (
     <ArticleContainer>
       <ArticleImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
-      <MovieInfo title={title} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon} />
+      <MovieInfo title={title} titleLength={titleLength} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon} />
       <MovieTag tag={tag} />
     </ArticleContainer>
   );
