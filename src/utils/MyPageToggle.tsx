@@ -55,9 +55,9 @@ const ToggleBox = styled.button`
   width: 14.8rem;
   height: 2.8rem;
 `;
-const ToggleTitle = styled.h2`
+const ToggleTitle = styled.h2<{ isInterested: boolean }>` 
   ${({ theme }) => theme.fonts.body4};
-  color: ${(props) => (props.isInterested ? props.theme.colors.mainPink : props.theme.colors.black)};
+  color: ${({ theme, isInterested }) => (isInterested ? theme.colors.mainPink : theme.colors.black)}; 
 `;
 const BodyPopupArchiveHoverIcon = styled(BodyPopupArchiveHoverIc)`
   ${MyPageIcon}
