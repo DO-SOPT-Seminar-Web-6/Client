@@ -12,7 +12,5 @@ export const AnimationLayout = styled.section`
 export const ContentLayout = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
-
-  width: 69.2rem;
+  padding: 0rem 2.5rem;
 `;

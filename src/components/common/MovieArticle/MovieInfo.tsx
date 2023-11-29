@@ -4,15 +4,17 @@ interface InMovieArticleProps {
   title: string;
   rate: number;
   keyword: string;
-  icon? : boolean;
+  icon?: boolean;
   subInfo?: string;
+  titleLength?: number;
 }
 
 /** each movie info  */
-export default function MovieInfo({ keyword, title, rate, subInfo, icon }: InMovieArticleProps) {
+export default function MovieInfo(props: InMovieArticleProps) {
+  const { keyword, title, rate, subInfo, icon, titleLength } = props;
   return (
     <ArticleInfoBox>
-      <ArticleTitle>{title}</ArticleTitle>
+      <ArticleTitle titleLength={titleLength}>{title}</ArticleTitle>
       <ArticleRateText>
         <span>{keyword}</span>
         {icon && <CastDetailLikeIcon />}
@@ -30,11 +32,15 @@ const ArticleInfoBox = styled.div`
   color: ${({ theme }) => theme.colors.grey600};
 `;
 
-const ArticleTitle = styled.h3`
-  ${({ theme }) => theme.fonts.subTitle5};
-
+const ArticleTitle = styled.h3<{ titleLength?: number | undefined }>`
+  width: ${({ titleLength }) => (titleLength !== undefined ? `${titleLength}rem` : 'auto')};
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 2.3rem;
+
+  white-space: nowrap;
   color: ${({ theme }) => theme.colors.black};
+  font-style: ${({ theme, titleLength }) => (titleLength ? theme.fonts.subTitle2 : theme.fonts.subTitle5)};
 `;
 
 const ArticleRateText = styled.p`
@@ -46,4 +52,4 @@ const ArticleRateText = styled.p`
 const CastDetailLikeIcon = styled(castDetailLikeIc)`
   width: 1.4rem;
   height: 1.4rem;
-`
+`;

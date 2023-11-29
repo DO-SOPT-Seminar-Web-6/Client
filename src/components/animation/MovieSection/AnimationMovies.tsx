@@ -5,6 +5,7 @@ import { animationMovies } from '@core/animationMovies';
 
 export default function AnimationMovies() {
   const imgSize: number[] = [16.4, 23.8];
+
   return (
     <MoviesArr>
       {animationMovies &&
@@ -12,7 +13,9 @@ export default function AnimationMovies() {
           const { img, title, rate, subInfo } = movie;
           return (
             <MovieArticle
+              titleLength={imgSize[0]}
               key={title}
+              icon={true}
               keyword="평점"
               imgHeight={imgSize[1]}
               imgWidth={imgSize[0]}

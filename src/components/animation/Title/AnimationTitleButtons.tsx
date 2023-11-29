@@ -53,7 +53,8 @@ const ButtonBox = styled.div`
   gap: 8.4rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid ${({ theme }) => theme.colors.grey300};
+  border-top: 1px solid ${({ theme }) => theme.colors.grey300};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grey300};
   height: 5.2rem;
 `;
 
