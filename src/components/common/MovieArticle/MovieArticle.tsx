@@ -34,7 +34,7 @@ export default function MovieArticle(props: InMovieArticleProps) {
     <ArticleContainer>
       <ArticleImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
       <MovieInfo title={title} titleLength={titleLength} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon} />
-      <MovieTag tag={tag} />
+      {tag && <MovieTag tag={tag} />}
     </ArticleContainer>
   );
 }
