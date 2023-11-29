@@ -12,10 +12,10 @@ export default function DirectorInfo() {
         <SubTitleDescriptionText>
           1941년 도쿄에서 출생. 애니메이션 영화감독. 가쿠슈인(學習院)대학을 졸업한 후 1963년 도에이동화(東映動畵: 현
           도에이 애니메이션) 입사. 그 후 몇몇 창작회사를 거쳐 1985년 지브리 스튜디오(Studio Ghibli) 설립에 참가. 2013년
-          현재 지브리 스튜디오 소장. 감독한 작품에 극장용 장편 (ルパン三世 : カリオストロの城, 1979), &lt;바람 계곡의
-          나우시카&gt;(風の谷の ナウシカ, 1984), &lt;천공의 성 라퓨타&gt;(天空の城ラピュタ, 1986), &lt;이웃집
+          현재 지브리 스튜디오 소장. 감독한 작품으로는 극장용 장편 (ルパン三世 : カリオストロの城, 1979), &lt;바람
+          계곡의 나우시카&gt;(風の谷の ナウシカ, 1984), &lt;천공의 성 라퓨타&gt;(天空の城ラピュタ, 1986), &lt;이웃집
           토토로&gt;(となりのトトロ, 1988), &lt;마녀 배달부 키키&gt;(魔女の宅急便, 1989), &lt;붉은 돼지&gt;(紅の豚,
-          1992), &lt;원령공주&gt;(もののけ姬, 1997), &lt;센과 치히로의 행방불명&gt;(千と千尋の神隱し,
+          1992), &lt;원령공주&gt;(もののけ姬, 1997), &lt;센과 치히로의 행방불명&gt;(千と千尋の神隱し) 등이 있다.
         </SubTitleDescriptionText>
         {!showText && <SubTitleDescriptionHideBox>&nbsp;</SubTitleDescriptionHideBox>}
         <SubTitleDescriptionButton
