@@ -14,6 +14,9 @@ export default function CommentInput() {
       queryClient.invalidateQueries('getAnimationCollection');
       setInputValue('');
     },
+    onSettled: () => {
+      console.log('loading..');
+    },
     onError: (error) => {
       console.log(error);
     },
