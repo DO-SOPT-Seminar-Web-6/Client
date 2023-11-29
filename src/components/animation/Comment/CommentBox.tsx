@@ -4,17 +4,23 @@ import collectDetailProfileImg from '@assets/image/collection/collectDetail/coll
 import { flexCenter } from '@styles/globalStyle';
 import { DivideLineButtom } from '@styles/common/divideLine';
 
-export default function CommentBox() {
+interface InCommentBoxPropsTypes {
+  content: string;
+  likeCount: number;
+}
+
+export default function CommentBox(props: InCommentBoxPropsTypes) {
+  const { content, likeCount } = props;
   return (
     <Wrapper>
       <CommentWrapper>
         <CollectDetailProfileImgBox src={collectDetailProfileImg} alt="profile" />
         <TextWrapper>
           <NickNameText>Doo</NickNameText>
-          <CommentText>제가 본 것중 하하</CommentText>
+          <CommentText>{content}</CommentText>
           <LikesWrapper>
             <CollectDetailLikeBottomIcon />
-            <ThumbsUpNumberText>0</ThumbsUpNumberText>
+            <ThumbsUpNumberText>{likeCount}</ThumbsUpNumberText>
             <CollectDetailMenuBottomIcon />
           </LikesWrapper>
         </TextWrapper>

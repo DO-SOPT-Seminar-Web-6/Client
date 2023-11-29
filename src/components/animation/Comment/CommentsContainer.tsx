@@ -1,10 +1,25 @@
-import React from 'react';
+import useGetAnimationCollection from '@hooks/useGetAnimationCollection';
 import CommentBox from './CommentBox';
+import { RepliesTypes } from 'types/repliesTypes';
 
 export default function CommentsContainer() {
+  const { data } = useGetAnimationCollection();
+  if (!data) {
+    return null;
+  }
+  const replyArray: RepliesTypes[] = data?.replies;
+
   return (
     <>
-      <CommentBox />
+      {replyArray?.map((reply) => {
+        const { replyId, content, likeCount } = reply;
+
+        return (
+          <>
+            <CommentBox key={replyId} content={content} likeCount={likeCount} />
+          </>
+        );
+      })}
     </>
   );
 }
