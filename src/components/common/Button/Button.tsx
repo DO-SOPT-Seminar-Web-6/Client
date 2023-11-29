@@ -2,19 +2,17 @@ import styled from 'styled-components';
 import WatchaOpenIc from '@assets/icon/watcha/watchaOpenIc.svg?react';
 import WatchaCloseIc from '@assets/icon/watcha/watchaCloseIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
-import { useState } from 'react';
+
+interface InButtonPropsTypes {
+  isOpen: boolean;
+  handleShowMore: () => void;
+}
 
 /** 닫기 / 더보기 버튼 */
-export default function Button() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function handleClick() {
-    setIsOpen((prev) => !prev);
-  }
-
+export default function Button({ isOpen, handleShowMore }: InButtonPropsTypes) {
   return (
     <>
-      <ButtonContainer onClick={handleClick}>
+      <ButtonContainer onClick={handleShowMore}>
         {!isOpen && (
           <>
             <span>더보기</span>
