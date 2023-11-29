@@ -14,10 +14,11 @@ export default function MyPageDescription() {
 }
 
 const Description = styled.p`
-  padding: 4rem 0;
-  height: 15.7rem;
-  ${({ theme }) => theme.fonts.body2160};
   border-top: 1px solid ${({ theme }) => theme.colors.grey400};
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
+  padding: 4rem 0;
+  ${({ theme }) => theme.fonts.body2160};
+  height: 15.7rem;
   color: ${({ theme }) => theme.colors.grey600};
+  
 `;

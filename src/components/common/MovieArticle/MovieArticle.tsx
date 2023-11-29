@@ -10,9 +10,9 @@ interface InMovieArticleProps extends InImageTypes {
   title: string;
   rate: number;
   keyword: string;
-  icon?: string;
   subInfo?: string;
   tag?: string[];
+  icon: boolean;
 }
 
 /** each movie info  */
@@ -23,14 +23,14 @@ export default function MovieArticle({
   subInfo,
   tag,
   keyword,
-  icon,
+  icon= true,
   imgWidth = 23.6,
   imgHeight = 35.2,
 }: InMovieArticleProps) {
   return (
     <ArticleContainer>
       <ArticleImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
-      <MovieInfo title={title} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon} />
+      <MovieInfo title={title} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon}/>
       <MovieTag tag={tag} />
     </ArticleContainer>
   );

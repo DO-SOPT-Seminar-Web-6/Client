@@ -1,21 +1,21 @@
 import styled from 'styled-components';
-
+import castDetailLikeIc from '@assets/icon/watcha/watchaListStarIc.svg?react';
 interface InMovieArticleProps {
   title: string;
   rate: number;
   keyword: string;
-  icon? : string;
+  icon? : boolean;
   subInfo?: string;
 }
 
 /** each movie info  */
-export default function MovieInfo({ keyword, icon, title, rate, subInfo }: InMovieArticleProps) {
+export default function MovieInfo({ keyword, title, rate, subInfo, icon }: InMovieArticleProps) {
   return (
     <ArticleInfoBox>
       <ArticleTitle>{title}</ArticleTitle>
       <ArticleRateText>
         <span>{keyword}</span>
-        {icon && <img src={icon} />}
+        {icon && <CastDetailLikeIcon />}
         <span>{rate}</span>
       </ArticleRateText>
       {subInfo && <p>{subInfo}</p>}
@@ -42,3 +42,8 @@ const ArticleRateText = styled.p`
   align-items: center;
   justify-content: flex-start;
 `;
+
+const CastDetailLikeIcon = styled(castDetailLikeIc)`
+  width: 1.4rem;
+  height: 1.4rem;
+`

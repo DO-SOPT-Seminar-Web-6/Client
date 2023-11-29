@@ -1,7 +1,7 @@
 import React from 'react';
-import AnimationTitleHeader from './AnimationTitleHeader';
-import AnimationTitleDetail from './AnimationTitleDetail';
-import AnimationTitleButtons from './AnimationTitleButtons';
+import AnimationTitleHeader from './Title/AnimationTitleHeader';
+import AnimationTitleDetail from './Title/AnimationTitleDetail';
+import AnimationTitleButtons from './Title/AnimationTitleButtons';
 
 export default function AnimationTitle() {
   return (
