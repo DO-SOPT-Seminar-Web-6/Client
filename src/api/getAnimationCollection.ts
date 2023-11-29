@@ -1,9 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-
-interface RepliesTypes {
-  content: string;
-  likeCount: number;
-}
+import { RepliesTypes } from 'types/repliesTypes';
 
 export interface DataTypes {
   title: string;
