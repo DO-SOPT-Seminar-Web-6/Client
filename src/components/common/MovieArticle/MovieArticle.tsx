@@ -10,10 +10,10 @@ interface InMovieArticleProps extends InImageTypes {
   title: string;
   rate: number;
   keyword: string;
+  icon: boolean;
   subInfo?: string;
   titleLength?: number;
   tag?: string[];
-  icon: boolean;
 }
 
 /** each movie info  */

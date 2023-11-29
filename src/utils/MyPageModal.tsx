@@ -1,11 +1,10 @@
 import { flexCenter } from '@styles/globalStyle';
-import React from 'react';
 import styled from 'styled-components';
 import { PopupExitIc } from '@assets/index';
 
 interface InModalPropsTypes {
   open: boolean;
-  close: (v: boolean) => void;
+  close: () => void;
   comment: string;
   handleComment: (value: string) => void;
 }
@@ -16,7 +15,8 @@ export default function MyPageModal(props: InModalPropsTypes) {
   function handleInputValue(event: React.ChangeEvent<HTMLInputElement>) {
     handleComment(event.target.value);
   }
-  function handleSubmit(event: React.FormEvent<HTMLInputElement>) {
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
   }
 
@@ -42,6 +42,7 @@ export default function MyPageModal(props: InModalPropsTypes) {
     </Modal>
   );
 }
+
 const Modal = styled.article`
   position: fixed;
   top: 0;
@@ -50,6 +51,7 @@ const Modal = styled.article`
   left: 0;
   background: rgba(168, 168, 168, 0.348);
 `;
+
 const ModalContainer = styled.section`
   display: flex;
   position: absolute;

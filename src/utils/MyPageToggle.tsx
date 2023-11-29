@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { flexCenter } from '@styles/globalStyle';
 import { useState } from 'react';
@@ -16,6 +15,7 @@ export default function MyPageToggle() {
   function handleIsInterested() {
     setIsInterested((click) => !click);
   }
+  
   return (
     <ToggleWrapper>
       <ToggleBox onClick={handleIsInterested}>
@@ -25,11 +25,11 @@ export default function MyPageToggle() {
       </ToggleBox>
       <ToggleBox>
         <BodyPopupArchiveHoverIcon />
-        <ToggleTitle>컬렉션에 추가</ToggleTitle>
+        <ToggleTitle isInterested={isInterested}>컬렉션에 추가</ToggleTitle>
       </ToggleBox>
       <ToggleBox>
         <BodyPopupEventHoverIcon />
-        <ToggleTitle>본 날짜 추가</ToggleTitle>
+        <ToggleTitle isInterested={isInterested}>본 날짜 추가</ToggleTitle>
       </ToggleBox>
     </ToggleWrapper>
   );
@@ -49,16 +49,23 @@ const ToggleWrapper = styled.div`
   width: 17.6rem;
   height: 12.4rem;
 `;
+
 const ToggleBox = styled.button`
   display: flex;
   gap: 1rem;
   width: 14.8rem;
   height: 2.8rem;
 `;
-const ToggleTitle = styled.h2<{ isInterested: boolean }>` 
+
+interface InToggleTitlePropsTypes {
+  isInterested: boolean;
+}
+
+const ToggleTitle = styled.h2<InToggleTitlePropsTypes>`
   ${({ theme }) => theme.fonts.body4};
-  color: ${({ theme, isInterested }) => (isInterested ? theme.colors.mainPink : theme.colors.black)}; 
+  color: ${({ theme, isInterested }) => (isInterested ? theme.colors.mainPink : theme.colors.black)};
 `;
+
 const BodyPopupArchiveHoverIcon = styled(BodyPopupArchiveHoverIc)`
   ${MyPageIcon}
 `;

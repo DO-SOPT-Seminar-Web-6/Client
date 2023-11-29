@@ -1,11 +1,9 @@
 import { RateContents } from '@styles/common/myPage/SetRateContents';
 import { SetTitle } from '@styles/common/myPage/SetTitle';
-import { flexCenter } from '@styles/globalStyle'
-import React from 'react'
-import styled from 'styled-components'
+import { flexCenter } from '@styles/globalStyle';
+import styled from 'styled-components';
 
 export default function SetRates() {
-
   return (
     <Rate>
       <MyRate>
@@ -20,18 +18,18 @@ export default function SetRates() {
   );
 }
 const Rate = styled.span`
-  ${flexCenter}; 
+  ${flexCenter};
   gap: 3rem;
   width: 30.5rem;
-`
+`;
 const MyRate = styled.article`
   ${flexCenter}
   flex-direction: column;
   color: ${({ theme }) => theme.colors.mainPink};
-`
+`;
 
 const AverageRate = styled.article`
   ${flexCenter}
   flex-direction: column;
   color: ${({ theme }) => theme.colors.grey600};
-`
+`;
