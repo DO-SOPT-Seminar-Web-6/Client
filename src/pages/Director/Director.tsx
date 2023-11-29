@@ -4,6 +4,7 @@ import { SectionContainer } from '@styles/globalStyle';
 import DirectorLike from '@components/director/directorDetail/DirectorLike';
 import DirectorInfo from '@components/director/directorDetail/DirectorInfo';
 import FilmoContainer from '@components/director/directorFilmo/FilmoContainer';
+import FilmoTable from '@components/director/directorFilmo/FilmoTable';
 
 /** director page */
 export default function Director() {
@@ -25,7 +26,7 @@ export default function Director() {
           <FilmoContainer title="각본" />
           <FilmoContainer title="출연" />
         </FilmoSection>
-        <FilmoTable>123</FilmoTable>
+        <FilmoTable />
       </FilmoContainerBox>
     </>
   );
@@ -73,12 +74,4 @@ const FilmoSectionTitle = styled.h3`
   ${({ theme }) => theme.fonts.title2};
 
   margin-bottom: 1.6rem;
-`;
-
-const FilmoTable = styled.aside`
-  ${({ theme }) => theme.fonts.body2};
-
-  padding: 2rem 0;
-  width: 23.6rem;
-  height: 19.6rem;
 `;
