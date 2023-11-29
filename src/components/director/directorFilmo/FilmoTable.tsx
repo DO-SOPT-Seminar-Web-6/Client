@@ -4,11 +4,19 @@ import styled, { css } from 'styled-components';
 export default function FilmoTable() {
   return (
     <Container>
-      <ContentTableLink selected={true}>영화</ContentTableLink>
+      <ContentTableLink href="#filmography_movies" selected={true}>
+        영화
+      </ContentTableLink>
       <SubContainer>
-        <ContentTableLink selected={true}>감독</ContentTableLink>
-        <ContentTableLink selected={false}>각본</ContentTableLink>
-        <ContentTableLink selected={false}>출연</ContentTableLink>
+        <ContentTableLink href="#filmography_director" selected={true}>
+          감독
+        </ContentTableLink>
+        <ContentTableLink href="#filmography_scenario" selected={false}>
+          각본
+        </ContentTableLink>
+        <ContentTableLink href="#filmography_cast" selected={false}>
+          출연
+        </ContentTableLink>
       </SubContainer>
       <ContentTableLink selected={false}>책</ContentTableLink>
     </Container>

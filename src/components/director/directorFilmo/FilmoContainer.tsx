@@ -5,17 +5,18 @@ import useShowMore from '@hooks/useShowMore';
 import { castDetailMovies } from '@core/\bdirectorMovies';
 
 interface InFilmoContainerPropsTypes {
+  id: string;
   title: string;
 }
 
 /** filmo 공통 container */
 export default function FilmoContainer(props: InFilmoContainerPropsTypes) {
-  const { title } = props;
+  const { id, title } = props;
   const { isOpen, handleShowMore } = useShowMore();
 
   return (
     <FilmoBox>
-      <FilmoTitle>{title}</FilmoTitle>
+      <FilmoTitle id={id}>{title}</FilmoTitle>
       <FilmoList isOpen={isOpen}>
         {castDetailMovies.map(({ img, title, rate, subInfo }) => (
           <li key={`${title}-${rate}-${subInfo}`}>

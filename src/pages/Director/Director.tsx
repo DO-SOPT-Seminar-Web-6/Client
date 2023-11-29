@@ -21,10 +21,10 @@ export default function Director() {
       </FigureContainer>
       <FilmoContainerBox>
         <FilmoSection>
-          <FilmoSectionTitle>영화</FilmoSectionTitle>
-          <FilmoContainer title="감독" />
-          <FilmoContainer title="각본" />
-          <FilmoContainer title="출연" />
+          <FilmoSectionTitle id="filmography_movies">영화</FilmoSectionTitle>
+          <FilmoContainer id="filmography_director" title="감독" />
+          <FilmoContainer id="filmography_scenario" title="각본" />
+          <FilmoContainer id="filmography_cast" title="출연" />
         </FilmoSection>
         <FilmoTable />
       </FilmoContainerBox>
