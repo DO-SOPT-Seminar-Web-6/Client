@@ -9,14 +9,14 @@ import { useState } from 'react';
 
 export default function MyPage() {
   const [existComment, isExistComment] = useState(false);
-  const [comment, setComment] = useState(null);
+  const [comment, setComment] = useState('');
 
   return (
     <Section>
       <MyPageSide />
       <MyPageBox>
-        <MyPageHeader comment={comment} setComment={setComment} isExistComment={isExistComment}/>
-        <MyPageReview comment={comment} existComment={existComment}/>
+        <MyPageHeader comment={comment} setComment={setComment} isExistComment={isExistComment} />
+        <MyPageReview comment={comment} existComment={existComment} />
         <MyPageDescription />
         <MyPagePopularComment />
       </MyPageBox>
