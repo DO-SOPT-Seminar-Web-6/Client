@@ -1,4 +1,3 @@
-import React from 'react';
 import AnimationTitleHeader from './Title/AnimationTitleHeader';
 import AnimationTitleDetail from './Title/AnimationTitleDetail';
 import AnimationTitleButtons from './Title/AnimationTitleButtons';

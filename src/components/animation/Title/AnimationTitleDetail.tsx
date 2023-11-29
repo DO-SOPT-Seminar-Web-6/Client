@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import { AnimationDetailText } from '@styles/common/commonText';
+import useGetAnimationCollection from '@hooks/useGetAnimationCollection';
 
 export default function AnimationTitleDetail() {
+  const { data } = useGetAnimationCollection();
   return (
     <Wrapper>
       <AnimationDetailText>좋아요</AnimationDetailText>
       <Number>1324</Number>
       <DivideLine />
       <AnimationDetailText>댓글</AnimationDetailText>
-      <Number>9</Number>
+      <Number>{data?.replyCount}</Number>
       <DivideLine />
 
       <AnimationDetailText>12일 전 업데이트</AnimationDetailText>
