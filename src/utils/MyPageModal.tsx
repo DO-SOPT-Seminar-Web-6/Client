@@ -6,14 +6,14 @@ interface InModalPropsTypes {
   open: boolean;
   close: () => void;
   comment: string;
-  setComment: React.Dispatch<React.SetStateAction<string>>;
+  handleComment: (value: string) => void;
 }
 
 export default function MyPageModal(props: InModalPropsTypes) {
-  const { open, close, comment, setComment } = props;
+  const { open, close, comment, handleComment } = props;
 
   function handleInputValue(event: React.ChangeEvent<HTMLInputElement>) {
-    setComment(event.target.value);
+    handleComment(event.target.value);
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -21,31 +21,42 @@ export default function MyPageModal(props: InModalPropsTypes) {
   }
 
   return (
-    <ModalContainer style={{ display: open ? 'flex' : 'none' }}>
-      <ModalHeader>
-        <Title>그대들은 어떻게 살 것인가</Title>
-        <PopupExitIcon />
-      </ModalHeader>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="이 작품에 대한 생각을 자유롭게 표현해주세요."
-          value={comment}
-          onChange={handleInputValue}
-        />
-        <SaveButton type="submit" onClick={close}>
-          저장
-        </SaveButton>
-      </Form>
-    </ModalContainer>
+    <Modal>
+      <ModalContainer>
+        <ModalHeader>
+          <Title>그대들은 어떻게 살 것인가</Title>
+          <PopupExitIcon />
+        </ModalHeader>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="이 작품에 대한 생각을 자유롭게 표현해주세요."
+            value={comment}
+            onChange={handleInputValue}
+          />
+          <SaveButton type="submit" onClick={close}>
+            저장
+          </SaveButton>
+        </Form>
+      </ModalContainer>
+    </Modal>
   );
 }
+
+const Modal = styled.article`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(168, 168, 168, 0.348);
+`;
 
 const ModalContainer = styled.section`
   display: flex;
   position: absolute;
-  right: 30rem;
-  bottom: 0;
+  top: calc(50vh - 300px);
+  left: calc(50vw - 200px);
   flex-direction: column;
   border-radius: 1.4rem;
   background-color: ${({ theme }) => theme.colors.white};
