@@ -14,7 +14,7 @@ export default function FilmoContainer(props: InFilmoContainerPropsTypes) {
   const { isOpen, handleShowMore } = useShowMore();
 
   return (
-    <>
+    <FilmoBox>
       <FilmoTitle>{title}</FilmoTitle>
       <FilmoList isOpen={isOpen}>
         {castDetailMovies.map(({ img, title, rate, subInfo }) => (
@@ -24,9 +24,13 @@ export default function FilmoContainer(props: InFilmoContainerPropsTypes) {
         ))}
       </FilmoList>
       <Button isOpen={isOpen} handleShowMore={handleShowMore} />
-    </>
+    </FilmoBox>
   );
 }
+
+const FilmoBox = styled.div`
+  margin-bottom: 6rem;
+`;
 
 const FilmoTitle = styled.h4`
   ${({ theme }) => theme.fonts.subTitle2};
