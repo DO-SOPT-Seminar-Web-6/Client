@@ -1,39 +1,41 @@
 import { flexCenter } from '@styles/globalStyle';
-import React from 'react';
 import styled from 'styled-components';
 import { PopupExitIc } from '@assets/index';
 
 interface InModalPropsTypes {
   open: boolean;
-  close:(v:boolean)=>void;
+  close: () => void;
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function MyPageModal(props: InModalPropsTypes) {
-  const {open, close, comment, setComment} = props;
+  const { open, close, comment, setComment } = props;
 
   function handleInputValue(event: React.ChangeEvent<HTMLInputElement>) {
     setComment(event.target.value);
-  };
-  function handleSubmit(event: React.FormEvent<HTMLInputElement>) {
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
   }
-  
+
   return (
-    <ModalContainer style={{display:open?"flex":"none"}}>
+    <ModalContainer style={{ display: open ? 'flex' : 'none' }}>
       <ModalHeader>
         <Title>그대들은 어떻게 살 것인가</Title>
-        <PopupExitIcon/> 
+        <PopupExitIcon />
       </ModalHeader>
       <Form onSubmit={handleSubmit}>
-        <Input 
+        <Input
           type="text"
-          placeholder= "이 작품에 대한 생각을 자유롭게 표현해주세요."
+          placeholder="이 작품에 대한 생각을 자유롭게 표현해주세요."
           value={comment}
           onChange={handleInputValue}
         />
-        <SaveButton type="submit" onClick={close}>저장</SaveButton>
+        <SaveButton type="submit" onClick={close}>
+          저장
+        </SaveButton>
       </Form>
     </ModalContainer>
   );
@@ -78,7 +80,7 @@ const Input = styled.input`
   transform: translateY(-40%);
   height: 36rem;
   color: ${({ theme }) => theme.colors.black};
-  &::placeholder{
+  &::placeholder {
     color: ${({ theme }) => theme.colors.grey500};
   }
 `;

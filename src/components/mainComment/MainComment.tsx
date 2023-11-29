@@ -1,8 +1,7 @@
-import { SectionContainer } from '@styles/globalStyle'
-import React from 'react'
-import styled from 'styled-components'
-import MainCommentHeader from './MainCommentHeader'
-import MainCommentDetail from './MainCommentDetail'
+import { SectionContainer } from '@styles/globalStyle';
+import styled from 'styled-components';
+import MainCommentHeader from './MainCommentHeader';
+import MainCommentDetail from './MainCommentDetail';
 
 export default function MainComment() {
   return (

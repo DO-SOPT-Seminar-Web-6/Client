@@ -12,6 +12,7 @@ interface InMovieArticleProps {
 /** each movie info  */
 export default function MovieInfo(props: InMovieArticleProps) {
   const { keyword, title, rate, subInfo, icon, titleLength } = props;
+
   return (
     <ArticleInfoBox>
       <ArticleTitle titleLength={titleLength}>{title}</ArticleTitle>

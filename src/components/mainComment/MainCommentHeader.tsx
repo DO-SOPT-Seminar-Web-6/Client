@@ -1,9 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { flexCenter } from '@styles/globalStyle';
 
 export default function MainCommentHeader() {
-
   return (
     <Header>
       <HeaderLeft>
@@ -20,9 +18,9 @@ export default function MainCommentHeader() {
 const Header = styled.section`
   ${flexCenter};
   gap: 100.2rem;
-  width:124.6rem;
+  width: 124.6rem;
   height: 3.5rem;
-`
+`;
 
 const HeaderLeft = styled.p`
   display: flex;
@@ -37,7 +35,8 @@ const HeaderLeft = styled.p`
     line-height: 3.5rem;
     color: ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
+
 const HeaderRight = styled.div`
   width: 4.5rem;
   height: 2.3rem;

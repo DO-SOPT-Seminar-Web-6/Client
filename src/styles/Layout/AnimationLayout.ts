@@ -1,4 +1,3 @@
-import { flexCenter } from '@styles/globalStyle';
 import styled from 'styled-components';
 
 export const AnimationLayout = styled.section`
