@@ -4,7 +4,7 @@ interface InMovieArticleProps {
   title: string;
   rate: number;
   keyword: string;
-  icon? : boolean;
+  icon?: boolean;
   subInfo?: string;
 }
 
@@ -46,4 +46,4 @@ const ArticleRateText = styled.p`
 const CastDetailLikeIcon = styled(castDetailLikeIc)`
   width: 1.4rem;
   height: 1.4rem;
-`
+`;

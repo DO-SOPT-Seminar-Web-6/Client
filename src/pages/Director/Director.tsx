@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import CastDetailHayaoImg from '@assets/image/cast/castDetail/castDetailHayaoImg.png';
 import { SectionContainer } from '@styles/globalStyle';
-import DirectorLike from './directorDetail/DirectorLike';
-import DirectorInfo from './directorDetail/DirectorInfo';
+import DirectorLike from '../../components/director/directorDetail/DirectorLike';
+import DirectorInfo from '../../components/director/directorDetail/DirectorInfo';
+import FilmoContainer from '@components/director/directorFilmo/FilmoContainer';
 
 /** director page */
 export default function Director() {
@@ -16,6 +17,9 @@ export default function Director() {
         </div>
         <DirectorInfo />
         <DirectorLike />
+      </Container>
+      <Container>
+        <FilmoContainer title="감독" />
       </Container>
     </>
   );
