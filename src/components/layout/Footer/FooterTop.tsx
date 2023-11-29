@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import footerStarIc from '@assets/icon/footer/footerStarIc.svg?react';
+import { FooterStarIc } from '@assets/index';
 
 /** footer top section */
 export default function FooterTop() {
@@ -7,7 +7,7 @@ export default function FooterTop() {
     <FooterTopBox>
       <span>지금까지 </span>
       <FooterStrongText>
-        <img src={footerStarIc} />
+        <FooterStarIcon />
         <span>705,566,092 개의 평가가 </span>
       </FooterStrongText>
       <span>쌓였어요.</span>
@@ -27,4 +27,9 @@ const FooterTopBox = styled.div`
 
 const FooterStrongText = styled.strong`
   color: ${({ theme }) => theme.colors.mainPink};
+`;
+
+const FooterStarIcon = styled(FooterStarIc)`
+  width: 1.8rem;
+  height: 1.8rem;
 `;

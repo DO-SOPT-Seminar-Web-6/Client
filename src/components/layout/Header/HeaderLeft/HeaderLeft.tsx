@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import watchaLogoIc from '@assets/icon/banner/watchaLogoIc.svg?react';
+import { WatchaLogoIc } from '@assets/index';
 import { flexCenter } from '@styles/globalStyle';
 import HeaderNav from './HeaderNav';
 
@@ -8,7 +8,7 @@ export default function HeaderLeft() {
   return (
     <HeaderContainerLeft>
       <button>
-        <img src={watchaLogoIc} />
+        <WatchaLogoIcon />
       </button>
       <HeaderNav />
     </HeaderContainerLeft>
@@ -19,4 +19,9 @@ const HeaderContainerLeft = styled.div`
   ${flexCenter}
 
   gap: 3rem;
+`;
+
+const WatchaLogoIcon = styled(WatchaLogoIc)`
+  width: 15rem;
+  height: 3.3rem;
 `;

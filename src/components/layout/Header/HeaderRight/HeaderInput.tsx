@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import bannerSearchIc from '@assets/icon/banner/bannerSearchIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
+import { BannerSearchIc } from '@assets/index';
 
 /** header right section input */
 export default function HeaderInput() {
   return (
     <HeaderSearchForm>
       <HeaderSearchLabel htmlFor="searchContent">
-        <img src={bannerSearchIc} />
+        <BannerSearchIcon />
       </HeaderSearchLabel>
       <HeaderSearchInput id="searchContent" type="text" placeholder="콘텐츠, 인물, 컬렉션, 유저를 검색해보세요." />
     </HeaderSearchForm>
@@ -30,4 +30,9 @@ const HeaderSearchLabel = styled.label`
 const HeaderSearchInput = styled.input`
   width: 25.4rem;
   height: 2rem;
+`;
+
+const BannerSearchIcon = styled(BannerSearchIc)`
+  width: 1.9rem;
+  height: 1.9rem;
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import footerPushDownIc from '@assets/icon/footer/footerPushDownIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
+import { FooterPushDownIc } from '@assets/index';
 
 /** footer bottom section second row */
 export default function FooterBottomSecondRow() {
@@ -11,7 +11,7 @@ export default function FooterBottomSecondRow() {
         <span>광고 문의 | ad_sales@Watcha.com</span>
         <FooterDownloadButton>
           <span>최신 광고 소개서</span>
-          <img src={footerPushDownIc} />
+          <FooterPushDownIcon />
         </FooterDownloadButton>
       </FooterDownloadBox>
       <span>제휴 및 대외 협력 | http://watcha.team/contact</span>
@@ -41,4 +41,9 @@ const FooterDownloadButton = styled.button`
   ${flexCenter}
 
   gap: 0.3rem;
+`;
+
+const FooterPushDownIcon = styled(FooterPushDownIc)`
+  width: 2.1rem;
+  height: 2.1rem;
 `;

@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import WatchaOpenIc from '@assets/icon/watcha/watchaOpenIc.svg?react';
-import WatchaCloseIc from '@assets/icon/watcha/watchaCloseIc.svg?react';
 import { flexCenter } from '@styles/globalStyle';
 import { useState } from 'react';
+import { WatchaCloseIc, WatchaOpenIc } from '@assets/index';
 
 /** 닫기 / 더보기 버튼 */
 export default function Button() {
@@ -18,13 +17,13 @@ export default function Button() {
         {!isOpen && (
           <>
             <span>더보기</span>
-            <img src={WatchaOpenIc} />
+            <WatchaOpenIcon />
           </>
         )}
         {isOpen && (
           <>
             <span>닫기</span>
-            <img src={WatchaCloseIc} />
+            <WatchaCloseIcon />
           </>
         )}
       </ButtonContainer>
@@ -41,4 +40,13 @@ const ButtonContainer = styled.button`
   width: 16.6rem;
   height: 3.4rem;
   color: ${({ theme }) => theme.colors.mainPink};
+`;
+
+const WatchaCloseIcon = styled(WatchaCloseIc)`
+  width: 2.4rem;
+  height: 2.4rem;
+`;
+const WatchaOpenIcon = styled(WatchaOpenIc)`
+  width: 2.4rem;
+  height: 2.4rem;
 `;
