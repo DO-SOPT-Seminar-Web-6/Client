@@ -36,6 +36,7 @@ const ButtonContainer = styled.button`
   ${flexCenter}
   ${({ theme }) => theme.fonts.body3};
 
+  margin: 0 auto;
   border: 1px solid ${({ theme }) => theme.colors.grey300};
   border-radius: 6px;
   width: 16.6rem;
