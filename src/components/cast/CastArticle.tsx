@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
 import { DataTypes } from 'types/dataTypes';
 
+interface InDataTypes {
+  data: DataTypes[];
+}
+
 export default function CastArticle() {
-  const { data } = useGetMyPageProduction();
+  const { data }: InDataTypes = useGetMyPageProduction();
 
   if (!data) {
     return null;
