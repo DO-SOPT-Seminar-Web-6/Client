@@ -3,7 +3,7 @@ import { getMyPageComment, InGetMyPageCommentTypes } from "@api/getMyPageComment
 import { CommentDataTypes } from "types/commentDataTypes";
 
 export default function useGetMyPageComment(){
-  const result=useQuery<CommentDataTypes, Error>
+  const result=useQuery<CommentDataTypes[], Error>
   (['getMyPageComment'], getMyPageComment, {
     onError: (error)=> {
       console.error('에러 발생', error);
