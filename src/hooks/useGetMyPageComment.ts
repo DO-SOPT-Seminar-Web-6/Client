@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getMyPageComment, InGetMyPageCommentTypes } from "@api/getMyPageComment";
+import { getMyPageComment} from "@api/getMyPageComment";
 import { CommentDataTypes } from "types/commentDataTypes";
 
 export default function useGetMyPageComment(){
@@ -9,6 +9,6 @@ export default function useGetMyPageComment(){
       console.error('에러 발생', error);
     },
   });
-  
+
   return result;
 }
