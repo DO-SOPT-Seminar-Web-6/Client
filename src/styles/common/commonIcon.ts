@@ -9,3 +9,8 @@ export const MyPageHeaderIcon = css`
   width: 3.8rem;
   height: 4rem;
 `
+
+export const MyPagePopularCommentIcon = css`
+  width: 2rem;
+  height: 2rem;
+`
