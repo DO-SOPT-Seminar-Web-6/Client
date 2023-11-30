@@ -3,25 +3,19 @@ import styled from 'styled-components';
 import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
 import { DataTypes } from 'types/dataTypes';
 
-interface InDataTypes {
-  data: DataTypes[];
-}
-
 export default function CastArticle() {
-  const { data }: InDataTypes = useGetMyPageProduction();
 
-  if (!data) {
+  const { data } = useGetMyPageProduction();
+  
+  if (!Array.isArray(data) || data.length === 0) {
     return null;
   }
-
-  console.log('쓰는 곳에서 Data:', data);
-
   return (
     <Article>
-      {data?.map((cast) => {
+      {data&& data.map((cast : DataTypes) => {
         const { id, imageUrl, name, role, roleDetail } = cast;
-        return <CastSection key={id} imageUrl={imageUrl} name={name} role={role} roleDetail={roleDetail} />;
-      })}
+        return <CastSection key={id} id={id} imageUrl={imageUrl} name={name} role={role} roleDetail={roleDetail} />;
+      })} 
     </Article>
   );
 }
