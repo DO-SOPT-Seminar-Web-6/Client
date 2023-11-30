@@ -10,7 +10,7 @@ interface InModalPropsTypes {
 }
 
 export default function MyPageModal(props: InModalPropsTypes) {
-  const { open, close, comment, handleComment } = props;
+  const { close, comment, handleComment } = props;
 
   function handleInputValue(event: React.ChangeEvent<HTMLInputElement>) {
     handleComment(event.target.value);
