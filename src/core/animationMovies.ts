@@ -7,14 +7,14 @@ import collectDetailPoster6Img from '@assets/image/collection/collectDetail/coll
 import collectDetailPoster7Img from '@assets/image/collection/collectDetail/collectDetailPoster7Img.png';
 import collectDetailPoster8Img from '@assets/image/collection/collectDetail/collectDetailPoster8Img.png';
 
-interface animationMoviesTypes {
+interface InAnimationMoviesTypes {
   img: string;
   title: string;
   rate: number;
   subInfo: string;
 }
 
-export const animationMovies: animationMoviesTypes[] = [
+export const animationMovies: InAnimationMoviesTypes[] = [
   {
     img: collectDetailPoster1Img,
     title: '그대들은 어떻게 살 것인가',
@@ -23,14 +23,14 @@ export const animationMovies: animationMoviesTypes[] = [
   },
   {
     img: collectDetailPoster2Img,
-    title: '스파이더맨',
+    title: '스파이더맨: 어크로스 유니버스',
     rate: 4.2,
     subInfo: '영화',
   },
   {
     img: collectDetailPoster3Img,
-    title: '스파이더맨',
-    rate: 4.0,
+    title: '스파이더맨: 뉴 유니버스',
+    rate: 4.2,
     subInfo: '영화',
   },
   {
@@ -41,7 +41,7 @@ export const animationMovies: animationMoviesTypes[] = [
   },
   {
     img: collectDetailPoster5Img,
-    title: '오스왈드',
+    title: '오스왈드 더 럭키 래빗',
     rate: 2.9,
     subInfo: '영화',
   },
@@ -59,7 +59,7 @@ export const animationMovies: animationMoviesTypes[] = [
   },
   {
     img: collectDetailPoster8Img,
-    title: '혹시 내게 무슨 일',
+    title: '혹시 내게 무슨 일이 일어났다면',
     rate: 3.4,
     subInfo: '영화',
   },

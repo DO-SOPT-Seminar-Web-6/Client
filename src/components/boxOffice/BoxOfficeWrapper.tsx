@@ -1,13 +1,12 @@
-import React from "react";
 import styled from 'styled-components';
 import BoxOfficeWrapperDescription from './BoxOfficeWrapperDescription';
 interface InBoxOfficeMoviesProps {
-  wrapperNumber : string;
+  wrapperNumber: string;
   imgSrc: string;
   title: string;
   rate: number;
-  imgWidth: number;
-  imgHeight: number;
+  imgWidth?: number;
+  imgHeight?: number;
 }
 
 /** each BoxOffice info  */
@@ -18,12 +17,17 @@ export default function BoxOfficeWrapper({
   rate,
   imgWidth = 15,
   imgHeight = 21.6,
-}: InBoxOfficeMoviesProps): JSX.Element{
-
-  return ( 
+}: InBoxOfficeMoviesProps): JSX.Element {
+  return (
     <WrapperContents>
       <Grade>{wrapperNumber}</Grade>
-      <BoxOfficeWrapperDescription imgSrc={imgSrc} title={title} rate={rate} imgWidth={imgWidth} imgHeight={imgHeight}/>
+      <BoxOfficeWrapperDescription
+        imgSrc={imgSrc}
+        title={title}
+        rate={rate}
+        imgWidth={imgWidth}
+        imgHeight={imgHeight}
+      />
     </WrapperContents>
   );
 }
@@ -38,4 +42,4 @@ const WrapperContents = styled.article`
 
 const Grade = styled.span`
   ${({ theme }) => theme.fonts.title1};
-`
+`;

@@ -1,8 +1,7 @@
-import React from 'react'
-import { MainContainer } from '@styles/Layout/MainContainer' 
-import styled from 'styled-components'
-import PopularCommentHeader from './PopularCommentHeader'
-import PopularCommentBottom from './PopularCommentBottom'
+import styled from 'styled-components';
+import PopularCommentHeader from './PopularCommentHeader';
+import PopularCommentBottom from './PopularCommentBottom';
+import { MainContainer } from '@styles/Layout/MainContainer';
 
 interface InPopularCommentPropsTypes {
   imgSrc: string;
@@ -18,24 +17,27 @@ export default function PopularCommentDetails(props: InPopularCommentPropsTypes)
 
   return (
     <CommentBox>
-      <PopularCommentHeader name={name} imgSrc={imgSrc}/>
+      <PopularCommentHeader name={name} imgSrc={imgSrc} />
       <PopularCommentText>{comments}</PopularCommentText>
-      <PopularCommentBottom likes={likes} numComments={numComments}/>
+      <PopularCommentBottom likes={likes} numComments={numComments} />
     </CommentBox>
-  )
+  );
 }
 
 const CommentBox = styled.section`
-  &{MainContainer};
-  padding: 1rem;
+  ${MainContainer}
   background-color: ${({ theme }) => theme.colors.white};
+
+  padding: 1rem;
   width: 43rem;
-`
+`;
+
 const PopularCommentText = styled.p`
   display: flex;
   ${({ theme }) => theme.fonts.body2160};
-  color: ${({ theme }) => theme.colors.grey600};
   border-top: 1px solid ${({ theme }) => theme.colors.grey300};
   padding: 2rem 0;
+
   height: 14.6rem;
-`
+  color: ${({ theme }) => theme.colors.grey600};
+`;

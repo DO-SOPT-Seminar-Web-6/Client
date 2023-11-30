@@ -1,6 +1,6 @@
+import styled from 'styled-components';
 import ReviewStarFullIc from '@assets/icon/review/reviewStarFullIc.svg';
 import ReviewProfile5Img from '@assets/image/review/reviewProfile5Img.png';
-import styled from 'styled-components';
 
 interface InContainerTypes {
   isThumbnail?: boolean;
