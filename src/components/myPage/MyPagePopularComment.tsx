@@ -1,14 +1,9 @@
 import styled from 'styled-components';
 import PopularCommentDetails from './PopularCommentDetails';
-import { CommentDataTypes } from 'types/commentDataTypes';
 import useGetMyPageComment from '@hooks/useGetMyPageComment';
 
-export interface InCommentDataTypes{
-  data: CommentDataTypes[];
-}
-
 export default function MyPagePopularComment() {
-  const {data}: InCommentDataTypes = useGetMyPageComment(); 
+  const {data} = useGetMyPageComment(); 
 
   return (
     <PopularCommentSection>
