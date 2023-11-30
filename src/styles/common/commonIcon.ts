@@ -14,3 +14,8 @@ export const MyPagePopularCommentIcon = css`
   width: 2rem;
   height: 2rem;
 `
+
+export const ReviewStarIcon = css`
+  width: 1.4rem;
+  height: 1.4rem;
+`
