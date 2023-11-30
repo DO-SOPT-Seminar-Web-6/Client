@@ -31,5 +31,6 @@ const CastContainer = styled(MainContainer)`
 const CastDetailContainer = styled(MainContainer)`
   gap: 3.5rem;
   align-items: center;
+  cursor: pointer;
   height: 36.8rem;
 `;
