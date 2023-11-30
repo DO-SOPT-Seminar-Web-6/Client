@@ -37,5 +37,5 @@ const PopularCommentText = styled.p`
   border-top: 1px solid ${({ theme }) => theme.colors.grey300};
   padding: 2rem 0;
   height: 14.6rem;
-  color: ${({ theme }) => theme.colors.grey600};
+  color: ${({ theme }) => theme.colors.black};
 `;
