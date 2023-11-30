@@ -1,19 +1,28 @@
-import ReviewLikeCommentIc from '@assets/icon/review/reviewLikeCommentIc.svg';
-import ReviewLikeUnActiveIc from '@assets/icon/review/reviewLikeUnActiveIc.svg';
 import styled from 'styled-components';
 import { flexCenter } from '@styles/globalStyle';
+import { ReviewLikeActiveIc, ReviewLikeCommentIc, ReviewLikeUnActiveIc } from '@assets/index';
+
+interface InTextTypes {
+  isLike: boolean;
+}
+
+interface InCommentBottomPropsTypes extends InTextTypes {
+  commentCount: number;
+  likeCount: number;
+}
 
 /** Comment 좋아요, 댓글 부분 */
-export default function CommentBottom() {
+export default function CommentBottom({ commentCount, isLike, likeCount }: InCommentBottomPropsTypes) {
   return (
     <CommentBottomBox>
       <CommentBottomButton>
-        <img src={ReviewLikeUnActiveIc} />
-        <span>755</span>
+        {!isLike && <ReviewLikeUnActiveIc />}
+        {isLike && <ReviewLikeActiveIc />}
+        <LikeCountText isLike={isLike}>{likeCount}</LikeCountText>
       </CommentBottomButton>
       <CommentBottomButton>
-        <img src={ReviewLikeCommentIc} />
-        <span>14</span>
+        <ReviewLikeCommentIc />
+        <span>{commentCount}</span>
       </CommentBottomButton>
     </CommentBottomBox>
   );
@@ -32,4 +41,8 @@ const CommentBottomButton = styled.button`
   ${flexCenter}
 
   gap: 0.2rem;
+`;
+
+const LikeCountText = styled.span<InTextTypes>`
+  color: ${({ isLike, theme }) => (isLike ? `${theme.colors.mainPink}` : `${theme.colors.grey600}`)};
 `;

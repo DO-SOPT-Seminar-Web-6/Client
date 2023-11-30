@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import CommentToggle from './CommentToggle';
 import { useState } from 'react';
 
-export default function CommentHeader() {
+interface InCommentHeaderPropsTypes {
+  handleSort: (sort: string) => void;
+}
+
+export default function CommentHeader({ handleSort }: InCommentHeaderPropsTypes) {
   const [isReorder, setIsReorder] = useState(false);
   const [isLiked, setIsLiked] = useState(true);
 
@@ -19,7 +23,7 @@ export default function CommentHeader() {
         <ReviewFilterIcon />
         {isLiked ? '좋아요 순' : '댓글 수 순'}
       </OrderButton>
-      {isReorder && <CommentToggle setIsReorder={setIsReorder} setIsLiked={setIsLiked} />}
+      {isReorder && <CommentToggle setIsReorder={setIsReorder} setIsLiked={setIsLiked} handleSort={handleSort} />}
     </Wrapper>
   );
 }
