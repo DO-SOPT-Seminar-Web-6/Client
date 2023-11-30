@@ -9,9 +9,6 @@ export default function useGetMyPageComment(){
       console.error('에러 발생', error);
     },
   });
-
-  if(result.data){
-    console.log('데이터:', result.data);
-  }
+  
   return result;
 }
