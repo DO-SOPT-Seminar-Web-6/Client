@@ -1,15 +1,23 @@
 import CastSection from './CastSection';
 import styled from 'styled-components';
-import { castData } from '@core/castData';
+import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
+import { DataTypes } from 'types/dataTypes';
 
 export default function CastArticle() {
+  const { data } = useGetMyPageProduction();
+
+  if (!data) {
+    return null;
+  }
+
+  console.log('쓰는 곳에서 Data:', data);
+
   return (
     <Article>
-      {castData &&
-        castData.map((cast) => {
-          const { imgSrc, name, role } = cast;
-          return <CastSection imgSrc={imgSrc} name={name} role={role} />;
-        })}
+      {data?.map((cast) => {
+        const { id, imageUrl, name, role, roleDetail } = cast;
+        return <CastSection key={id} imageUrl={imageUrl} name={name} role={role} roleDetail={roleDetail} />;
+      })}
     </Article>
   );
 }
