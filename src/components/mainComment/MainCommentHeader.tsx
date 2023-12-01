@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import { flexCenter } from '@styles/globalStyle';
+import { useNavigate } from 'react-router-dom';
 
 export default function MainCommentHeader() {
+  const navigate = useNavigate();
+  
+  function handleMoveToComments() {
+    navigate('/comments');
+  }
+
   return (
     <Header>
       <HeaderLeft>
@@ -9,7 +16,7 @@ export default function MainCommentHeader() {
         <h2>6000+</h2>
       </HeaderLeft>
       <HeaderRight>
-        <button>더보기</button>
+        <button onClick={handleMoveToComments}>더보기</button>
       </HeaderRight>
     </Header>
   );

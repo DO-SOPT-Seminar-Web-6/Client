@@ -4,6 +4,7 @@ import CastHeader from './CastHeader';
 import CastArticle from './CastArticle';
 import Button from '@components/common/Button/Button';
 import useShowMore from '@hooks/useShowMore';
+
 export default function Cast() {
   const { isOpen, handleShowMore } = useShowMore();
 
