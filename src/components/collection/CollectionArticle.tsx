@@ -14,6 +14,7 @@ export default function CollectionArticle() {
           const { imgSrc, title, likes } = image;
           return (
             <MovieArticle
+              key={`${title}-${likes}`}
               imgSrc={imgSrc}
               imgHeight={imgSize[1]}
               imgWidth={imgSize[0]}

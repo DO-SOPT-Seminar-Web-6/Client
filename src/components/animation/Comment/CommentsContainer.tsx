@@ -14,7 +14,7 @@ export default function CommentsContainer() {
       {replyArray?.map((reply) => {
         const { replyId, content, likeCount } = reply;
 
-        return <CommentBox key={replyId} content={content} likeCount={likeCount} />;
+        return <CommentBox key={`${replyId}-${likeCount}`} content={content} likeCount={likeCount} />;
       })}
     </>
   );

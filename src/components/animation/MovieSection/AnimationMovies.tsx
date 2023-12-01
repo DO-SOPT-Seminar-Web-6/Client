@@ -14,7 +14,7 @@ export default function AnimationMovies() {
           return (
             <MovieArticle
               titleLength={imgSize[0]}
-              key={title}
+              key={`${rate}-${title}`}
               icon={true}
               keyword="평점"
               imgHeight={imgSize[1]}

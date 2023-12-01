@@ -23,7 +23,7 @@ export default function SetStars() {
   return (
     <StarBox>
       {starRatingOnOff.map((isFilled, index) => (
-        <Star key={index} onMouseOver={(e) => handleMouseOverStarRating(e, index)}>
+        <Star key={`${index}-${isFilled}`} onMouseOver={(e) => handleMouseOverStarRating(e, index)}>
           {isFilled ? <BodyStarFillIcon /> : <BodyStarEmptyIcon />}
         </Star>
       ))}

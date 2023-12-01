@@ -9,7 +9,15 @@ export default function BoxOfficeArticle() {
         boxOfficeMovies.map((boxOffice) => {
           const { wrapperNumber, imgSrc, title, rate } = boxOffice;
 
-          return <BoxOfficeWrapper wrapperNumber={wrapperNumber} imgSrc={imgSrc} title={title} rate={rate} />;
+          return (
+            <BoxOfficeWrapper
+              key={`${wrapperNumber}-${title}`}
+              wrapperNumber={wrapperNumber}
+              imgSrc={imgSrc}
+              title={title}
+              rate={rate}
+            />
+          );
         })}
     </Article>
   );
