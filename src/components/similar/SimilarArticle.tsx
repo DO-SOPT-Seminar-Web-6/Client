@@ -10,7 +10,17 @@ export default function SimilarArticle() {
       {similarWorks &&
         similarWorks.map((works) => {
           const { imgSrc, title, rate, tag } = works;
-          return <MovieArticle imgSrc={imgSrc} title={title} rate={rate} tag={tag} keyword={keyword} icon={true} />;
+          return (
+            <MovieArticle
+              key={`${rate}-${title}-${tag}`}
+              imgSrc={imgSrc}
+              title={title}
+              rate={rate}
+              tag={tag}
+              keyword={keyword}
+              icon={true}
+            />
+          );
         })}
     </Article>
   );

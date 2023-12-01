@@ -1,28 +1,29 @@
 import styled from 'styled-components';
-import PopularCommentDetails from './PopularCommentDetails';
 import useGetMyPageComment from '@hooks/useGetMyPageComment';
+import PopularCommentDetails from './PopularCommentDetails';
 
 export default function MyPagePopularComment() {
-  const {data} = useGetMyPageComment(); 
+  const { data } = useGetMyPageComment();
 
   return (
     <PopularCommentSection>
       <Header>인기 코멘트</Header>
       <PopularCommentBox>
-        {data?.slice(6,8).map((data) => {
-            const { imageUrl, name, star, content, likeCount, commentCount, isLike } = data;
-            return (
-              <PopularCommentDetails
-                imageUrl={imageUrl}
-                name={name}
-                star={star}
-                content={content}
-                likeCount={likeCount}
-                commentCount={commentCount}
-                isLike={isLike}
-              />
-            );
-          })}
+        {data?.slice(6, 8).map((data) => {
+          const { imageUrl, name, star, content, likeCount, commentCount, isLike } = data;
+          return (
+            <PopularCommentDetails
+              key={`${name}-${star}-${content}`}
+              imageUrl={imageUrl}
+              name={name}
+              star={star}
+              content={content}
+              likeCount={likeCount}
+              commentCount={commentCount}
+              isLike={isLike}
+            />
+          );
+        })}
       </PopularCommentBox>
     </PopularCommentSection>
   );
@@ -37,7 +38,7 @@ const PopularCommentSection = styled.section`
 `;
 
 const Header = styled.h2`
-  ${({ theme }) => theme.fonts.body5}; 
+  ${({ theme }) => theme.fonts.body5};
   color: ${({ theme }) => theme.colors.grey600};
 `;
 

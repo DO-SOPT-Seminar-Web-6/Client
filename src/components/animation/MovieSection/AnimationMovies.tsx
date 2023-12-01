@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import { animationMovies } from '@core/animationMovies';
 
@@ -14,7 +13,7 @@ export default function AnimationMovies() {
           return (
             <MovieArticle
               titleLength={imgSize[0]}
-              key={title}
+              key={`${rate}-${title}`}
               icon={true}
               keyword="평점"
               imgHeight={imgSize[1]}

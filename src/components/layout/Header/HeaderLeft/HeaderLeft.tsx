@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { WatchaLogoIc } from '@assets/index';
 import { flexCenter } from '@styles/globalStyle';
+import { WatchaLogoIc } from '@assets/index';
 import HeaderNav from './HeaderNav';
 
 /** header left section */

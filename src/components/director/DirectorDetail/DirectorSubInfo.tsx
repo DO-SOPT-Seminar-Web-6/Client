@@ -8,7 +8,7 @@ export default function DirectorSubInfo() {
   return (
     <div>
       <SubTitle>바이오그래피</SubTitle>
-      <SubTitleDescription showText={showText}>
+      <SubTitleDescription $showText={showText}>
         <SubTitleDescriptionText>
           1941년 도쿄에서 출생. 애니메이션 영화감독. 가쿠슈인(學習院)대학을 졸업한 후 1963년 도에이동화(東映動畵: 현
           도에이 애니메이션) 입사. 그 후 몇몇 창작회사를 거쳐 1985년 지브리 스튜디오(Studio Ghibli) 설립에 참가. 2013년
@@ -19,7 +19,7 @@ export default function DirectorSubInfo() {
         </SubTitleDescriptionText>
         {!showText && <SubTitleDescriptionHideBox>&nbsp;</SubTitleDescriptionHideBox>}
         <SubTitleDescriptionButton
-          showText={showText}
+          $showText={showText}
           onClick={() => {
             setShowText(true);
           }}>
@@ -39,7 +39,7 @@ const SubTitle = styled.h1`
 `;
 
 interface InSubTitleDescriptionTypes {
-  showText: boolean;
+  $showText: boolean;
 }
 
 const SubTitleDescription = styled.div<InSubTitleDescriptionTypes>`
@@ -47,8 +47,8 @@ const SubTitleDescription = styled.div<InSubTitleDescriptionTypes>`
 
   position: relative;
   margin-bottom: 1rem;
-  height: ${({ showText }) => (showText ? 'auto' : '7.8rem')};
-  overflow: ${({ showText }) => (showText ? 'visible' : 'hidden')};
+  height: ${({ $showText }) => ($showText ? 'auto' : '7.8rem')};
+  overflow: ${({ $showText }) => ($showText ? 'visible' : 'hidden')};
 `;
 
 const SubTitleDescriptionText = styled.p`
@@ -72,7 +72,7 @@ const SubTitleDescriptionHideBox = styled.div`
 `;
 
 const SubTitleDescriptionButton = styled.button<InSubTitleDescriptionTypes>`
-  display: ${({ showText }) => (showText ? 'none' : 'block')};
+  display: ${({ $showText }) => ($showText ? 'none' : 'block')};
   position: absolute;
   right: 0;
   bottom: 0;

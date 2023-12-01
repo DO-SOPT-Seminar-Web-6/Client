@@ -1,8 +1,8 @@
-import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import styled from 'styled-components';
 import Button from '@components/common/Button/Button';
-import useShowMore from '@hooks/useShowMore';
+import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import { castDetailMovies } from '@core/directorMovies';
+import useShowMore from '@hooks/useShowMore';
 
 interface InFilmoContainerPropsTypes {
   id: string;
@@ -17,7 +17,7 @@ export default function FilmoContainer(props: InFilmoContainerPropsTypes) {
   return (
     <FilmoBox>
       <FilmoTitle id={id}>{title}</FilmoTitle>
-      <FilmoList isOpen={isOpen}>
+      <FilmoList $isOpen={isOpen}>
         {castDetailMovies.map(({ img, title, rate, subInfo }) => (
           <li key={`${title}-${rate}-${subInfo}`}>
             <MovieArticle imgSrc={img} title={title} rate={rate} subInfo={subInfo} />
@@ -40,7 +40,7 @@ const FilmoTitle = styled.h4`
 `;
 
 interface InFilmoListPropsTypes {
-  isOpen: boolean;
+  $isOpen: boolean;
 }
 
 const FilmoList = styled.ul<InFilmoListPropsTypes>`
@@ -51,6 +51,6 @@ const FilmoList = styled.ul<InFilmoListPropsTypes>`
   margin-bottom: 4rem;
   width: 100%;
   height: 87.4rem;
-  height: ${({ isOpen }) => (isOpen ? 'auto' : '87.4rem')};
-  overflow: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  height: ${({ $isOpen }) => ($isOpen ? 'auto' : '87.4rem')};
+  overflow: ${({ $isOpen }) => ($isOpen ? 'visible' : 'hidden')};
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { flexCenter } from '@styles/globalStyle';
-import FooterTop from './FooterTop';
 import FooterBottom from './FooterBottom/FooterBottom';
+import FooterTop from './FooterTop';
 
 /** footer */
 export default function Footer() {

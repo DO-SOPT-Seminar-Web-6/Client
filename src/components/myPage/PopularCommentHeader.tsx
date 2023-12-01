@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ReviewStarFullIc, ReviewStarEmptyIc } from '@assets/index';
 import { ReviewStarIconStyle } from '@styles/common/commonIcon';
+
 interface InHeaderPropsTypes {
   name: string;
   imageUrl: string;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { flexCenter } from '@styles/globalStyle';
 import { FooterPushDownIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
 
 /** footer bottom section second row */
 export default function FooterBottomSecondRow() {

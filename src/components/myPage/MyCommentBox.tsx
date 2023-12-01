@@ -1,6 +1,6 @@
-import { BannerProfileIc } from '@assets/index';
 import styled from 'styled-components';
 import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader';
+import { BannerProfileIc } from '@assets/index';
 
 interface InBoxPropsTypes {
   comment: string;

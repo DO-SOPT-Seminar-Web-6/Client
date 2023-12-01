@@ -5,11 +5,11 @@ import boxOfficeGrade4Img from '@assets/image/boxoffice/boxOfficeGrade4Img.png';
 import boxOfficeGrade5Img from '@assets/image/boxoffice/boxOfficeGrade5Img.png';
 import boxOfficeGrade6Img from '@assets/image/boxoffice/boxOfficeGrade6Img.png';
 
-interface InBoxOfficeMoviesTypes{
-  wrapperNumber : string;
+interface InBoxOfficeMoviesTypes {
+  wrapperNumber: string;
   imgSrc: string;
-  title : string;
-  rate : number;
+  title: string;
+  rate: number;
 }
 
 export const boxOfficeMovies: InBoxOfficeMoviesTypes[] = [
