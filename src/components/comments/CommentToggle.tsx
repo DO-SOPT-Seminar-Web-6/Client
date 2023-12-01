@@ -31,15 +31,19 @@ export default function CommentToggle(props: CommentTogglePropsTypes) {
 
 const ToggleWrapper = styled.div`
   ${flexCenter}
-  flex-direction: column;
+  position: absolute;
+  top: 12rem;
 
+  flex-direction: column;
   gap: 1rem;
+
+  z-index: 9;
   margin-top: -1.5rem;
 
   border-radius: 7px;
 
-  box-shadow: 0px 0px 6px 0px ${({ theme }) => theme.colors.black};
-
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  background-color: ${({ theme }) => theme.colors.white};
   width: 17.6rem;
   height: 8.6rem;
 `;
