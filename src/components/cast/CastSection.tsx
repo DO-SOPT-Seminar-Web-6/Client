@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 import CastInfo from './CastInfo';
-
-interface InCastSectionPropsTypes{
-  imgSrc: string;
+interface InCastSectionPropsTypes {
+  id: number;
+  imageUrl: string;
   name: string;
   role: string;
+  roleDetail: string;
 }
 
 /** each movie info  */
 export default function CastSection(props: InCastSectionPropsTypes) {
-  const { imgSrc, name, role } = props;
+  const { imageUrl, name, role, roleDetail } = props;
 
   return (
     <CastContainer>
-      <CastImage src={imgSrc}/>
-      <CastInfo name={name} role={role}/>
+      <CastImage src={imageUrl} />
+      <CastInfo name={name} role={role} roleDetail={roleDetail} />
     </CastContainer>
   );
 }
@@ -31,4 +32,3 @@ const CastImage = styled.img`
   width: 5.7rem;
   height: 5.7rem;
 `;
-
