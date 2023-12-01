@@ -1,15 +1,21 @@
 import CastSection from './CastSection';
 import styled from 'styled-components';
-import { castData } from '@core/castData';
+import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
+import { DataTypes } from 'types/dataTypes';
 
 export default function CastArticle() {
+
+  const { data } = useGetMyPageProduction();
+  
+  if (!Array.isArray(data) || data.length === 0) {
+    return null;
+  }
   return (
     <Article>
-      {castData &&
-        castData.map((cast) => {
-          const { imgSrc, name, role } = cast;
-          return <CastSection imgSrc={imgSrc} name={name} role={role} />;
-        })}
+      {data&& data.map((cast : DataTypes) => {
+        const { id, imageUrl, name, role, roleDetail } = cast;
+        return <CastSection key={id} id={id} imageUrl={imageUrl} name={name} role={role} roleDetail={roleDetail} />;
+      })} 
     </Article>
   );
 }
