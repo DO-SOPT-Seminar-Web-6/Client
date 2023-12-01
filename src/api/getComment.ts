@@ -14,12 +14,10 @@ export interface InCommentDataTypes {
 interface InGetCommentTypes {
   status: number;
   message: string;
-  data: InCommentDataTypes;
+  data: InCommentDataTypes[];
 }
 
-export default async function getComment(sort: string = 'default'): Promise<InCommentDataTypes> {
-  console.log('getComment', sort);
-
+export default async function getComment(sort: string = 'default'): Promise<InCommentDataTypes[]> {
   const response: AxiosResponse<InGetCommentTypes> = await customAxios.get('/api/comment', {
     params: {
       sort,
