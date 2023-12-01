@@ -4,19 +4,14 @@ import CastHeader from './CastHeader';
 import CastArticle from './CastArticle';
 import Button from '@components/common/Button/Button';
 import useShowMore from '@hooks/useShowMore';
-import { useNavigate } from 'react-router-dom';
 
 export default function Cast() {
   const { isOpen, handleShowMore } = useShowMore();
-  const navigate = useNavigate();
 
-  function handleMoveToDirector() {
-    navigate('/director');
-  }
   return (
     <CastContainer>
       <CastHeader />
-      <CastDetailContainer onClick={handleMoveToDirector}>
+      <CastDetailContainer>
         <CastArticle />
         <Button isOpen={isOpen} handleShowMore={handleShowMore} />
       </CastDetailContainer>
