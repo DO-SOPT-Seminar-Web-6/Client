@@ -5,20 +5,23 @@ import { SectionContainer } from '@styles/globalStyle';
 import { AnimationLayout, ContentLayout } from '@styles/Layout/AnimationLayout';
 import MoviesSection from '@components/animation/MoviesSection';
 import CommentSection from '@components/animation/CommentSection';
+import { Suspense } from 'react';
 
 export default function Animation() {
   return (
     <>
-      <SectionWrapper>
-        <AnimationLayout>
-          <AnimationHeader />
-          <ContentLayout>
-            <AnimationTitle />
-            <MoviesSection />
-            <CommentSection />
-          </ContentLayout>
-        </AnimationLayout>
-      </SectionWrapper>
+      <Suspense fallback={<div>로딩중</div>}>
+        <SectionWrapper>
+          <AnimationLayout>
+            <AnimationHeader />
+            <ContentLayout>
+              <AnimationTitle />
+              <MoviesSection />
+              <CommentSection />
+            </ContentLayout>
+          </AnimationLayout>
+        </SectionWrapper>
+      </Suspense>
     </>
   );
 }
