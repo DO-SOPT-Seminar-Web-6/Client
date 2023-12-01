@@ -1,6 +1,6 @@
+import styled from 'styled-components';
 import Comment from '@components/common/Comment/Comment';
 import useGetComment from '@hooks/useGetComment';
-import styled from 'styled-components';
 
 interface InCommentSectionPropsTypes {
   sort: string;

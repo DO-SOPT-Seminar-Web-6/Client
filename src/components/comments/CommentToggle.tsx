@@ -1,5 +1,5 @@
-import { flexCenter } from '@styles/globalStyle';
 import styled from 'styled-components';
+import { flexCenter } from '@styles/globalStyle';
 
 interface CommentTogglePropsTypes {
   setIsReorder: React.Dispatch<React.SetStateAction<boolean>>;

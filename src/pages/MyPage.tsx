@@ -1,11 +1,11 @@
-import MyPageDescription from '@components/myPage/MyPageDescription';
-import { MainContainer } from '@styles/Layout/MainContainer';
-import styled from 'styled-components';
-import MyPageSide from '@components/myPage/MyPageSide';
-import MyPageHeader from '@components/myPage/MyPageHeader';
-import MyPageReview from '@components/myPage/MyPageReview';
-import MyPagePopularComment from '@components/myPage/MyPagePopularComment';
 import { useState } from 'react';
+import styled from 'styled-components';
+import MyPageDescription from '@components/myPage/MyPageDescription';
+import MyPageHeader from '@components/myPage/MyPageHeader';
+import MyPagePopularComment from '@components/myPage/MyPagePopularComment';
+import MyPageReview from '@components/myPage/MyPageReview';
+import MyPageSide from '@components/myPage/MyPageSide';
+import { MainContainer } from '@styles/Layout/MainContainer';
 
 export default function MyPage() {
   const [existComment, isExistComment] = useState(false);

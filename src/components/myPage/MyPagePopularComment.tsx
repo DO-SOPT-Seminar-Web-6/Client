@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import PopularCommentDetails from './PopularCommentDetails';
 import useGetMyPageComment from '@hooks/useGetMyPageComment';
+import PopularCommentDetails from './PopularCommentDetails';
 
 export default function MyPagePopularComment() {
   const { data } = useGetMyPageComment();

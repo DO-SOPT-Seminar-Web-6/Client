@@ -1,7 +1,7 @@
-import { BodyStarEmptyIc, BodyStarFillIc } from '@assets/index';
-import { flexCenter } from '@styles/globalStyle';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { BodyStarEmptyIc, BodyStarFillIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
 
 export default function SetStars() {
   let starRatingState: Array<boolean> = [false, false, false, false, false];

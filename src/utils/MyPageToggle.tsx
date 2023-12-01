@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-import { flexCenter } from '@styles/globalStyle';
 import { useState } from 'react';
+import styled from 'styled-components';
 import {
   BodyPopupArchiveHoverIc,
   BodyPopupDoNotHoverIc,
@@ -8,6 +7,7 @@ import {
   BodyPopupEventHoverIc,
 } from '@assets/index';
 import { MyPageIcon } from '@styles/common/commonIcon';
+import { flexCenter } from '@styles/globalStyle';
 
 export default function MyPageToggle() {
   const [isInterested, setIsInterested] = useState(false);

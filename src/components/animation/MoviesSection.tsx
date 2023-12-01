@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import MoviesSectionTitle from './MovieSection/MoviesSectionTitle';
 import AnimationMovies from './MovieSection/AnimationMovies';
+import MoviesSectionTitle from './MovieSection/MoviesSectionTitle';
 
 export default function MoviesSection() {
   return (

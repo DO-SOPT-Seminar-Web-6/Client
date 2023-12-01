@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import { animationMovies } from '@core/animationMovies';
 

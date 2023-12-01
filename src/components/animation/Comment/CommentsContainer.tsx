@@ -1,6 +1,6 @@
+import { RepliesTypes } from 'types/repliesTypes';
 import useGetAnimationCollection from '@hooks/useGetAnimationCollection';
 import CommentBox from './CommentBox';
-import { RepliesTypes } from 'types/repliesTypes';
 
 export default function CommentsContainer() {
   const { data } = useGetAnimationCollection();

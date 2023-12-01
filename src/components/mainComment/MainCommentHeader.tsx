@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { flexCenter } from '@styles/globalStyle';
-import { useNavigate } from 'react-router-dom';
 
 export default function MainCommentHeader() {
   const navigate = useNavigate();

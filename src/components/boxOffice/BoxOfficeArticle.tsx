@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import BoxOfficeWrapper from './BoxOfficeWrapper';
 import { boxOfficeMovies } from '@core/boxOfficeMovies';
+import BoxOfficeWrapper from './BoxOfficeWrapper';
 
 export default function BoxOfficeArticle() {
   return (

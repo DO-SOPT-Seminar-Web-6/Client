@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { flexCenter } from '@styles/globalStyle';
 import { ReviewLikeActiveIc, ReviewLikeCommentIc, ReviewLikeUnActiveIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
 
 interface InCommentBottomPropsTypes {
   commentCount: number;

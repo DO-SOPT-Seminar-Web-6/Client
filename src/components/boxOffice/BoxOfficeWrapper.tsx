@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BoxOfficeWrapperDescription from './BoxOfficeWrapperDescription';
+
 interface InBoxOfficeMoviesProps {
   wrapperNumber: string;
   imgSrc: string;

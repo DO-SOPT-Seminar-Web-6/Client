@@ -1,7 +1,7 @@
-import CastSection from './CastSection';
 import styled from 'styled-components';
-import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
 import { DataTypes } from 'types/dataTypes';
+import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
+import CastSection from './CastSection';
 
 export default function CastArticle() {
   const { data } = useGetMyPageProduction();

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export default function ThumbnailTitleHeader() {
   return (
     <Header>
@@ -10,4 +11,4 @@ export default function ThumbnailTitleHeader() {
 const Header = styled.div`
   ${({ theme }) => theme.fonts.largeTitle};
   line-height: 6.2rem;
-`
+`;

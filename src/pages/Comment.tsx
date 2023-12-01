@@ -1,7 +1,7 @@
+import { useState, Suspense } from 'react';
 import CommentHeader from '@components/comments/CommentHeader';
 import CommentSection from '@components/comments/CommentSection';
 import { CommentPageLayout } from '@styles/Layout/commentPageLayout';
-import { useState, Suspense } from 'react';
 
 export default function Comment() {
   const [sort, setSort] = useState('default');

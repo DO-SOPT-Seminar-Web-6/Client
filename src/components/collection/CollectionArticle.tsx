@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { collectionImages } from '@core/collectionImages';
 import MovieArticle from '@components/common/MovieArticle/MovieArticle';
+import { collectionImages } from '@core/collectionImages';
 
 export default function CollectionArticle() {
   const imgSize: number[] = [19.8, 29.6];

@@ -1,5 +1,5 @@
-import { ReviewStarFullIc, ReviewStarEmptyIc } from '@assets/index';
 import styled from 'styled-components';
+import { ReviewStarFullIc, ReviewStarEmptyIc } from '@assets/index';
 
 interface InCommentTopPropsTypes {
   imageUrl: string;

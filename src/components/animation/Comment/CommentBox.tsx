@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { CollectDetailLikeBottomIc, CollectDetailMenuBottomIc } from '@assets/index';
 import collectDetailProfileImg from '@assets/image/collection/collectDetail/collectDetailProfileImg.png';
-import { flexCenter } from '@styles/globalStyle';
 import { DivideLineButtom } from '@styles/common/divideLine';
+import { flexCenter } from '@styles/globalStyle';
 
 interface InCommentBoxPropsTypes {
   content: string;
