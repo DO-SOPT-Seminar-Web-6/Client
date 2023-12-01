@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export default function CollectionHeader() {
+
   return (
     <Header>이 작품이 담긴 컬렉션</Header>
   )
