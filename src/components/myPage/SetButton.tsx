@@ -12,6 +12,7 @@ import { SetTitle } from '@styles/common/myPage/SetTitle';
 import { ButtonBox } from '@styles/Layout/MyPage/SetButtonBox';
 import MyPageModal from '@utils/MyPageModal';
 import MyPageToggle from '@utils/MyPageToggle';
+import { MyPageHeaderIcon } from '@styles/common/commonIcon';
 interface InSetButtonPropsTypes {
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
@@ -24,7 +25,7 @@ export default function SetButton(props: InSetButtonPropsTypes) {
   const [isSeeMore, setIsSeeMore] = useState(false);
 
   function handleOpenModal() {
-    setIsModalOpen(true);
+    setIsModalOpen((open)=>!open);
   }
   function handleCloseModal() {
     setIsModalOpen(false);
@@ -33,29 +34,33 @@ export default function SetButton(props: InSetButtonPropsTypes) {
   function handleSeeMore() {
     setIsSeeMore((see) => !see);
   }
-
+  function handleComment(value: string) {
+    setComment(value);
+  } 
   return (
     <Container>
       <ButtonBox>
-        <BodyPlusNormalIc />
+        <BodyPlusNormalIcon />
         <SetTitle>보고싶어요</SetTitle>
       </ButtonBox>
+      <ModalBox>
       <ButtonBox onClick={handleOpenModal}>
-        {isModalOpen && <BodyPencilHoverIc />}
-        {!isModalOpen && <BodyPencilNormalIc />}
+        {isModalOpen && <BodyPencilHoverIcon />}
+        {!isModalOpen && <BodyPencilNormalIcon />}
         <SetTitle>코멘트</SetTitle>
       </ButtonBox>
+      {isModalOpen && (
+        <MyPageModal open={isModalOpen} close={handleCloseModal} comment={comment} handleComment={handleComment} />
+      )}
+      </ModalBox>
       <ToggleBox>
         <ButtonBox onClick={handleSeeMore}>
-          {isSeeMore && <BodyMenuHoverIc />}
-          {!isSeeMore && <BodyMenuNormalIc />}
+          {isSeeMore && <BodyMenuHoverIcon />}
+          {!isSeeMore && <BodyMenuNormalIcon />}
           <SetTitle>더보기</SetTitle>
         </ButtonBox>
         {isSeeMore && <MyPageToggle />}
       </ToggleBox>
-      {isModalOpen && (
-        <MyPageModal open={isModalOpen} close={handleCloseModal} comment={comment} setComment={setComment} />
-      )}
     </Container>
   );
 }
@@ -69,3 +74,23 @@ const ToggleBox = styled.section`
   display: flex;
   flex-direction: column;
 `;
+
+const ModalBox = styled.section`
+  display: flex;
+  flex-direction: column;
+`
+const BodyPlusNormalIcon = styled(BodyPlusNormalIc)`
+  ${MyPageHeaderIcon}
+`
+const BodyPencilHoverIcon = styled(BodyPencilHoverIc)`
+  ${MyPageHeaderIcon}
+`
+const BodyPencilNormalIcon =styled(BodyPencilNormalIc)`
+  ${MyPageHeaderIcon}
+`
+const BodyMenuHoverIcon = styled(BodyMenuHoverIc)`
+  ${MyPageHeaderIcon}
+`
+const BodyMenuNormalIcon = styled(BodyMenuNormalIc)`
+  ${MyPageHeaderIcon}
+`

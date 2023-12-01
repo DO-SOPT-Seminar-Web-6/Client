@@ -1,5 +1,6 @@
-import axios, { AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios';
 import { RepliesTypes } from 'types/repliesTypes';
+import { customAxios } from './customAxios';
 
 export interface DataTypes {
   title: string;
@@ -14,14 +15,7 @@ interface GetAnimationTypes {
 }
 
 export async function getAnimationCollection(): Promise<DataTypes> {
-  const response: AxiosResponse<GetAnimationTypes> = await axios.get(
-    `${import.meta.env.VITE_APP_BASE_URL}/api/collection/1`,
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    },
-  );
+  const response: AxiosResponse<GetAnimationTypes> = await customAxios.get('/api/collection/1', {});
 
   const { data } = response?.data;
   return data;

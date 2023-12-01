@@ -7,19 +7,25 @@ interface InContainerTypes {
 }
 
 interface InCommentPropsTypes extends InContainerTypes {
-  userName: string;
+  imageUrl: string;
+  commentCount: number;
+  isLike: boolean;
+  likeCount: number;
+  star: number;
+  name: string;
   content: string;
 }
 
 /** Comment */
 export default function Comment(props: InCommentPropsTypes) {
-  const { userName, content, isThumbnail = false } = props;
+  // const { userName, content, isThumbnail = false } = props;
+  const { imageUrl, commentCount, isLike, likeCount, star, name, content, isThumbnail = false } = props;
 
   return (
     <CommentContainer isThumbnail={isThumbnail}>
-      <CommentTop userName={userName} isThumbnail={isThumbnail} />
+      <CommentTop imageUrl={imageUrl} name={name} star={star} isThumbnail={isThumbnail} />
       <CommentMiddleText>{content}</CommentMiddleText>
-      <CommentBottom />
+      <CommentBottom commentCount={commentCount} isLike={isLike} likeCount={likeCount} />
     </CommentContainer>
   );
 }
@@ -46,15 +52,3 @@ const CommentMiddleText = styled.p<InContainerTypes>`
   text-overflow: ellipsis;
   line-height: 2.3rem;
 `;
-
-{
-  /** 이런 식으로 사용하면 됩니다 */
-}
-{
-  /** <Comment
-   *    userName="너"
-   *    content="설명"
-   *    isThumbnail={true} // isThumbnail은 comment view 말고 thumbnail view에서 사용할 때만 true로 속성 넣어주시면 되고, comment view에서 사용할 경우, 속성 추가 안하셔도 됩니다
-   *  />
-   */
-}

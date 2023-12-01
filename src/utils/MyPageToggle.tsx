@@ -15,6 +15,7 @@ export default function MyPageToggle() {
   function handleIsInterested() {
     setIsInterested((click) => !click);
   }
+  
   return (
     <ToggleWrapper>
       <ToggleBox onClick={handleIsInterested}>
@@ -48,6 +49,7 @@ const ToggleWrapper = styled.div`
   width: 17.6rem;
   height: 12.4rem;
 `;
+
 const ToggleBox = styled.button`
   display: flex;
   gap: 1rem;
