@@ -45,4 +45,5 @@ const Wrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;
+  margin-bottom: 12rem;
 `;
