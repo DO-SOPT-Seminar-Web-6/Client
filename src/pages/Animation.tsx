@@ -5,8 +5,6 @@ import MoviesSection from '@components/animation/MoviesSection';
 import AnimationHeader from '@components/animation/Title/AnimationHeader';
 import { SectionContainer } from '@styles/globalStyle';
 import { AnimationLayout, ContentLayout } from '@styles/Layout/AnimationLayout';
-import MoviesSection from '@components/animation/MoviesSection';
-import CommentSection from '@components/animation/CommentSection';
 import { Suspense } from 'react';
 
 export default function Animation() {
