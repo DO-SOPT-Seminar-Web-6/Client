@@ -2,7 +2,7 @@ import MovieArticle from '@components/common/MovieArticle/MovieArticle';
 import styled from 'styled-components';
 import Button from '@components/common/Button/Button';
 import useShowMore from '@hooks/useShowMore';
-import { castDetailMovies } from '@core/\bdirectorMovies';
+import { castDetailMovies } from '@core/directorMovies';
 
 interface InFilmoContainerPropsTypes {
   id: string;
