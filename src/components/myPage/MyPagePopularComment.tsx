@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 import PopularCommentDetails from './PopularCommentDetails';
-import { popularComments } from '@core/popularComments';
+import useGetMyPageComment from '@hooks/useGetMyPageComment';
 
 export default function MyPagePopularComment() {
+  const {data} = useGetMyPageComment(); 
+
   return (
     <PopularCommentSection>
       <Header>인기 코멘트</Header>
       <PopularCommentBox>
-        {popularComments &&
-          popularComments.map((data) => {
-            const { imgSrc, name, comments, likes, numComments } = data;
+        {data?.slice(6,8).map((data) => {
+            const { imageUrl, name, star, content, likeCount, commentCount, isLike } = data;
             return (
               <PopularCommentDetails
-                imgSrc={imgSrc}
+                imageUrl={imageUrl}
                 name={name}
-                comments={comments}
-                likes={likes}
-                numComments={numComments}
+                star={star}
+                content={content}
+                likeCount={likeCount}
+                commentCount={commentCount}
+                isLike={isLike}
               />
             );
           })}
@@ -32,11 +35,12 @@ const PopularCommentSection = styled.section`
   padding: 3rem 0;
   height: 28.1rem;
 `;
+
 const Header = styled.h2`
-  ${({ theme }) => theme.fonts.body5};
-  margin-bottom: 1.2rem;
+  ${({ theme }) => theme.fonts.body5}; 
   color: ${({ theme }) => theme.colors.grey600};
 `;
+
 const PopularCommentBox = styled.section`
   display: flex;
   gap: 2rem;

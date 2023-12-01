@@ -1,23 +1,25 @@
-import {ReviewLikeCommentIc,ReviewLikeUnActiveIc} from '@assets/index';
+import { ReviewLikeCommentIc, ReviewLikeUnActiveIc, ReviewLikeActiveIc } from '@assets/index';
 import styled from 'styled-components';
-
+import { MyPagePopularCommentIcon } from '@styles/common/commonIcon';
 interface InBottomPropsTypes {
-  likes: string;
-  numComments: number;
+  likeCount: number;
+  commentCount: number;
+  isLike: boolean;
 }
 
 export default function PopularCommentBottom(props: InBottomPropsTypes) {
-  const { likes, numComments } = props; 
+  const { likeCount, commentCount, isLike } = props;
 
   return (
     <BottomBox>
       <CommentBottomButton>
-        <ReviewLikeCommentIcon />
-        {likes}
+        {isLike && <ReviewLikeUnActiveIcon />}
+        {!isLike && <ReviewLikeActiveIcon />}
+        {commentCount}
       </CommentBottomButton>
       <CommentBottomButton>
-        <ReviewLikeUnActiveIcon />
-        {numComments}
+        <ReviewLikeCommentIcon />
+        {likeCount}
       </CommentBottomButton>
     </BottomBox>
   );
@@ -40,10 +42,13 @@ const CommentBottomButton = styled.button`
 `;
 
 const ReviewLikeCommentIcon = styled(ReviewLikeCommentIc)`
-  width: 2rem;
-  height: 2rem;
-`
+  ${MyPagePopularCommentIcon};
+`;
+
 const ReviewLikeUnActiveIcon = styled(ReviewLikeUnActiveIc)`
-  width: 2rem;
-  height: 2rem;
-`
+  ${MyPagePopularCommentIcon};
+`;
+
+const ReviewLikeActiveIcon = styled(ReviewLikeActiveIc)`
+  ${MyPagePopularCommentIcon};
+`;
