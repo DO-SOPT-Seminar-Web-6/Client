@@ -25,11 +25,11 @@ export default function MyPageToggle() {
       </ToggleBox>
       <ToggleBox>
         <BodyPopupArchiveHoverIcon />
-        <ToggleTitle isInterested={isInterested}>컬렉션에 추가</ToggleTitle>
+        <Title>컬렉션에 추가</Title>
       </ToggleBox>
       <ToggleBox>
         <BodyPopupEventHoverIcon />
-        <ToggleTitle isInterested={isInterested}>본 날짜 추가</ToggleTitle>
+        <Title>본 날짜 추가</Title>
       </ToggleBox>
     </ToggleWrapper>
   );
@@ -65,6 +65,10 @@ const ToggleTitle = styled.h2<InToggleTitlePropsTypes>`
   ${({ theme }) => theme.fonts.body4};
   color: ${({ theme, isInterested }) => (isInterested ? theme.colors.mainPink : theme.colors.black)};
 `;
+
+const Title = styled.h2`
+  ${({ theme }) => theme.fonts.body4};
+`
 
 const BodyPopupArchiveHoverIcon = styled(BodyPopupArchiveHoverIc)`
   ${MyPageIcon}
