@@ -1,14 +1,27 @@
 import styled from 'styled-components';
 import Comment from '@components/common/Comment/Comment';
-import { mainComments } from '@core/mainComments';
+import useGetComment from '@hooks/useGetComment';
 
 export default function MainCommentDetail() {
+  const { data } = useGetComment('default');
+
   return (
     <MainCommentBox>
-      {mainComments &&
-        mainComments.map((mainComment) => {
-          const { userName, content, isThumbnail } = mainComment;
-          return <Comment userName={userName} content={content} isThumbnail={isThumbnail} />;
+      {data &&
+        data.map((mainComment) => {
+          const { imageUrl, commentCount, isLike, likeCount, star, name, content } = mainComment;
+          return (
+            <Comment
+              imageUrl={imageUrl}
+              commentCount={commentCount}
+              isLike={isLike}
+              likeCount={likeCount}
+              star={star}
+              name={name}
+              content={content}
+              isThumbnail={true}
+            />
+          );
         })}
     </MainCommentBox>
   );
@@ -22,5 +35,4 @@ const MainCommentBox = styled.section`
   gap: 1rem;
   align-items: space-between;
   margin-top: 3.5rem;
-  height: 51rem;
 `;

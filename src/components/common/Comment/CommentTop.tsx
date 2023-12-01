@@ -1,29 +1,31 @@
+import { ReviewStarFullIc, ReviewStarEmptyIc } from '@assets/index';
 import styled from 'styled-components';
-import ReviewStarFullIc from '@assets/icon/review/reviewStarFullIc.svg';
-import ReviewProfile5Img from '@assets/image/review/reviewProfile5Img.png';
 
 interface InContainerTypes {
   isThumbnail?: boolean;
 }
 
 interface InCommentTopPropsTypes extends InContainerTypes {
-  userName: string;
+  imageUrl: string;
+  name: string;
+  star: number;
 }
 
 /** Comment user info 부분 */
 export default function CommentTop(props: InCommentTopPropsTypes) {
-  const { userName, isThumbnail } = props;
+  const { imageUrl, name, star, isThumbnail } = props;
+  const starCount = star / 2;
+
+  const starIcons = Array.from({ length: starCount }, (_, index) => <ReviewStarFullIc key={index} />);
+  const unStarIcons = Array.from({ length: 5 - starCount }, (_, index) => <ReviewStarEmptyIc key={index} />);
 
   return (
     <CommentTopBox isThumbnail={isThumbnail}>
-      <img src={ReviewProfile5Img} alt="user-profile" width={32} height={32} />
-      <CommentTopText>{userName}</CommentTopText>
+      <img src={imageUrl} alt="user-profile" width={32} height={32} />
+      <CommentTopText>{name}</CommentTopText>
       <CommentTopStars>
-        <img src={ReviewStarFullIc} />
-        <img src={ReviewStarFullIc} />
-        <img src={ReviewStarFullIc} />
-        <img src={ReviewStarFullIc} />
-        <img src={ReviewStarFullIc} />
+        {starIcons}
+        {unStarIcons}
       </CommentTopStars>
     </CommentTopBox>
   );

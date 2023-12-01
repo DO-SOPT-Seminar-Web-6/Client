@@ -4,21 +4,24 @@ import styled from 'styled-components';
 interface CommentTogglePropsTypes {
   setIsReorder: React.Dispatch<React.SetStateAction<boolean>>;
   setIsLiked: React.Dispatch<React.SetStateAction<boolean>>;
+  handleSort: (sort: string) => void;
 }
 
 export default function CommentToggle(props: CommentTogglePropsTypes) {
-  const { setIsReorder, setIsLiked } = props;
+  const { setIsReorder, setIsLiked, handleSort } = props;
 
   //좋아요 수 순
   function handleClickLikedOrder() {
     setIsReorder(false);
     setIsLiked(true);
+    handleSort('like');
   }
 
   //댓글수순
   function handleClickCommentsNumOrder() {
     setIsReorder(false);
     setIsLiked(false);
+    handleSort('comment');
   }
 
   return (
