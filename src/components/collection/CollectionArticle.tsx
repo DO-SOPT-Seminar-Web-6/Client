@@ -36,6 +36,7 @@ export default function CollectionArticle() {
 const Article = styled.article`
   display: flex;
   gap: 1.2rem;
+  cursor: pointer;
   width: 123rem;
   height: 33rem;
 `;
