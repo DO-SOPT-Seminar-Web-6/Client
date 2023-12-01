@@ -12,6 +12,7 @@ export default function MainCommentDetail() {
           const { imageUrl, commentCount, isLike, likeCount, star, name, content } = mainComment;
           return (
             <Comment
+              key={`${commentCount}-${star}-${name}`}
               imageUrl={imageUrl}
               commentCount={commentCount}
               isLike={isLike}

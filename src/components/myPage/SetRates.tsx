@@ -1,7 +1,7 @@
+import styled from 'styled-components';
 import { RateContents } from '@styles/common/myPage/SetRateContents';
 import { SetTitle } from '@styles/common/myPage/SetTitle';
 import { flexCenter } from '@styles/globalStyle';
-import styled from 'styled-components';
 
 export default function SetRates() {
   return (
@@ -17,11 +17,13 @@ export default function SetRates() {
     </Rate>
   );
 }
+
 const Rate = styled.span`
   ${flexCenter};
   gap: 3rem;
   width: 30.5rem;
 `;
+
 const MyRate = styled.article`
   ${flexCenter}
   flex-direction: column;

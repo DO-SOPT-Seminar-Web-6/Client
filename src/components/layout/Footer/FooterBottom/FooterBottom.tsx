@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { SectionContainer } from '@styles/globalStyle';
 import FooterBottomFirstRow from './FooterBottomFirstRow';
 import FooterBottomSecondRow from './FooterBottomSecondRow';
 import FooterBottomThirdRow from './FooterBottomThirdRow';
-import { SectionContainer } from '@styles/globalStyle';
 
 /** footer bottom section */
 export default function FooterBottom() {

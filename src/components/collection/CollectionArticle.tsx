@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { collectionImages } from '@core/collectionImages';
 import MovieArticle from '@components/common/MovieArticle/MovieArticle';
+import { collectionImages } from '@core/collectionImages';
 
 export default function CollectionArticle() {
   const imgSize: number[] = [19.8, 29.6];
@@ -14,6 +14,7 @@ export default function CollectionArticle() {
           const { imgSrc, title, likes } = image;
           return (
             <MovieArticle
+              key={`${title}-${likes}`}
               imgSrc={imgSrc}
               imgHeight={imgSize[1]}
               imgWidth={imgSize[0]}

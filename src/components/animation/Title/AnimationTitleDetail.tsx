@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { AnimationDetailText } from '@styles/common/commonText';
 import useGetAnimationCollection from '@hooks/useGetAnimationCollection';
+import { AnimationDetailText } from '@styles/common/commonText';
 
 export default function AnimationTitleDetail() {
   const { data } = useGetAnimationCollection();

@@ -1,6 +1,7 @@
-import { ReviewLikeCommentIc, ReviewLikeUnActiveIc, ReviewLikeActiveIc } from '@assets/index';
 import styled from 'styled-components';
 import { MyPagePopularCommentIcon } from '@styles/common/commonIcon';
+import { ReviewLikeCommentIc, ReviewLikeUnActiveIc, ReviewLikeActiveIc } from '@assets/index';
+
 interface InBottomPropsTypes {
   likeCount: number;
   commentCount: number;

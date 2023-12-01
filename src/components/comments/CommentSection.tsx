@@ -1,7 +1,6 @@
-import { customAxios } from '@api/customAxios';
-import Comment from '@components/common/Comment/Comment';
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Comment from '@components/common/Comment/Comment';
+import useGetComment from '@hooks/useGetComment';
 
 interface InCommentSectionPropsTypes {
   sort: string;
@@ -9,19 +8,7 @@ interface InCommentSectionPropsTypes {
 
 //여기다가 나열해주시면 됩니다!
 export default function CommentSection({ sort }: InCommentSectionPropsTypes) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function todo() {
-      const response = await customAxios.get('/api/comment', {
-        params: {
-          sort,
-        },
-      });
-      setData(response.data.data);
-    }
-    todo();
-  }, [sort]);
+  const { data } = useGetComment(sort);
 
   return (
     <Wrapper>

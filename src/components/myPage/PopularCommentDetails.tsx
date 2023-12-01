@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import PopularCommentHeader from './PopularCommentHeader';
-import PopularCommentBottom from './PopularCommentBottom';
 import { MainContainer } from '@styles/Layout/MainContainer';
+import PopularCommentBottom from './PopularCommentBottom';
+import PopularCommentHeader from './PopularCommentHeader';
+
 interface InPopularCommentPropsTypes {
   imageUrl: string;
   name: string;

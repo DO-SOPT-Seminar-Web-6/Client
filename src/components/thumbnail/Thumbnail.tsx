@@ -5,8 +5,8 @@ import ThumbnailTitle from './ThumbnailTitle';
 export default function Thumbnail() {
   return (
     <Wrapper>
-      <ThumbnailHeader/>
-      <ThumbnailTitle/>
+      <ThumbnailHeader />
+      <ThumbnailTitle />
     </Wrapper>
   );
 }

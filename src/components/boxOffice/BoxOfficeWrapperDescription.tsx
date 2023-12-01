@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 import { BoxOfficeStarIc } from '@assets/index';
 
-interface InDescriptionImageTypes {
-  imgWidth: number;
-  imgHeight: number;
-}
-
-interface InBoxOfficePropsTypes extends InDescriptionImageTypes {
+interface InBoxOfficePropsTypes {
   imgSrc: string;
   title: string;
   rate: number;
+  imgWidth: number;
+  imgHeight: number;
 }
 
 export default function BoxOfficeWrapperDescriptions(props: InBoxOfficePropsTypes) {
@@ -17,7 +14,7 @@ export default function BoxOfficeWrapperDescriptions(props: InBoxOfficePropsType
 
   return (
     <DescriptionBox>
-      <DescriptionImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
+      <DescriptionImage src={imgSrc} $imgWidth={imgWidth} $imgHeight={imgHeight} />
       <DescriptionTitle>{title}</DescriptionTitle>
       <DescriptionStar>
         <BoxOfficeStarIcon />
@@ -33,9 +30,14 @@ const DescriptionBox = styled.section`
   height: 29.3rem;
 `;
 
-const DescriptionImage = styled.img<InDescriptionImageTypes>`
-  width: ${({ imgWidth }) => `${imgWidth}rem`};
-  height: ${({ imgHeight }) => `${imgHeight}rem`};
+interface InDescriptionImagePropsTypes {
+  $imgWidth: number;
+  $imgHeight: number;
+}
+
+const DescriptionImage = styled.img<InDescriptionImagePropsTypes>`
+  width: ${({ $imgWidth }) => `${$imgWidth}rem`};
+  height: ${({ $imgHeight }) => `${$imgHeight}rem`};
 `;
 
 const DescriptionTitle = styled.h2`

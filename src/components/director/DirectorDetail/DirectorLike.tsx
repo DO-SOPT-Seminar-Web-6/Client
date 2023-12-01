@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { CastDetailLikeIc } from '@assets/index';
 import { flexCenter } from '@styles/globalStyle';
+import { CastDetailLikeIc } from '@assets/index';
 
 /** director page - like */
 export default function DirectorLike() {

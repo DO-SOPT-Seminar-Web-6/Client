@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { flexCenter } from '@styles/globalStyle';
 import { BannerSearchIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
 
 /** header right section input */
 export default function HeaderInput() {

@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const SetTitle = styled. h2`
+export const SetTitle = styled.h2`
   ${({ theme }) => theme.fonts.body5};
-`
+`;

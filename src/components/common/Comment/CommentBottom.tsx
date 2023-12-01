@@ -1,14 +1,11 @@
 import styled from 'styled-components';
-import { flexCenter } from '@styles/globalStyle';
 import { ReviewLikeActiveIc, ReviewLikeCommentIc, ReviewLikeUnActiveIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
 
-interface InTextTypes {
-  isLike: boolean;
-}
-
-interface InCommentBottomPropsTypes extends InTextTypes {
+interface InCommentBottomPropsTypes {
   commentCount: number;
   likeCount: number;
+  isLike: boolean;
 }
 
 /** Comment 좋아요, 댓글 부분 */
@@ -18,7 +15,7 @@ export default function CommentBottom({ commentCount, isLike, likeCount }: InCom
       <CommentBottomButton>
         {!isLike && <ReviewLikeUnActiveIc />}
         {isLike && <ReviewLikeActiveIc />}
-        <LikeCountText isLike={isLike}>{likeCount}</LikeCountText>
+        <LikeCountText $isLike={isLike}>{likeCount}</LikeCountText>
       </CommentBottomButton>
       <CommentBottomButton>
         <ReviewLikeCommentIc />
@@ -43,6 +40,10 @@ const CommentBottomButton = styled.button`
   gap: 0.2rem;
 `;
 
-const LikeCountText = styled.span<InTextTypes>`
-  color: ${({ isLike, theme }) => (isLike ? `${theme.colors.mainPink}` : `${theme.colors.grey600}`)};
+interface InLikeCountTextPropsTypes {
+  $isLike: boolean;
+}
+
+const LikeCountText = styled.span<InLikeCountTextPropsTypes>`
+  color: ${({ $isLike, theme }) => ($isLike ? `${theme.colors.mainPink}` : `${theme.colors.grey600}`)};
 `;

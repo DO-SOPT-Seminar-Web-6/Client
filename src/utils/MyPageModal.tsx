@@ -1,6 +1,6 @@
-import { flexCenter } from '@styles/globalStyle';
 import styled from 'styled-components';
 import { PopupExitIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
 
 interface InModalPropsTypes {
   open: boolean;

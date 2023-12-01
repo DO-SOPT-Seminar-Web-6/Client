@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { flexCenter } from '@styles/globalStyle';
-import styled from 'styled-components';
-import { CollectDetailChatBottomIc } from '@assets/index';
 import { useMutation, useQueryClient } from 'react-query';
+import styled from 'styled-components';
 import { postCollectionAnimation } from '@api/postCollectionAnimation';
+import { flexCenter } from '@styles/globalStyle';
+import { CollectDetailChatBottomIc } from '@assets/index';
 
 export default function CommentInput() {
   const [inputValue, setInputValue] = useState('');

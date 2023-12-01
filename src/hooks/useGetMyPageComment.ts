@@ -1,11 +1,11 @@
-import { useQuery } from "react-query";
-import { getMyPageComment} from "@api/getMyPageComment";
-import { CommentDataTypes } from "types/commentDataTypes";
+import { useQuery } from 'react-query';
+import { CommentDataTypes } from 'types/commentDataTypes';
+import { getMyPageComment } from '@api/getMyPageComment';
 
-export default function useGetMyPageComment(){
-  const result=useQuery<CommentDataTypes[], Error>
-  (['getMyPageComment'], getMyPageComment, {
-    onError: (error)=> {
+export default function useGetMyPageComment() {
+  const result = useQuery<CommentDataTypes[], Error>(['getMyPageComment'], getMyPageComment, {
+    refetchOnMount: 'always',
+    onError: (error) => {
       console.error('에러 발생', error);
     },
   });

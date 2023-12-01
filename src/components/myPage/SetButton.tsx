@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import styled from 'styled-components';
+import { flexCenter } from '@styles/globalStyle';
 import {
   BodyPlusNormalIc,
   BodyPencilHoverIc,
@@ -6,13 +8,12 @@ import {
   BodyMenuHoverIc,
   BodyMenuNormalIc,
 } from '@assets/index';
-import { flexCenter } from '@styles/globalStyle';
-import { useState } from 'react';
+import { MyPageHeaderIcon } from '@styles/common/commonIcon';
 import { SetTitle } from '@styles/common/myPage/SetTitle';
 import { ButtonBox } from '@styles/Layout/MyPage/SetButtonBox';
 import MyPageModal from '@utils/MyPageModal';
 import MyPageToggle from '@utils/MyPageToggle';
-import { MyPageHeaderIcon } from '@styles/common/commonIcon';
+
 interface InSetButtonPropsTypes {
   comment: string;
   setComment: React.Dispatch<React.SetStateAction<string>>;
@@ -25,7 +26,7 @@ export default function SetButton(props: InSetButtonPropsTypes) {
   const [isSeeMore, setIsSeeMore] = useState(false);
 
   function handleOpenModal() {
-    setIsModalOpen((open)=>!open);
+    setIsModalOpen((open) => !open);
   }
   function handleCloseModal() {
     setIsModalOpen(false);
@@ -36,7 +37,7 @@ export default function SetButton(props: InSetButtonPropsTypes) {
   }
   function handleComment(value: string) {
     setComment(value);
-  } 
+  }
   return (
     <Container>
       <ButtonBox>
@@ -44,14 +45,14 @@ export default function SetButton(props: InSetButtonPropsTypes) {
         <SetTitle>보고싶어요</SetTitle>
       </ButtonBox>
       <ModalBox>
-      <ButtonBox onClick={handleOpenModal}>
-        {isModalOpen && <BodyPencilHoverIcon />}
-        {!isModalOpen && <BodyPencilNormalIcon />}
-        <SetTitle>코멘트</SetTitle>
-      </ButtonBox>
-      {isModalOpen && (
-        <MyPageModal open={isModalOpen} close={handleCloseModal} comment={comment} handleComment={handleComment} />
-      )}
+        <ButtonBox onClick={handleOpenModal}>
+          {isModalOpen && <BodyPencilHoverIcon />}
+          {!isModalOpen && <BodyPencilNormalIcon />}
+          <SetTitle>코멘트</SetTitle>
+        </ButtonBox>
+        {isModalOpen && (
+          <MyPageModal open={isModalOpen} close={handleCloseModal} comment={comment} handleComment={handleComment} />
+        )}
       </ModalBox>
       <ToggleBox>
         <ButtonBox onClick={handleSeeMore}>
@@ -78,19 +79,19 @@ const ToggleBox = styled.section`
 const ModalBox = styled.section`
   display: flex;
   flex-direction: column;
-`
+`;
 const BodyPlusNormalIcon = styled(BodyPlusNormalIc)`
   ${MyPageHeaderIcon}
-`
+`;
 const BodyPencilHoverIcon = styled(BodyPencilHoverIc)`
   ${MyPageHeaderIcon}
-`
-const BodyPencilNormalIcon =styled(BodyPencilNormalIc)`
+`;
+const BodyPencilNormalIcon = styled(BodyPencilNormalIc)`
   ${MyPageHeaderIcon}
-`
+`;
 const BodyMenuHoverIcon = styled(BodyMenuHoverIc)`
   ${MyPageHeaderIcon}
-`
+`;
 const BodyMenuNormalIcon = styled(BodyMenuNormalIc)`
   ${MyPageHeaderIcon}
-`
+`;

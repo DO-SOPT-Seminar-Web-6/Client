@@ -8,7 +8,7 @@ interface InMovieTagProps {
 export default function MovieTag({ tag }: InMovieTagProps) {
   return (
     <ArticleTagList>
-      {tag && tag.map((item, index) => <ArticleTagListItem key={`${item} - ${index}`}>{item}</ArticleTagListItem>)}
+      {tag && tag.map((item, index) => <ArticleTagListItem key={`${item}-${index}`}>{item}</ArticleTagListItem>)}
     </ArticleTagList>
   );
 }

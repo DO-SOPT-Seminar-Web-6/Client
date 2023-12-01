@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { SectionContainer } from '@styles/globalStyle';
 import DirectorInfo from './DirectorInfo';
-import DirectorSubInfo from './DirectorSubInfo';
 import DirectorLike from './DirectorLike';
+import DirectorSubInfo from './DirectorSubInfo';
 
 /** director page */
 export default function DirectorDetail() {

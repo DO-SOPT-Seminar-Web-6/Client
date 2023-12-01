@@ -1,7 +1,7 @@
-import { SectionContainer } from '@styles/globalStyle';
 import styled from 'styled-components';
-import MainCommentHeader from './MainCommentHeader';
+import { SectionContainer } from '@styles/globalStyle';
 import MainCommentDetail from './MainCommentDetail';
+import MainCommentHeader from './MainCommentHeader';
 
 export default function MainComment() {
   return (

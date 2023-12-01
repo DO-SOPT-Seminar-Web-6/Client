@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import BodyPosterImg from '@assets/image/body/bodyPosterImg.png';
 import BodyBargraphImg from '@assets/image/body/bodyBargraphImg.png';
+import BodyPosterImg from '@assets/image/body/bodyPosterImg.png';
+
 export default function MyPageSide() {
   return (
     <Side>
