@@ -30,9 +30,12 @@ export default function CommentHeader({ handleSort }: InCommentHeaderPropsTypes)
 
 const Wrapper = styled.header`
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
+  margin-top: 2.5rem;
+  margin-bottom: 2.1rem;
 `;
 
 const TitleText = styled.h1`
