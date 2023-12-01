@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 import { collectionImages } from '@core/collectionImages';
 import MovieArticle from '@components/common/MovieArticle/MovieArticle';
+import { useNavigate } from 'react-router-dom';
 
 export default function CollectionArticle() {
   const imgSize: number[] = [19.8, 29.6];
   const keyword: string = '좋아요';
   const icon: boolean = false;
+  const navigate = useNavigate();
 
+  function handleMoveToAnimation() {
+    navigate('/animation');
+  }
   return (
-    <Article>
+    <Article onClick={handleMoveToAnimation}>
       {collectionImages &&
         collectionImages.map((image) => {
           const { imgSrc, title, likes } = image;
