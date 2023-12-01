@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import MovieTag from '@components/common/MovieArticle/MovieTag';
-import MyCommentBox from './MyCommentBox';
 import { BoxHeader } from '@styles/common/myPage/ReviewBoxHeader';
+import MyCommentBox from './MyCommentBox';
+
 interface InMyPageReviewPropsTypes {
   existComment: boolean;
   comment: string;

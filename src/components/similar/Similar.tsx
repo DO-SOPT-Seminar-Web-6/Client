@@ -1,9 +1,9 @@
-import SimilarHeader from './SimilarHeader';
-import { SectionContainer } from '@styles/globalStyle';
-import SimilarArticle from './SimilarArticle';
 import styled from 'styled-components';
 import Button from '@components/common/Button/Button';
 import useShowMore from '@hooks/useShowMore';
+import { SectionContainer } from '@styles/globalStyle';
+import SimilarHeader from './SimilarHeader';
+import SimilarArticle from './SimilarArticle';
 
 export default function Similar() {
   const { isOpen, handleShowMore } = useShowMore();

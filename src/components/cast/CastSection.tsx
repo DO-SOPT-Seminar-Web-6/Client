@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CastInfo from './CastInfo';
+
 interface InCastSectionPropsTypes {
   id: number;
   imageUrl: string;

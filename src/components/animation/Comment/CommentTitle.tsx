@@ -1,7 +1,7 @@
+import styled from 'styled-components';
 import useGetAnimationCollection from '@hooks/useGetAnimationCollection';
 import { AnimationDetailText, AnimationTitleText } from '@styles/common/commonText';
 import { flexCenter } from '@styles/globalStyle';
-import styled from 'styled-components';
 
 export default function CommentTitle() {
   const { data } = useGetAnimationCollection();

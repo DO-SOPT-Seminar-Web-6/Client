@@ -1,14 +1,11 @@
-import { ReviewStarFullIc, ReviewStarEmptyIc } from '@assets/index';
 import styled from 'styled-components';
+import { ReviewStarFullIc, ReviewStarEmptyIc } from '@assets/index';
 
-interface InContainerTypes {
-  isThumbnail?: boolean;
-}
-
-interface InCommentTopPropsTypes extends InContainerTypes {
+interface InCommentTopPropsTypes {
   imageUrl: string;
   name: string;
   star: number;
+  isThumbnail?: boolean;
 }
 
 /** Comment user info 부분 */
@@ -20,7 +17,7 @@ export default function CommentTop(props: InCommentTopPropsTypes) {
   const unStarIcons = Array.from({ length: 5 - starCount }, (_, index) => <ReviewStarEmptyIc key={index} />);
 
   return (
-    <CommentTopBox isThumbnail={isThumbnail}>
+    <CommentTopBox $isThumbnail={isThumbnail}>
       <img src={imageUrl} alt="user-profile" width={32} height={32} />
       <CommentTopText>{name}</CommentTopText>
       <CommentTopStars>
@@ -31,7 +28,11 @@ export default function CommentTop(props: InCommentTopPropsTypes) {
   );
 }
 
-const CommentTopBox = styled.div<InContainerTypes>`
+interface InCommentTopBoxPropsTypes {
+  $isThumbnail?: boolean;
+}
+
+const CommentTopBox = styled.div<InCommentTopBoxPropsTypes>`
   display: flex;
   gap: 0.8rem;
   align-items: center;
@@ -39,7 +40,7 @@ const CommentTopBox = styled.div<InContainerTypes>`
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey300};
   padding-bottom: 1.2rem;
   width: 100%;
-  height: ${({ isThumbnail }) => (isThumbnail ? '3.2rem' : '4.4rem')};
+  height: ${({ $isThumbnail }) => ($isThumbnail ? '3.2rem' : '4.4rem')};
 `;
 
 const CommentTopText = styled.span`

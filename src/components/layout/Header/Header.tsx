@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { SectionContainer } from '@styles/globalStyle';
 import HeaderLeft from './HeaderLeft/HeaderLeft';
 import HeaderRight from './HeaderRight/HeaderRight';
-import { SectionContainer } from '@styles/globalStyle';
 
 /** header */
 export default function Header() {

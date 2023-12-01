@@ -1,21 +1,30 @@
-import CastSection from './CastSection';
 import styled from 'styled-components';
-import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
 import { DataTypes } from 'types/dataTypes';
+import useGetMyPageProduction from '@hooks/useGetMyPageProduction';
+import CastSection from './CastSection';
 
 export default function CastArticle() {
-
   const { data } = useGetMyPageProduction();
-  
+
   if (!Array.isArray(data) || data.length === 0) {
     return null;
   }
   return (
     <Article>
-      {data&& data.map((cast : DataTypes) => {
-        const { id, imageUrl, name, role, roleDetail } = cast;
-        return <CastSection key={id} id={id} imageUrl={imageUrl} name={name} role={role} roleDetail={roleDetail} />;
-      })} 
+      {data &&
+        data.map((cast: DataTypes) => {
+          const { id, imageUrl, name, role, roleDetail } = cast;
+          return (
+            <CastSection
+              key={`${id}-${name}-${role}`}
+              id={id}
+              imageUrl={imageUrl}
+              name={name}
+              role={role}
+              roleDetail={roleDetail}
+            />
+          );
+        })}
     </Article>
   );
 }

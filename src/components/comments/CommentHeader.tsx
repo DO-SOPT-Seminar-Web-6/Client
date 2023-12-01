@@ -1,8 +1,8 @@
-import { flexCenter } from '@styles/globalStyle';
-import { ReviewFilterIc } from '@assets/index';
-import styled from 'styled-components';
-import CommentToggle from './CommentToggle';
 import { useState } from 'react';
+import styled from 'styled-components';
+import { ReviewFilterIc } from '@assets/index';
+import { flexCenter } from '@styles/globalStyle';
+import CommentToggle from './CommentToggle';
 
 interface InCommentHeaderPropsTypes {
   handleSort: (sort: string) => void;

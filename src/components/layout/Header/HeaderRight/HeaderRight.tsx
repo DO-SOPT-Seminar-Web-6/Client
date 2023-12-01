@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { BannerProfileIc } from '@assets/index';
 import { flexCenter } from '@styles/globalStyle';
+import { BannerProfileIc } from '@assets/index';
 import HeaderInput from './HeaderInput';
 
 /** header right section */

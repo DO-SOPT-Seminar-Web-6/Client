@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 import MovieTag from './MovieTag';
 import MovieInfo from './MovieInfo';
-interface InImageTypes {
-  imgWidth?: number;
-  imgHeight?: number;
-}
-interface InMovieArticleProps extends InImageTypes {
+
+interface InMovieArticleProps {
   imgSrc: string;
   title: string;
   rate: number;
@@ -14,9 +11,20 @@ interface InMovieArticleProps extends InImageTypes {
   titleLength?: number;
   tag?: string[];
   icon?: boolean;
+  imgWidth?: number;
+  imgHeight?: number;
 }
 
-/** each movie info  */
+/** each movie info
+ * 사용법 :
+ * <MovieArticle
+ *  imgSrc={BoxOfficeGrade6Img}
+ *  title="마녀 배달부 키키"
+ *  rate={3.8}
+ *  subInfo="감독, 각본"
+ *  tag={['가족', '애니메이션']}
+ * />
+ */
 export default function MovieArticle(props: InMovieArticleProps) {
   const {
     imgSrc,
@@ -32,7 +40,7 @@ export default function MovieArticle(props: InMovieArticleProps) {
   } = props;
   return (
     <ArticleContainer>
-      <ArticleImage src={imgSrc} imgWidth={imgWidth} imgHeight={imgHeight} />
+      <ArticleImage src={imgSrc} $imgWidth={imgWidth} $imgHeight={imgHeight} />
       <MovieInfo title={title} titleLength={titleLength} rate={rate} subInfo={subInfo} keyword={keyword} icon={icon} />
       {tag && <MovieTag tag={tag} />}
     </ArticleContainer>
@@ -47,20 +55,12 @@ const ArticleContainer = styled.article`
   justify-content: center;
 `;
 
-const ArticleImage = styled.img<InImageTypes>`
-  width: ${({ imgWidth }) => `${imgWidth}rem`};
-  height: ${({ imgHeight }) => `${imgHeight}rem`};
-`;
+interface InArticleImagePropsTypes {
+  $imgWidth?: number;
+  $imgHeight?: number;
+}
 
-{
-  /* 이런 식으로 사용하면 됩니다 */
-}
-{
-  /* <MovieArticle
-  imgSrc={BoxOfficeGrade6Img}
-  title="마녀 배달부 키키"
-  rate={3.8}
-  subInfo="감독, 각본"
-  tag={['가족', '애니메이션']}
-/> */
-}
+const ArticleImage = styled.img<InArticleImagePropsTypes>`
+  width: ${({ $imgWidth }) => `${$imgWidth}rem`};
+  height: ${({ $imgHeight }) => `${$imgHeight}rem`};
+`;

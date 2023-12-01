@@ -4,21 +4,21 @@ import styled, { css } from 'styled-components';
 export default function FilmoTable() {
   return (
     <Container>
-      <ContentTableLink href="#filmography_movies" selected={true}>
+      <ContentTableLink href="#filmography_movies" $selected={true}>
         영화
       </ContentTableLink>
       <SubContainer>
-        <ContentTableLink href="#filmography_director" selected={true}>
+        <ContentTableLink href="#filmography_director" $selected={true}>
           감독
         </ContentTableLink>
-        <ContentTableLink href="#filmography_scenario" selected={false}>
+        <ContentTableLink href="#filmography_scenario" $selected={false}>
           각본
         </ContentTableLink>
-        <ContentTableLink href="#filmography_cast" selected={false}>
+        <ContentTableLink href="#filmography_cast" $selected={false}>
           출연
         </ContentTableLink>
       </SubContainer>
-      <ContentTableLink selected={false}>책</ContentTableLink>
+      <ContentTableLink $selected={false}>책</ContentTableLink>
     </Container>
   );
 }
@@ -35,7 +35,7 @@ const Container = styled.aside`
 `;
 
 interface ContentInTableLinkPropsTypes {
-  selected: boolean;
+  $selected: boolean;
 }
 
 const ContentTableLink = styled.a<ContentInTableLinkPropsTypes>`
@@ -44,8 +44,8 @@ const ContentTableLink = styled.a<ContentInTableLinkPropsTypes>`
   width: 100%;
   height: 2.8rem;
 
-  ${({ selected }) =>
-    selected &&
+  ${({ $selected }) =>
+    $selected &&
     css`
       border-radius: 4px;
       background-color: ${({ theme }) => theme.colors.black};

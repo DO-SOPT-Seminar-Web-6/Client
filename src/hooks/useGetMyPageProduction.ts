@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
-import { getMyPageProduction} from '@api/getMyPageProduction';
 import { DataTypes } from 'types/dataTypes';
+import { getMyPageProduction } from '@api/getMyPageProduction';
 
 export default function useGetMyPageProduction() {
   const result = useQuery<DataTypes[], Error>(['getMyPageProduction'], getMyPageProduction, {
