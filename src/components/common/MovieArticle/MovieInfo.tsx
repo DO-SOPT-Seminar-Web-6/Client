@@ -15,7 +15,7 @@ export default function MovieInfo(props: InMovieArticleProps) {
 
   return (
     <ArticleInfoBox>
-      <ArticleTitle titleLength={titleLength}>{title}</ArticleTitle>
+      <ArticleTitle $titleLength={titleLength}>{title}</ArticleTitle>
       <ArticleRateText>
         <span>{keyword}</span>
         {icon && <CastDetailLikeIcon />}
@@ -33,15 +33,15 @@ const ArticleInfoBox = styled.div`
   color: ${({ theme }) => theme.colors.grey600};
 `;
 
-const ArticleTitle = styled.h3<{ titleLength?: number | undefined }>`
-  width: ${({ titleLength }) => (titleLength !== undefined ? `${titleLength}rem` : 'auto')};
+const ArticleTitle = styled.h3<{ $titleLength?: number | undefined }>`
+  width: ${({ $titleLength }) => ($titleLength !== undefined ? `${$titleLength}rem` : 'auto')};
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 2.3rem;
 
   white-space: nowrap;
   color: ${({ theme }) => theme.colors.black};
-  font-style: ${({ theme, titleLength }) => (titleLength ? theme.fonts.subTitle2 : theme.fonts.subTitle5)};
+  font-style: ${({ theme, $titleLength }) => ($titleLength ? theme.fonts.subTitle2 : theme.fonts.subTitle5)};
 `;
 
 const ArticleRateText = styled.p`

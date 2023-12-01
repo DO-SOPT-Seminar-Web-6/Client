@@ -15,13 +15,13 @@ export default function MyPageToggle() {
   function handleIsInterested() {
     setIsInterested((click) => !click);
   }
-  
+
   return (
     <ToggleWrapper>
       <ToggleBox onClick={handleIsInterested}>
         {!isInterested && <BodyPopupDoNotHoverIcon />}
         {isInterested && <BodyPopupDoNotActiveIcon />}
-        <ToggleTitle isInterested={isInterested}>관심없어요</ToggleTitle>
+        <ToggleTitle $isInterested={isInterested}>관심없어요</ToggleTitle>
       </ToggleBox>
       <ToggleBox>
         <BodyPopupArchiveHoverIcon />
@@ -58,17 +58,17 @@ const ToggleBox = styled.button`
 `;
 
 interface InToggleTitlePropsTypes {
-  isInterested: boolean;
+  $isInterested: boolean;
 }
 
 const ToggleTitle = styled.h2<InToggleTitlePropsTypes>`
   ${({ theme }) => theme.fonts.body4};
-  color: ${({ theme, isInterested }) => (isInterested ? theme.colors.mainPink : theme.colors.black)};
+  color: ${({ theme, $isInterested }) => ($isInterested ? theme.colors.mainPink : theme.colors.black)};
 `;
 
 const Title = styled.h2`
   ${({ theme }) => theme.fonts.body4};
-`
+`;
 
 const BodyPopupArchiveHoverIcon = styled(BodyPopupArchiveHoverIc)`
   ${MyPageIcon}
