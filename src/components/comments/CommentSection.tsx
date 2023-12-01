@@ -1,8 +1,5 @@
-import { customAxios } from '@api/customAxios';
-import getComment from '@api/getComment';
 import Comment from '@components/common/Comment/Comment';
 import useGetComment from '@hooks/useGetComment';
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 interface InCommentSectionPropsTypes {
