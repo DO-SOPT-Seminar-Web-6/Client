@@ -77,7 +77,7 @@
 
 
 ### 출연 및 제작 뷰
-<img src='https://github.com/DO-SOPT-Seminar-Web-6/Client/assets/100409061/b06e52c6-357d-4bdd-9d6a-4c9e35fedc23' alt='출연 및 제작'/>
+<img src='https://github.com/DO-SOPT-Seminar-Web-6/Client/assets/100409061/b8748b42-006f-4fd7-b144-d30e581e4fba' alt='출연 및 제작'/>
 
 
 
