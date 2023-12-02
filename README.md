@@ -62,6 +62,25 @@
 </table>
 </aside>
 
+## 📺 화면
+
+### 메인 화면
+<img src='https://github.com/DO-SOPT-Seminar-Web-6/Client/assets/100409061/40640624-56ec-4d3c-a9c7-a2a0f7f8f8b3' alt='메인화면 썸네일'/>
+
+
+### 애니메이션(컬렉션뷰)
+<img src="https://github.com/DO-SOPT-Seminar-Web-6/Client/assets/100409061/7c98ea75-a0c2-4608-9e9a-83adc1f6868b" alt="컬렉션뷰"/>
+
+
+### 코멘트뷰
+<img src='https://github.com/DO-SOPT-Seminar-Web-6/Client/assets/100409061/b8d7c976-44f8-4cab-a117-6ec766359012' alt='코멘트뷰'/>
+
+
+### 출연 및 제작 뷰
+<img src='https://github.com/DO-SOPT-Seminar-Web-6/Client/assets/100409061/b06e52c6-357d-4bdd-9d6a-4c9e35fedc23' alt='출연 및 제작'/>
+
+
+
 ## ⚒️ 기술 스택
 
 <div align="center">
@@ -120,7 +139,6 @@
 | --------------- | -------------------------------------------------------------------- |
 | [ feat ]        | 새로운 기능이 추가되었을 때                                          |
 | [ fix ]         | 버그를 고친 경우                                                     |
-| (에러, 깃 에러) |
 | [ design ]      | css 혹은 UI를 생성 & 변경한 경우                                     |
 | [ style ]       | 코드포맷 변경 (기능에 변화가 없는 경우)                              |
 | [ refactor ]    | 더 좋은 코드로 개선한 경우 ( 기능에 변화가 없는 경우/코드리뷰 반영 ) |
@@ -163,8 +181,8 @@
 ### 2️⃣ 함수
 
 - 컴포넌트는 \*\*`rfc`
-- \*\*함수의 선언은 `function 함수명() {}`
-- \*\*이벤트 핸들링함수 `handle`로 시작  
+- 함수의 선언은 `function 함수명() {}`
+- 이벤트 핸들링함수 `handle`로 시작  
 
 
 ### 3️⃣ 메소드
@@ -174,7 +192,7 @@
 - **axios, async await을 이용할 때 try & catch** 금지
 - react-query의 onSuccess, onError 사용.
 - **2개 이상부터! : 구조분해할당쓰기**
-- \*\*switch-case 사용시 break를 강제
+- switch-case 사용시 break를 강제
 - **for는 지양하고 forEach, map을 사용.**
 - **불필요한 반복문은 지양**
 
@@ -186,11 +204,11 @@
 - svg파일
         ```jsx
         return <LoginIcon/>
-
         const LoginIcon = styled(LoginIc)`
           margin-right: 2.2rem;
         `;
         ```
+  
 
 - 단위: rem, border 속성: px
 - 반복되는 스타일링은 export해서 쓰기
